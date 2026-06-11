@@ -1,160 +1,209 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-
-<HEAD>
-		<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
-		<TITLE>fuzzyDL System</TITLE>
-</HEAD>
-
-<BODY BGCOLOR="#FFFFFF">
-		<p class="titolo"><code><strong><font size="+2" face="Georgia, Times New Roman, Times, serif">The <img src="tower.jpg" alt="" height="116" width="89" border="0" livesrc="tower.psd"> </font><font size="+2" color="#770000" face="Georgia, Times New Roman, Times, serif">DL</font><font size="+2" face="Georgia, Times New Roman, Times, serif"> System  </font><font face="Georgia, Times New Roman, Times, serif"><font size="1">(</font><font size="1" color="#dd1e28"><a href="changes.html">see also latest changes</a></font><font size="1">)</font></font></strong></code></p>
-<code><font color="#770000" face="Georgia, Times New Roman, Times, serif"><em>fuzzyDL</em></font><em> is a joint project with <a href="http://webdiis.unizar.es/~fbobillo/">Fernando Bobillo</a></em>
-</code>
-<hr>
-		<p><code><font color="#770000" face="Georgia, Times New Roman, Times, serif">fuzzyDL</font><font face="Georgia, Times New Roman, Times, serif"> is a Description Logic Reasoner supporting Fuzzy Logic and fuzzy Rough Set reasoning. The </font><font color="#770000" face="Georgia, Times New Roman, Times, serif">fuzzyDL</font><font face="Georgia, Times New Roman, Times, serif"> system includes a reasoner for fuzzy SHIF with concrete fuzzy concepts (ALC augmented with transitive roles, a role hierarchy, inverse, reflexive, symmetric roles, functional roles, and explicit definition of fuzzy sets). There is also a <a href="http://protege.stanford.edu/">Protege</a> plug-in that supports <a href="../FuzzyOWL/index.html">Fuzzy OWL2</a>, to build fuzzy ontologies.</font></code></p>
-<p><code><font color="#770000" face="Georgia, Times New Roman, Times, serif">fuzzyDL</font><font color="black" face="Georgia, Times New Roman, Times, serif">'s most interesting features are:</font></code></p>
-		<ul>
-			<li type="disc"><code><font color="black" face="Georgia, Times New Roman, Times, serif">it extends the classical Description Logic SHIF to the fuzzy case</font>
-			</code>
-			<li type="disc"><code><font face="Georgia, Times New Roman, Times, serif">it allows the explicti definition of fuzzy concepts with left-shoulder, right-shoulder, triangular and trapezoidal membership functions</font>
-			</code>
-			<li type="disc"><code><font face="Georgia, Times New Roman, Times, serif">it supports concept modifiers in terms of linear hedges</font>
-			</code>
-			<li type="disc"><code><font face="Georgia, Times New Roman, Times, serif">it supports General Inclusion Axioms</font>
-			</code>
-			<li type="disc"><code><font face="Georgia, Times New Roman, Times, serif">it supports &quot;Zadeh semantics&quot; and Lukasiewicz Logic</font>
-			</code>
-			<li type="disc"><code><font face="Georgia, Times New Roman, Times, serif">it is backward compatible, i.e. it supports classical description logic reasoning</font>
-			</code>
-			<li type="disc"><code><font face="Georgia, Times New Roman, Times, serif">full support of Mixed Integer Linear Programming optimization</font>
-			</code>
-			<li type="disc"><code><font face="Georgia, Times New Roman, Times, serif">it supports fuzzy Rough Set reasoning within fuzzy DLs</font>
-			</code>
-			</ul>
-		<p><code><font color="#770000" face="Georgia, Times New Roman, Times, serif">fuzzyDL</font> is a joint project with <a href="http://webdiis.unizar.es/~fbobillo/">Fernando Bobillo</a>.</code></p>
-<p><code><font face="Georgia, Times New Roman, Times, serif"><strong>Some applications</strong>:</font></code></p>
-		<ul>
-			<li><code>Matchmaking
-			
-			
-			</code>
-			<li><code>Knowledge-based Image Interpretation
-			
-			</code>
-			<li><code>Multi Criteria Decision Making
-			</code>
-			<li><code>Clinical Decision Support
-			
-			
-			</code>
-			<li><code><font face="Georgia, Times New Roman, Times, serif">Logic-based Fuzzy Control Systems</font>
-	        </code>
-	    </ul>
-		<p class="titolo"><code><strong>An example</strong>:
-		</code></p>
-		<p><code>The following knowledge defines the classes of Minors and Young Persons.</code></p>
-		<ol>
-			<li><code><strong>(define-fuzzy-concept LessThan18 crisp(0,100,0,18))</strong>
-			</code>
-			<li><code><strong>(define-fuzzy-concept LowAge left-shoulder(0,100,10,30))</strong>
-			</code>
-			<li><code><strong>(define-concept Minor (and Person (some age LessThan18)))</strong>
-			</code>
-			<li><code><strong>(define-concept YoungPerson (and Person (some age LowAge)))</strong>
-			</code>
-			<li><code><strong>(functional age)</strong>
-			</code>
-			<li><code><strong>(define-modifier very linear-modifier(3))</strong>
-			</code>
-			<li><code><strong>(define-concept VeryYoungPerson (very YoungPerson))</strong>
-	        </code>
-	    </ol>
-		<ul>
-			<li><code>Axiom 5 asserts that <strong>age </strong>is functional, i.e. a person has one age only.
-			
-			
-			</code>
-			<li><code>Axiom 1 asserts that the concept <strong>LessThan18 </strong>is a fuzzy set with a crisp membership function <strong>crisp(k1,k2,a,b)) </strong>of the form below, where [k1,k2] is the domain. Essentially, it says that the domain is [0,100] and that membership is 1 for x in [0,18] .
-			</code>
-			</ul>
-		<div align="center">
-			<code><img src="crisp.gif" alt="" height="94" width="189" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/crisp.pdf"></code></div>
-		<p></p>
-		<ul>
-			<li><code>Axiom 2 asserts that the concept <strong>LowAge </strong>is a fuzzy set with a left-shoulder membership function <strong> left-shoulder(k1,k2,a,b) </strong>of the form below.
-		    
-	        </code>
-	    </ul>
-		<div align="center">
-			<code><img src="lsfunction.gif" alt="" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/lsfunction.pdf" width="224" height="153"></code></div>
-		<ul>
-			<li><code>Axiom 3 defines the concept of <strong>Minor</strong> as a <strong>Person</strong> whose  <strong>age</strong> is <strong>LessThan18</strong>, i.e. less than 18.
-			
-			</code>
-			<li><code>Axiom 4 defines the concept of <strong>YoungPerson</strong> as a <strong>Person</strong> whose age is <strong>LowAge</strong>.
-		    
-	        </code>
-	    </ul>
-		<p><code>As a consequence, under Zadeh semantics we get that a  <strong>YoungPerson </strong>is a <strong>Minor</strong> to degree 0.4. Indeed,</code></p>
-		<p><code><strong>(concept-subsumes? Minor YoungPerson)</strong></code></p>
-		<p><code>returns 0.4.</code></p>
-		<p><code>On the other hand </code></p>
-		<p><code><strong>(concept-subsumes? YoungPerson Minor)</strong></code></p>
-		<p><code>returns 0.6, which is the degree of being a  <strong>Minor </strong>a  <strong>YoungPerson.</strong></code></p>
-		<p><code>Other membership functions supported by <font color="#770000">fuzzyDL</font>  are shown below.</code></p>
-		<div align="center">
-			<table width="180" border="1" cellspacing="2" cellpadding="0">
-				<tr>
-					<td><code><img src="rsfunction.gif" alt="" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/rsfunction.pdf" width="205" height="106"></code></td>
-					<td><code><img src="trapezoidal.gif" alt="" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/trapezoidal.pdf" width="270" height="137"></code></td>
-					<td><code><img src="triangular.gif" alt="" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/triangular.pdf" width="222" height="141"></code></td>
-				</tr>
-				<tr>
-					<td>
-						<div align="center"><code>Right-shoulder function</code></div>
-					</td>
-					<td>
-						<div align="center"><code>
-						  Trapezoidal function</code></div>
-					</td>
-					<td>
-						<div align="center"><code>
-						  Triangular function</code></div>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<p></p>
-		<div align="center">
-			<table width="64" border="1" cellspacing="2" cellpadding="0">
-				<tr>
-					<td><code><img src="lm.gif" alt="" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/lm.pdf" width="214" height="141"></code></td>
-				</tr>
-				<tr>
-					<td>
-						<div align="center"><code>
-						  Linear Modifier</code></div>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<p></p>
-		<ul>
-			<li><code>Axiom 6 defines the modifier <strong>very</strong> using <strong>linear-modifier(c)</strong>, where a =  c/(c+1), b=1/(c+1) 
-			
-			</code>
-			<li><code>Axiom 6 defines the concept <strong>VeryYoungPerson</strong> as a <strong>very</strong> <strong>YoungPerson</strong>.
-		    
-	        </code>
-	    </ul>
-		<p><code>As a consequence.</code></p>
-		<p><code><strong>(concept-subsumes? VeryYoungPerson Minor)</strong></code></p>
-		<p><code>returns 0.2, which is the degree of being a <strong>Minor </strong>a  <strong>VeryYoungPerson.</strong></code></p>
-		<p><code>On the other hand</code></p>
-		<p><code><strong>(concept-subsumes? Minor VeryYoungPerson)</strong></code></p>
-		<p><code>returns 0.8, which is the degree of being a <strong>VeryYoungPerson </strong>a <strong>Minor.</strong></code></p>
-</BODY>
-	
-	
-
-</HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <title>fuzzyDL System</title>
+  </head>
+  <body bgcolor="#FFFFFF">
+    <p class="titolo"><code><strong><font size="+2" face="Georgia, Times
+            New Roman, Times, serif">The <img src="tower.jpg" alt=""
+              livesrc="tower.psd" width="89" height="116" border="0"> </font><font
+            size="+2" face="Georgia, Times New Roman, Times, serif"
+            color="#770000">DL</font><font size="+2" face="Georgia,
+            Times New Roman, Times, serif"> System </font><font
+            face="Georgia, Times New Roman, Times, serif"><font size="1">(</font><font
+              size="1" color="#dd1e28"><a href="changes.html">see also
+                latest changes</a></font><font size="1">)</font></font></strong></code></p>
+    <code><font face="Georgia, Times New Roman, Times, serif"
+        color="#770000"><em>fuzzyDL</em></font><em> is a joint project
+        with <a href="http://webdiis.unizar.es/~fbobillo/">Fernando
+          Bobillo</a></em>
+    </code>
+    <hr>
+    <p><code><font face="Georgia, Times New Roman, Times, serif"
+          color="#770000">fuzzyDL</font><font face="Georgia, Times New
+          Roman, Times, serif"> is a Description Logic Reasoner
+          supporting Fuzzy Logic and fuzzy Rough Set reasoning. The </font><font
+          face="Georgia, Times New Roman, Times, serif" color="#770000">fuzzyDL</font><font
+          face="Georgia, Times New Roman, Times, serif"> system includes
+          a reasoner for fuzzy SHIF with concrete fuzzy concepts (ALC
+          augmented with transitive roles, a role hierarchy, inverse,
+          reflexive, symmetric roles, functional roles, and explicit
+          definition of fuzzy sets). There is also a <a
+            href="http://protege.stanford.edu/">Protege</a> plug-in that
+          supports <a href="../FuzzyOWL/index.html">Fuzzy OWL2</a>, to
+          build fuzzy ontologies.<br>
+        </font></code></p>
+    <p><code><font face="Georgia, Times New Roman, Times, serif"
+          color="#770000">fuzzyDL <font color="#000000">source code is
+            now available from <a
+              href="https://github.com/umberto-straccia/FuzzyDL">https://github.com/umberto-straccia/FuzzyDL&nbsp;</a></font>
+        </font></code><br>
+      <code></code></p>
+    <p><code><font face="Georgia, Times New Roman, Times, serif"
+          color="#770000">fuzzyDL</font><font face="Georgia, Times New
+          Roman, Times, serif" color="black">'s most interesting
+          features are:</font></code></p>
+    <ul>
+      <li type="disc"><code><font face="Georgia, Times New Roman, Times,
+            serif" color="black">it extends the classical Description
+            Logic SHIF to the fuzzy case</font> </code> </li>
+      <li type="disc"><code><font face="Georgia, Times New Roman, Times,
+            serif">it allows the explicti definition of fuzzy concepts
+            with left-shoulder, right-shoulder, triangular and
+            trapezoidal membership functions</font> </code> </li>
+      <li type="disc"><code><font face="Georgia, Times New Roman, Times,
+            serif">it supports concept modifiers in terms of linear
+            hedges</font> </code> </li>
+      <li type="disc"><code><font face="Georgia, Times New Roman, Times,
+            serif">it supports General Inclusion Axioms</font> </code>
+      </li>
+      <li type="disc"><code><font face="Georgia, Times New Roman, Times,
+            serif">it supports "Zadeh semantics" and Lukasiewicz Logic</font>
+        </code> </li>
+      <li type="disc"><code><font face="Georgia, Times New Roman, Times,
+            serif">it is backward compatible, i.e. it supports classical
+            description logic reasoning</font> </code> </li>
+      <li type="disc"><code><font face="Georgia, Times New Roman, Times,
+            serif">full support of Mixed Integer Linear Programming
+            optimization</font> </code> </li>
+      <li type="disc"><code><font face="Georgia, Times New Roman, Times,
+            serif">it supports fuzzy Rough Set reasoning within fuzzy
+            DLs</font> </code> </li>
+    </ul>
+    <p><code><font face="Georgia, Times New Roman, Times, serif"
+          color="#770000">fuzzyDL</font> is a joint project with <a
+          href="http://webdiis.unizar.es/~fbobillo/">Fernando Bobillo</a>.</code></p>
+    <p><code><font face="Georgia, Times New Roman, Times, serif"><strong>Some
+            applications</strong>:</font></code></p>
+    <ul>
+      <li><code>Matchmaking </code> </li>
+      <li><code>Knowledge-based Image Interpretation </code> </li>
+      <li><code>Multi Criteria Decision Making </code> </li>
+      <li><code>Clinical Decision Support </code> </li>
+      <li><code><font face="Georgia, Times New Roman, Times, serif">Logic-based
+            Fuzzy Control Systems</font> </code> </li>
+    </ul>
+    <p class="titolo"><code><strong>An example</strong>: </code></p>
+    <p><code>The following knowledge defines the classes of Minors and
+        Young Persons.</code></p>
+    <ol>
+      <li><code><strong>(define-fuzzy-concept LessThan18
+            crisp(0,100,0,18))</strong> </code> </li>
+      <li><code><strong>(define-fuzzy-concept LowAge
+            left-shoulder(0,100,10,30))</strong> </code> </li>
+      <li><code><strong>(define-concept Minor (and Person (some age
+            LessThan18)))</strong> </code> </li>
+      <li><code><strong>(define-concept YoungPerson (and Person (some
+            age LowAge)))</strong> </code> </li>
+      <li><code><strong>(functional age)</strong> </code> </li>
+      <li><code><strong>(define-modifier very linear-modifier(3))</strong>
+        </code> </li>
+      <li><code><strong>(define-concept VeryYoungPerson (very
+            YoungPerson))</strong> </code> </li>
+    </ol>
+    <ul>
+      <li><code>Axiom 5 asserts that <strong>age </strong>is
+          functional, i.e. a person has one age only. </code> </li>
+      <li><code>Axiom 1 asserts that the concept <strong>LessThan18 </strong>is
+          a fuzzy set with a crisp membership function <strong>crisp(k1,k2,a,b))
+          </strong>of the form below, where [k1,k2] is the domain.
+          Essentially, it says that the domain is [0,100] and that
+          membership is 1 for x in [0,18] . </code> </li>
+    </ul>
+    <div align="center"> <code><img src="crisp.gif" alt=""
+          livesrc="../../../../Research/Presentations/Karlsruhe05/crisp.pdf"
+          width="189" height="94" border="0"></code></div>
+    <p></p>
+    <ul>
+      <li><code>Axiom 2 asserts that the concept <strong>LowAge </strong>is
+          a fuzzy set with a left-shoulder membership function <strong>
+            left-shoulder(k1,k2,a,b) </strong>of the form below. </code>
+      </li>
+    </ul>
+    <div align="center"> <code><img src="lsfunction.gif" alt=""
+          livesrc="../../../../Research/Presentations/Karlsruhe05/lsfunction.pdf"
+          width="224" height="153" border="0"></code></div>
+    <ul>
+      <li><code>Axiom 3 defines the concept of <strong>Minor</strong>
+          as a <strong>Person</strong> whose <strong>age</strong> is <strong>LessThan18</strong>,
+          i.e. less than 18. </code> </li>
+      <li><code>Axiom 4 defines the concept of <strong>YoungPerson</strong>
+          as a <strong>Person</strong> whose age is <strong>LowAge</strong>.
+        </code> </li>
+    </ul>
+    <p><code>As a consequence, under Zadeh semantics we get that a <strong>YoungPerson
+        </strong>is a <strong>Minor</strong> to degree 0.4. Indeed,</code></p>
+    <p><code><strong>(concept-subsumes? Minor YoungPerson)</strong></code></p>
+    <p><code>returns 0.4.</code></p>
+    <p><code>On the other hand </code></p>
+    <p><code><strong>(concept-subsumes? YoungPerson Minor)</strong></code></p>
+    <p><code>returns 0.6, which is the degree of being a <strong>Minor
+        </strong>a <strong>YoungPerson.</strong></code></p>
+    <p><code>Other membership functions supported by <font
+          color="#770000">fuzzyDL</font> are shown below.</code></p>
+    <div align="center">
+      <table width="180" cellspacing="2" cellpadding="0" border="1">
+        <tbody>
+          <tr>
+            <td><code><img src="rsfunction.gif" alt=""
+                  livesrc="../../../../Research/Presentations/Karlsruhe05/rsfunction.pdf"
+                  width="205" height="106" border="0"></code></td>
+            <td><code><img src="trapezoidal.gif" alt=""
+                  livesrc="../../../../Research/Presentations/Karlsruhe05/trapezoidal.pdf"
+                  width="270" height="137" border="0"></code></td>
+            <td><code><img src="triangular.gif" alt=""
+                  livesrc="../../../../Research/Presentations/Karlsruhe05/triangular.pdf"
+                  width="222" height="141" border="0"></code></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center"><code>Right-shoulder function</code></div>
+            </td>
+            <td>
+              <div align="center"><code> Trapezoidal function</code></div>
+            </td>
+            <td>
+              <div align="center"><code> Triangular function</code></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p></p>
+    <div align="center">
+      <table width="64" cellspacing="2" cellpadding="0" border="1">
+        <tbody>
+          <tr>
+            <td><code><img src="lm.gif" alt=""
+                  livesrc="../../../../Research/Presentations/Karlsruhe05/lm.pdf"
+                  width="214" height="141" border="0"></code></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="center"><code> Linear Modifier</code></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p></p>
+    <ul>
+      <li><code>Axiom 6 defines the modifier <strong>very</strong>
+          using <strong>linear-modifier(c)</strong>, where a = c/(c+1),
+          b=1/(c+1) </code> </li>
+      <li><code>Axiom 6 defines the concept <strong>VeryYoungPerson</strong>
+          as a <strong>very</strong> <strong>YoungPerson</strong>. </code>
+      </li>
+    </ul>
+    <p><code>As a consequence.</code></p>
+    <p><code><strong>(concept-subsumes? VeryYoungPerson Minor)</strong></code></p>
+    <p><code>returns 0.2, which is the degree of being a <strong>Minor
+        </strong>a <strong>VeryYoungPerson.</strong></code></p>
+    <p><code>On the other hand</code></p>
+    <p><code><strong>(concept-subsumes? Minor VeryYoungPerson)</strong></code></p>
+    <p><code>returns 0.8, which is the degree of being a <strong>VeryYoungPerson
+        </strong>a <strong>Minor.</strong></code></p>
+  </body>
+</html>
