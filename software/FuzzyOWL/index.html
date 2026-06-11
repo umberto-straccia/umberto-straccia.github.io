@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+	<head>
+
+	<title>FuzzyOWL2: Fuzzy Ontology Representation using OWL 2</title>
+	<meta name='title' content='Fuzzy Ontology Representation using OWL 2' />
+	<meta name='description' content='Fuzzy Ontology Representation using OWL 2' />
+	<meta name='author' content='Fernando Bobillo' />
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
+	<link href='main.css' rel='stylesheet' type='text/css' />
+</head>
+
+	<body>
+		<div>
+			<h1>Fuzzy Ontology Representation using OWL 2</h1>
+          <p><strong>Fuzzy OWL 2</strong><em> is a joint project with <a href="http://webdiis.unizar.es/~fbobillo/">Fernando Bobillo</a></em>
+          </p>
+        <h1><font size="-2" color="#000077">(<a href="../fuzzyDL/changes.html">Latest changes</a>)</font></h1>
+			<h2>Introduction</h2>
+			<p>The need to deal with vague information in Semantic Web languages is rising in importance and, thus, calls for a standard way to represent such information. We propose to use the language OWL 2 itself (the current standard ontology language) to represent fuzzy ontologies. More precisely, we use OWL 2 annotation properties to encode fuzzy ontologies. The use of annotation properties makes possible to use current OWL 2 editors (e.g., <a href="http://protege.stanford.edu/">Prot&eacute;g&eacute;</a>) for fuzzy ontology representation. </p>
+			<p>We also provide a <a href="#plug-in">Fuzzy OWL 2 Prot&eacute;g&eacute; plug-in</a>.</p>
+			<p>A full description of the syntax of the fuzzy ontologies, and of the methodology to represent them, is described in a technical report available at the <a href="#documentation">Documentation</a> section.</p>
+			<div>
+				<h2><a name="documentation">Download</a></h2>
+				<ul>
+					<li>The whole Fuzzy OWL2 package, containing parser sources, binary, the Fuzzy OWL 2 Protege plug-in and the documentation can be downloaded from <a href="../fuzzyDL/download.html">here</a>.</li>
+					<li>The old package can be obtained from <a href="old/FuzzyOWL2.old.zip">here.</a></li>
+				</ul>
+			</div>
+			<h2><a name="documentation">Documentation</a></h2>
+			<ul>
+				<li>Fernando Bobillo and Umberto Straccia. Fuzzy Ontology Representation using OWL 2. In International Journal of Approximate Reasoning, 2011.</li>
+			</ul>
+			<h2>Toy example</h2>
+			<p>Let us consider an example. Consider the fuzzy concept assertion <i>paul : Tall &gt;= 0.5</i>, which states that Paul can be considered tall with at least degree 0.5. To represent it in OWL 2, we consider the concept assertion <i>paul : Tall</i> as represented in OWL 2: <i>ClassAssertion(paul Tall)</i>. Then, we add an annotation property including the information <i>&gt;=0.5</i> to it, as shown in the following picture.</p>
+			<div style="text-align: center;">
+				<img src="example.png" alt="Example of OWL 2 annotation" /></div>
+			<h2>Examples</h2>
+			<p>In this section, we will provide some examples illustrating how to encode the fuzzy ontologies using our approach. Some fuzzy ontologies are explained in a technical report available at the <a href="#documentation">Documentation</a> section.</p>
+			<ul>
+				<li><a href="ontologies/FuzzyWine.1.0.owl">Fuzzy Wine Ontology</a></li>
+				<li><a href="ontologies/matchmaking.owl">Fuzzy ontology for matchmaking</a></li>
+				<li><a href="ontologies/multiCriteria.owl">Fuzzy ontology for multi-criteria decision making</a></li>
+			</ul>
+      <p>Screenshot of the fuzzy ontology for matchmaking:</p>
+			<div style="text-align: center;">
+				<img src="matchmaking.png" alt="Fuzzy ontology for matchmaking" /></div>
+			<div>
+				<div>
+					<h2><a name="plug-in">Fuzzy OWL 2 Prot&eacute;g&eacute; plug-in</a></h2>
+					<p>The plug-in supports you in creating Fuzzy OWL 2 ontologies, without bothering about how to write the annotations.</p>
+					<p>The plug-in allows you also to submit queries to the <a href="../fuzzyDL/fuzzyDL.html">fuzzyDL</a> reasoner.</p>
+					<p>A screenshot</p>
+				</div>
+			</div>
+			<div style="text-align: center;">
+				<img src="plug-in.gif" alt="" height="678" width="960" align="middle" border="0" livesrc="plug-in.tiff" />
+				<p></p>
+				<p>From the plug-in you may also query the <a href="../fuzzyDL/fuzzyDL.html">fuzzyDL</a> reasoner.</p>
+				<p></p>
+				<p align="center"> <img src="query.gif" alt="" height="678" width="960" align="middle" border="0" livesrc="query.jpg" /></p>
+				<p></p>
+			</div>
+			<h2>Reasoning with fuzzy ontologies</h2>
+			<p>Once the fuzzy ontology has been created with a conventional ontology editor, it has to be translated into the language supported by some fuzzy ontology reasoner, so that we reason with it. For this purpose, we have developed a template code for a parser translating from OWL 2 with annotations representing fuzzy information into the language supported by some reasoner (class <i></i>). This general parser can be adapted to any particular fuzzy DL reasoner. As illustrative purposes, we have adapted it to the languages supported by two fuzzy DL reasoners: <a href="http://www.straccia.info/software/fuzzyDL/fuzzyDL.html">fuzzyDL</a> and <a href="http://webdiis.unizar.es/~fbobillo/delorean">DeLorean</a>. It is important to point out that similar parsers for other fuzzy DL reasoners can be obtained without difficulties.</p>
+		</div>
+	</body>
+
+</html>

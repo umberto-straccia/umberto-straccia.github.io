@@ -1,0 +1,337 @@
+﻿/* Définition des polices personnalisées */
+
+@font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('http://nmis.isti.cnr.it/~straccia/sum2014/polices/ballpark.eot');
+    src: url('http://nmis.isti.cnr.it/~straccia/sum2014/polices/ballpark.eot?') format('embedded-opentype'),
+         url('http://nmis.isti.cnr.it/~straccia/sum2014/polices/ballpark.woff') format('woff'),
+         url('http://nmis.isti.cnr.it/~straccia/sum2014/polices/ballpark.ttf') format('truetype'),
+         url('http://nmis.isti.cnr.it/~straccia/sum2014/polices/ballpark.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('http://nmis.isti.cnr.it/~straccia/sum2014/polices/dayrom.eot');
+    src: url('http://nmis.isti.cnr.it/~straccia/sum2014/polices/dayrom.eot?') format('embedded-opentype'),
+         url('http://nmis.isti.cnr.it/~straccia/sum2014/polices/dayrom.woff') format('woff'),
+         url('http://nmis.isti.cnr.it/~straccia/sum2014/polices/dayrom.ttf') format('truetype'),
+         url('http://nmis.isti.cnr.it/~straccia/sum2014//polices/dayrom.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Eléments principaux de la page */
+
+body
+{
+	background : #DDDDDD;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+}
+
+#page
+{
+    width: 900px;
+    margin: auto;
+}
+
+partie_centrale h1, footer h1, nav a
+{
+    font-family: Dayrom, serif;
+    font-weight: bold;
+    text-transform: small-caps;
+}
+
+/* Header */
+
+header
+{
+    background: url('http://informatique.umons.ac.be/sum2013/images/separateur.png') repeat-x bottom;
+}
+
+#titre_principal
+{
+    display: inline-block;
+}
+
+header h1
+{
+    font-family: 'BallparkWeiner', serif;
+    font-size: 1.6em;
+    font-weight: normal;
+}
+
+#logo, header h1
+{
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+header h2
+{
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+/* Bannière */
+
+#banniere
+{
+    margin-top: 15px;
+    height: 270px;
+    border-radius: 10px;
+    background: url('http://nmis.isti.cnr.it/~straccia/sum2014/banner2.jpg') no-repeat;
+	/*background: url('http://nmis.isti.cnr.it/~straccia/sum2014/banner.jpg') no-repeat;*/
+	/*background: url('http://nmis.isti.cnr.it/~straccia/sum2014/Oxford.jpg') no-repeat; */
+	/*background: url('http://nmis.isti.cnr.it/~straccia/sum2014/Oxford1.jpg') no-repeat; */
+    position: relative;
+    box-shadow: 0px 4px 4px #1c1a19;
+	/*box-shadow: 0px 0px 0px #1c1a19;*/
+    margin-bottom: 25px;
+}
+
+#banniere_txt1
+{
+    position: absolute;
+    bottom: 0px;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.5%;
+    height: 33px;
+    padding-top: 8px;
+    padding-left: 4px;
+    background-color: rgb(75,75,0); /* Pour les anciens navigateurs */
+    background-color: rgba(5,50,0,0.7);
+    color: white;
+    font-size: 1em;
+}
+
+#banniere_txt2
+{
+    position: absolute;
+    bottom: -15px;
+    left: 3px;
+    width: 99.5%;
+    height: 30px;
+    padding-top: 15px;
+    padding-left: 1px;
+	color: white;
+    font-size: 0.8em;
+    
+}
+
+
+/* Corps */
+
+texte, menu_left
+{	
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+texte
+{
+    width: 635px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+texte h1{
+	font-size: 1.5em;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+.pentagone
+{
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+texte
+{
+    font-size: 0.8em;
+}
+
+texte h2
+{
+	font-variant: small-caps;
+}
+
+texte .text-table-center td{ 
+	border-width:1px;
+	border-style:solid; 
+	border-color:black;	
+	text-align: center;
+}
+
+texte .text-table-left td{ 
+	border-width:1px;
+	border-style:solid; 
+	border-color:black;	
+	text-align: left;
+}
+
+texte .text-table-center td.title{ 
+	font-weight: bold;
+	background-color:#666666;
+	color: white;
+}
+
+texte .text-table-left td.title{ 
+	font-weight: bold;
+	background-color:#666666;
+	color: white;
+}
+
+
+
+
+
+
+menu_left .links
+{
+    position: relative;
+    width: 220px;
+    background-color: #706b64;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 1px 5px 15px 5px;
+    color: #F0FFFF;
+    font-size: 0.8em;
+}
+
+menu_left .copyright
+{
+	padding-top:20px;
+    color: #666666;
+    font-size: 0.6em;
+}
+
+
+p a:link, a:visited {
+	background: none;
+    color: black;
+}
+
+p a:hover, a:active {
+	background: none;
+    color: #960018;
+	font-weight: bold;
+}
+
+
+
+/* Liens */
+
+.mdiv{
+	margin: 0 22px 0 15px;
+}
+
+#liens {
+	font-size: 12px;
+    margin-left: 20px;
+}
+
+#liens ul {
+	list-style: none;
+    list-style-image:url('http://nmis.isti.cnr.it/~straccia/sum2014/images/puce2.gif');
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	margin-top: -12px;
+}
+
+#liens li a:link, a:visited {
+	background: none;
+    color:  #F0FFFF;
+	text-decoration: none; 
+}
+
+#liens li a:hover, a:active {
+	background: none;
+    color: #960018;
+	font-weight: bold;
+	text-decoration: none; 
+}
+
+
+texte a:link, texte a:visited {
+	background: none;
+    color: black;
+	font-weight: bold;
+}
+
+texte a:hover, texte a:active {
+	background: none;
+    color: #960018;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+footer
+{
+    background:  url('http://nmis.isti.cnr.it/~straccia/sum2014/images/line2.png') repeat-x top;
+    padding-top: 15px;
+    margin-top: 15px;
+	text-align: center;
+}
+
+
+
+
+
+
+/* Correctifs pour les vieilles versions d'Internet Explorer */
+
+/* Pour activer un positionnement type inline-block sur les vieilles versions d'IE */
+
+.old_ie #titre_principal, .old_ie #logo, .old_ie header h1, .old_ie nav, .old_ie nav li, .old_ie .bouton_rouge, .old_ie texte, .old_ie menu_left, .old_ie #tweet, .old_ie #mes_photos, .old_ie #mes_amis, .old_ie #mes_amis ul
+{
+    display: inline;
+    zoom: 1;
+}
+
+/* Quelques ajustements pour les vieilles versions d'IE */
+
+.old_ie partie_centrale h1, .ie8 partie_centrale h1
+{
+    font-size: 0.85em;
+}
+
+.old_ie footer div, .ie8 footer div
+{
+    margin-top: 30px;
+    background: url('http://informatique.umons.ac.be/sum2013/images/separateur.png') repeat-x top;
+}
+
+.red {
+	color: #F00;
+}
+#page partie_centrale texte h1 #page-table {
+	color: #F00;
+}
+#page partie_centrale texte p {
+	color: #F00;
+}
+.black {
+	color: #000;
+}
+#page partie_centrale texte h1 #page-table {
+	color: #000;
+}
+#page partie_centrale texte p {
+	color: #000;
+}

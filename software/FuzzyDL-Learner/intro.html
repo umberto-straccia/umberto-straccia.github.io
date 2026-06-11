@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;
+      charset=windows-1252">
+    <title>FuzzyDL-Learner System</title>
+  </head>
+  <body bgcolor="#FFFFFF">
+    <p class="titolo"><strong><font face="Georgia, Times New Roman,
+          Times, serif" size="+2">The </font><font face="Georgia, Times
+          New Roman, Times, serif" size="+2" color="#770000">FuzzyDL-Learner</font><font
+          face="Georgia, Times New Roman, Times, serif" size="+2">
+          System </font><font face="Georgia, Times New Roman, Times,
+          serif"><font size="1">(</font><font size="1" color="#dd1e28"><a
+              href="changes.html">see also latest changes</a></font><font
+            size="1">)</font></font></strong></p>
+    <p><em>The Project started in collaboration with <a
+          href="http://www.di.uniba.it/%7Elisi">Francesca A. Lisi</a></em>.
+    </p>
+    <hr>
+    <p><font face="Georgia, Times New Roman, Times, serif"
+        color="#770000">FuzzyDL-Learner </font><font face="Georgia,
+        Times New Roman, Times, serif">is an automatic learning system
+        for OLW 2 ontologies.</font></p>
+    <ul>
+      <li>G<font face="Georgia, Times New Roman, Times, serif">iven an
+          OWL 2 ontology, it allows to learn graded OWL 2 descriptions
+          of a target class in terms of specific inclusion axioms</font>
+        expressed in OWL EL like, in which, however, fuzzy concepts may
+        occur, such as HighPrice and LowPrice, to improve the redability
+        of the generated expressions. For instance, consider the case of
+        hotel finding in a possible tourism application, where an
+        ontology is used to describe the meaningful entities of the
+        domain (see <a
+href="http://donghee.info/research/SHSS/ObjectiveConceptsOntology%28OCO%29.html">here</a>).
+
+        Now, one may fix a city, say Pisa, extract the characteristic of
+        the hotels from Web sites and the graded hotel judgements of the
+        users, e.g., from <a href="http://www.tripadvisor.com">Trip
+          Advisor</a> and ask about what characterises <em>good</em>
+        hotels. Then one may learn that, </li>
+    </ul>
+    <div align="center">
+      <table width="876" border="1">
+        <tbody>
+          <tr>
+            <td width="88"><strong>Confidence</strong></td>
+            <td width="795"><strong>Axiom</strong></td>
+          </tr>
+          <tr>
+            <td>1,000</td>
+            <td>Hostel subclass of Good_Hotel</td>
+          </tr>
+          <tr>
+            <td>1,000</td>
+            <td> hasPrice_veryhigh subclass of Good_Hotel</td>
+          </tr>
+          <tr>
+            <td>0,569 </td>
+            <td>hasPrice_high subclass of Good_Hotel</td>
+          </tr>
+          <tr>
+            <td>0,286</td>
+            <td>hasAmenity some (24h_Reception) and hasAmenity some
+              (Disabled_Facilities) and hasPrice_low subclass of
+              Good_Hotel</td>
+          </tr>
+          <tr>
+            <td>0,282 </td>
+            <td>hasAmenity some (Babysitting) and hasRank some (Rank)
+              and hasPrice_fair subclass of Good_Hotel</td>
+          </tr>
+          <tr>
+            <td>0,200</td>
+            <td>Hotel_1_Star subclass of Good_Hotel</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <blockquote>
+      <blockquote>
+        <p>Here, the range of the real valued price attribute has been
+          automatically fuzzyfied as illustrated below.</p>
+      </blockquote>
+      <p align="center"><img src="hasprice.jpg" alt="has price"
+          height="229" width="291"></p>
+      <blockquote>
+        <p>See the <a
+            href="/cs/software/FuzzyDL-Learner/download/FOIL-DL/examples/">here</a>
+          for a list of ontologies on which <span class="red">FOIL-DL</span>
+          has been tested.</p>
+        <p>So far, the system supports the following algorithms</p>
+      </blockquote>
+      <ul>
+        <li><strong class="red1">FOIL-DL</strong>
+          <ul>
+            <li>Inspired by the well-known <a
+                href="http://en.wikipedia.org/wiki/First_Order_Inductive_Learner">FOIL</a>
+              algorithm</li>
+          </ul>
+        </li>
+        <li><strong class="red1">pFOIL-DL</strong>
+          <ul>
+            <li>Like FOIL-DL, though a novel ensemble learning measure
+              has been incorporated (see <a
+                href="../../download/papers/SAC15/SAC15.pdf">here</a>)</li>
+          </ul>
+        </li>
+        <li><strong class="red1">AdaBoost-DL</strong>
+          <ul>
+            <li>Based on <a
+href="http://www.google.it/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=4&amp;ved=0CDgQFjAD&amp;url=http%3A//www.sonycsl.co.jp/person/nielsen/PT/AdaboostR/2006-C-A_Real_Generalization_Of_Discrete_Adaboost%28ECAI2006%29.pdf&amp;ei=KTy5VIXpN4r6UKPggfAF&amp;usg=AFQjCNG_TS7gwN-Jv5R71DRgku6QnjJo0w&amp;bvm=bv.83829542,d.d24&amp;cad=rja">Real
+
+                AdaBoost</a>, where a genetic algorith has been used to
+              generate GCI candidates</li>
+          </ul>
+          <p><br>
+          </p>
+          In preparation:<br>
+        </li>
+        <li><strong class="red1">gFOIL-DL</strong>
+          <ul>
+            <li>Like FOIL-DL, though a genetic algorith has been used to
+              generate GCI candidates</li>
+          </ul>
+        </li>
+        <li><strong class="red1">gpFOIL-DL</strong>
+          <ul>
+            <li>Like gFOIL-DL, but ensemble learning measure of pFOIL-DL
+              has been used instead</li>
+          </ul>
+        </li>
+      </ul>
+      <blockquote>
+        <p>&nbsp; </p>
+      </blockquote>
+      <p><br>
+      </p>
+    </blockquote>
+  </body>
+</html>

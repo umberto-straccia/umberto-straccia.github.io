@@ -1,0 +1,7 @@
+(define-fuzzy-concept AudiTTPrize right-shoulder(0,50000,30500,31500))
+(define-concept AudiTT (and SportsCar (some hasPrice AudiTTPrize))
+
+(define-fuzzy-concept BuyerPrize left-shoulder(0,50000,30000,32000))
+(define-concept BuyerQuery (and SportsCar (some hasPrice BuyerPrize))
+
+(concept-satisfiable? (and BuyerQuery AudiTT))

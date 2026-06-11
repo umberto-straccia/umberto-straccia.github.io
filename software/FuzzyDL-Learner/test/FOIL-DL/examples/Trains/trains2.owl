@@ -1,0 +1,1179 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foo "http://example.com/foo#" >
+    <!ENTITY trains "http://example.com/trains#" >
+    <!ENTITY trains6 "http://example.com/trains#4" >
+    <!ENTITY trains2 "http://example.com/trains#0" >
+    <!ENTITY trains3 "http://example.com/trains#3" >
+    <!ENTITY trains5 "http://example.com/trains#2" >
+    <!ENTITY trains4 "http://example.com/trains#1" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://example.com/trains#"
+     xml:base="http://example.com/trains"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:foo="http://example.com/foo#"
+     xmlns:trains="http://example.com/trains#"
+     xmlns:trains6="&trains;4"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:trains5="&trains;2"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:trains3="&trains;3"
+     xmlns:trains2="&trains;0"
+     xmlns:trains4="&trains;1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://example.com/trains"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/trains#hasCar -->
+
+    <owl:ObjectProperty rdf:about="&trains;hasCar">
+        <rdfs:range rdf:resource="&trains;Car"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/trains#hasShape -->
+
+    <owl:ObjectProperty rdf:about="&trains;hasShape"/>
+    
+
+
+    <!-- http://example.com/trains#load -->
+
+    <owl:ObjectProperty rdf:about="&trains;load"/>
+    
+
+
+    <!-- http://example.com/trains#loadCount -->
+
+    <owl:ObjectProperty rdf:about="&trains;loadCount"/>
+    
+
+
+    <!-- http://example.com/trains#wheels -->
+
+    <owl:ObjectProperty rdf:about="&trains;wheels"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/trains#0LoadCar -->
+
+    <owl:Class rdf:about="&trains;0LoadCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;loadCount"/>
+                <owl:hasValue rdf:resource="&trains;zero"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#1LoadCar -->
+
+    <owl:Class rdf:about="&trains;1LoadCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;loadCount"/>
+                <owl:hasValue rdf:resource="&trains;one"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#2CarTrain -->
+
+    <owl:Class rdf:about="&trains;2CarTrain">
+        <rdfs:subClassOf rdf:resource="&trains;Train"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#2LoadCar -->
+
+    <owl:Class rdf:about="&trains;2LoadCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;loadCount"/>
+                <owl:hasValue rdf:resource="&trains;two"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#2WheelsCar -->
+
+    <owl:Class rdf:about="&trains;2WheelsCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;wheels"/>
+                <owl:hasValue rdf:resource="&trains;two"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#3CarTrain -->
+
+    <owl:Class rdf:about="&trains;3CarTrain">
+        <rdfs:subClassOf rdf:resource="&trains;Train"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#3LoadCar -->
+
+    <owl:Class rdf:about="&trains;3LoadCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;loadCount"/>
+                <owl:hasValue rdf:resource="&trains;three"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#3WheelsCar -->
+
+    <owl:Class rdf:about="&trains;3WheelsCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;wheels"/>
+                <owl:hasValue rdf:resource="&trains;three"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#4CarTrain -->
+
+    <owl:Class rdf:about="&trains;4CarTrain">
+        <rdfs:subClassOf rdf:resource="&trains;Train"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#Car -->
+
+    <owl:Class rdf:about="&trains;Car">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#CircleLoadCar -->
+
+    <owl:Class rdf:about="&trains;CircleLoadCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;load"/>
+                <owl:hasValue rdf:resource="&trains;circle"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#CircleShapeCar -->
+
+    <owl:Class rdf:about="&trains;CircleShapeCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;hasShape"/>
+                <owl:hasValue rdf:resource="&trains;circle"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#ClosedCar -->
+
+    <owl:Class rdf:about="&trains;ClosedCar">
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+        <owl:disjointWith rdf:resource="&trains;OpenCar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#DoubleCar -->
+
+    <owl:Class rdf:about="&trains;DoubleCar">
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#EastTrain -->
+
+    <owl:Class rdf:about="&trains;EastTrain">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#ElipseLoadCar -->
+
+    <owl:Class rdf:about="&trains;ElipseLoadCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;load"/>
+                <owl:hasValue rdf:resource="&trains;elipse"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#ElipseShapeCar -->
+
+    <owl:Class rdf:about="&trains;ElipseShapeCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;hasShape"/>
+                <owl:hasValue rdf:resource="&trains;elipse"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#HexagonLoadCar -->
+
+    <owl:Class rdf:about="&trains;HexagonLoadCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;load"/>
+                <owl:hasValue rdf:resource="&trains;hexagon"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#HexagonShapeCar -->
+
+    <owl:Class rdf:about="&trains;HexagonShapeCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;hasShape"/>
+                <owl:hasValue rdf:resource="&trains;hexagon"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#JaggedCar -->
+
+    <owl:Class rdf:about="&trains;JaggedCar">
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#LongCar -->
+
+    <owl:Class rdf:about="&trains;LongCar">
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+        <owl:disjointWith rdf:resource="&trains;ShortCar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#OpenCar -->
+
+    <owl:Class rdf:about="&trains;OpenCar">
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#RectangleLoadCar -->
+
+    <owl:Class rdf:about="&trains;RectangleLoadCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;load"/>
+                <owl:hasValue rdf:resource="&trains;rectangle"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#RectangleShapeCar -->
+
+    <owl:Class rdf:about="&trains;RectangleShapeCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;hasShape"/>
+                <owl:hasValue rdf:resource="&trains;rectangle"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#Shape -->
+
+    <owl:Class rdf:about="&trains;Shape"/>
+    
+
+
+    <!-- http://example.com/trains#ShortCar -->
+
+    <owl:Class rdf:about="&trains;ShortCar">
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#Train -->
+
+    <owl:Class rdf:about="&trains;Train"/>
+    
+
+
+    <!-- http://example.com/trains#TriangleLoadCar -->
+
+    <owl:Class rdf:about="&trains;TriangleLoadCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;load"/>
+                <owl:hasValue rdf:resource="&trains;triangle"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#TriangleShapeCar -->
+
+    <owl:Class rdf:about="&trains;TriangleShapeCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;hasShape"/>
+                <owl:hasValue rdf:resource="&trains;triangle"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#UShapeCar -->
+
+    <owl:Class rdf:about="&trains;UShapeCar">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&trains;hasShape"/>
+                <owl:hasValue rdf:resource="&trains;u_shaped"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&trains;Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/trains#WestTrain -->
+
+    <owl:Class rdf:about="&trains;WestTrain">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/trains#car_101 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_101">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+        <hasShape rdf:resource="&trains;u_shaped"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_102 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_102">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;LongCar"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <loadCount rdf:resource="&trains;two"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_11 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_11">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;LongCar"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <loadCount rdf:resource="&trains;three"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_12 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_12">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;ClosedCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <load rdf:resource="&trains;triangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_13 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_13">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;LongCar"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <load rdf:resource="&trains;hexagon"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_14 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_14">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <load rdf:resource="&trains;circle"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_21 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_21">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <load rdf:resource="&trains;triangle"/>
+        <wheels rdf:resource="&trains;two"/>
+        <hasShape rdf:resource="&trains;u_shaped"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_22 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_22">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+        <hasShape rdf:resource="&trains;u_shaped"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_23 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_23">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;ClosedCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <load rdf:resource="&trains;circle"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+        <loadCount rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_31 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_31">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <load rdf:resource="&trains;circle"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_32 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_32">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;ClosedCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <hasShape rdf:resource="&trains;hexagon"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <load rdf:resource="&trains;triangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_33 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_33">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;ClosedCar"/>
+        <rdf:type rdf:resource="&trains;LongCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;three"/>
+        <load rdf:resource="&trains;triangle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_41 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_41">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <load rdf:resource="&trains;triangle"/>
+        <wheels rdf:resource="&trains;two"/>
+        <hasShape rdf:resource="&trains;u_shaped"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_42 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_42">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;DoubleCar"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <load rdf:resource="&trains;triangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_43 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_43">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;ClosedCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <hasShape rdf:resource="&trains;elipse"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_44 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_44">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_51 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_51">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;DoubleCar"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <load rdf:resource="&trains;triangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_52 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_52">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;ClosedCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_53 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_53">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;ClosedCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <load rdf:resource="&trains;circle"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_61 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_61">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;ClosedCar"/>
+        <rdf:type rdf:resource="&trains;LongCar"/>
+        <load rdf:resource="&trains;circle"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <loadCount rdf:resource="&trains;three"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_62 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_62">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <load rdf:resource="&trains;triangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_71 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_71">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;DoubleCar"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <load rdf:resource="&trains;circle"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_72 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_72">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <load rdf:resource="&trains;triangle"/>
+        <wheels rdf:resource="&trains;two"/>
+        <hasShape rdf:resource="&trains;u_shaped"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_73 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_73">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;JaggedCar"/>
+        <rdf:type rdf:resource="&trains;LongCar"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+        <loadCount rdf:resource="&trains;zero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_81 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_81">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;ClosedCar"/>
+        <rdf:type rdf:resource="&trains;LongCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_82 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_82">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <load rdf:resource="&trains;circle"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <wheels rdf:resource="&trains;two"/>
+        <hasShape rdf:resource="&trains;u_shaped"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_91 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_91">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <load rdf:resource="&trains;circle"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <wheels rdf:resource="&trains;two"/>
+        <hasShape rdf:resource="&trains;u_shaped"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_92 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_92">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;JaggedCar"/>
+        <rdf:type rdf:resource="&trains;LongCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_93 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_93">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <hasShape rdf:resource="&trains;rectangle"/>
+        <load rdf:resource="&trains;rectangle"/>
+        <wheels rdf:resource="&trains;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#car_94 -->
+
+    <owl:NamedIndividual rdf:about="&trains;car_94">
+        <rdf:type rdf:resource="&trains;Car"/>
+        <rdf:type rdf:resource="&trains;OpenCar"/>
+        <rdf:type rdf:resource="&trains;ShortCar"/>
+        <load rdf:resource="&trains;circle"/>
+        <loadCount rdf:resource="&trains;one"/>
+        <wheels rdf:resource="&trains;two"/>
+        <hasShape rdf:resource="&trains;u_shaped"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#circle -->
+
+    <owl:NamedIndividual rdf:about="&trains;circle">
+        <rdf:type rdf:resource="&trains;Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#east1 -->
+
+    <owl:NamedIndividual rdf:about="&trains;east1">
+        <rdf:type rdf:resource="&trains;4CarTrain"/>
+        <rdf:type rdf:resource="&trains;EastTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;WestTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_11"/>
+        <hasCar rdf:resource="&trains;car_12"/>
+        <hasCar rdf:resource="&trains;car_13"/>
+        <hasCar rdf:resource="&trains;car_14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#east2 -->
+
+    <owl:NamedIndividual rdf:about="&trains;east2">
+        <rdf:type rdf:resource="&trains;3CarTrain"/>
+        <rdf:type rdf:resource="&trains;EastTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;WestTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_21"/>
+        <hasCar rdf:resource="&trains;car_22"/>
+        <hasCar rdf:resource="&trains;car_23"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#east3 -->
+
+    <owl:NamedIndividual rdf:about="&trains;east3">
+        <rdf:type rdf:resource="&trains;3CarTrain"/>
+        <rdf:type rdf:resource="&trains;EastTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;WestTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_31"/>
+        <hasCar rdf:resource="&trains;car_32"/>
+        <hasCar rdf:resource="&trains;car_33"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#east4 -->
+
+    <owl:NamedIndividual rdf:about="&trains;east4">
+        <rdf:type rdf:resource="&trains;4CarTrain"/>
+        <rdf:type rdf:resource="&trains;EastTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;WestTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_41"/>
+        <hasCar rdf:resource="&trains;car_42"/>
+        <hasCar rdf:resource="&trains;car_43"/>
+        <hasCar rdf:resource="&trains;car_44"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#east5 -->
+
+    <owl:NamedIndividual rdf:about="&trains;east5">
+        <rdf:type rdf:resource="&trains;3CarTrain"/>
+        <rdf:type rdf:resource="&trains;EastTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;WestTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_51"/>
+        <hasCar rdf:resource="&trains;car_52"/>
+        <hasCar rdf:resource="&trains;car_53"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#elipse -->
+
+    <owl:NamedIndividual rdf:about="&trains;elipse">
+        <rdf:type rdf:resource="&trains;Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#hexagon -->
+
+    <owl:NamedIndividual rdf:about="&trains;hexagon">
+        <rdf:type rdf:resource="&trains;Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#one -->
+
+    <owl:Thing rdf:about="&trains;one">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://example.com/trains#rectangle -->
+
+    <owl:NamedIndividual rdf:about="&trains;rectangle">
+        <rdf:type rdf:resource="&trains;Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#three -->
+
+    <owl:Thing rdf:about="&trains;three">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://example.com/trains#triangle -->
+
+    <owl:NamedIndividual rdf:about="&trains;triangle">
+        <rdf:type rdf:resource="&trains;Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#two -->
+
+    <owl:Thing rdf:about="&trains;two">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://example.com/trains#u_shaped -->
+
+    <owl:NamedIndividual rdf:about="&trains;u_shaped">
+        <rdf:type rdf:resource="&trains;Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#west10 -->
+
+    <owl:NamedIndividual rdf:about="&trains;west10">
+        <rdf:type rdf:resource="&trains;2CarTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type rdf:resource="&trains;WestTrain"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;EastTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_101"/>
+        <hasCar rdf:resource="&trains;car_102"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#west6 -->
+
+    <owl:NamedIndividual rdf:about="&trains;west6">
+        <rdf:type rdf:resource="&trains;2CarTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type rdf:resource="&trains;WestTrain"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;EastTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_61"/>
+        <hasCar rdf:resource="&trains;car_62"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#west7 -->
+
+    <owl:NamedIndividual rdf:about="&trains;west7">
+        <rdf:type rdf:resource="&trains;3CarTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type rdf:resource="&trains;WestTrain"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;EastTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_71"/>
+        <hasCar rdf:resource="&trains;car_72"/>
+        <hasCar rdf:resource="&trains;car_73"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#west8 -->
+
+    <owl:NamedIndividual rdf:about="&trains;west8">
+        <rdf:type rdf:resource="&trains;2CarTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type rdf:resource="&trains;WestTrain"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;EastTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_81"/>
+        <hasCar rdf:resource="&trains;car_82"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#west9 -->
+
+    <owl:NamedIndividual rdf:about="&trains;west9">
+        <rdf:type rdf:resource="&trains;4CarTrain"/>
+        <rdf:type rdf:resource="&trains;Train"/>
+        <rdf:type rdf:resource="&trains;WestTrain"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&trains;EastTrain"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCar rdf:resource="&trains;car_91"/>
+        <hasCar rdf:resource="&trains;car_92"/>
+        <hasCar rdf:resource="&trains;car_93"/>
+        <hasCar rdf:resource="&trains;car_94"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/trains#zero -->
+
+    <owl:Thing rdf:about="&trains;zero">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&trains;Car"/>
+            <rdf:Description rdf:about="&trains;Shape"/>
+            <rdf:Description rdf:about="&trains;Train"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&trains;CircleLoadCar"/>
+            <rdf:Description rdf:about="&trains;ElipseLoadCar"/>
+            <rdf:Description rdf:about="&trains;HexagonLoadCar"/>
+            <rdf:Description rdf:about="&trains;RectangleLoadCar"/>
+            <rdf:Description rdf:about="&trains;TriangleLoadCar"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&trains;0LoadCar"/>
+            <rdf:Description rdf:about="&trains;1LoadCar"/>
+            <rdf:Description rdf:about="&trains;2LoadCar"/>
+            <rdf:Description rdf:about="&trains;3LoadCar"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

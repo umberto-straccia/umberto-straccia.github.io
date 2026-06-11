@@ -1,0 +1,5104 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/Hotel2.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/Hotel2.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#24h_Reception"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Accomodation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Airport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amenity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attraction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Babysitting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beach-Volley"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beach_Umbrella"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bed_and_Breakfast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bike"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Boat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Booking_Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bowling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bridge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bus_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Camping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Center"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Civic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conference_Hall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cradle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disabled_Facilities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fire_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Golf_Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Good_Hotel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gym"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Health_Clinic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hospital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hostel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotel_1_Star"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotel_2_Stars"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotel_3_Stars"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotel_4_Stars"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hotel_5_Stars"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Internet_Access_Point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Laundry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Minigolf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Park"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pet_Allowed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Police_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Port"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Public_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Residence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Safety_box"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sail"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shopping_Center"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Airport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Attraction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Bridge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Bus_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Civic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Fire_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Park"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Police_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Shopping_Center"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Square"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Stadium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Theater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Tower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Town_Hall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_Train_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Site_Near_University"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sport_facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Square"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stadium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sub"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Subway_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sunbed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Surf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Swimming_Pool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Table_Tennis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tennis_Court"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Theater"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Town_Hall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train_Station"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#University"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WI-FI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wellness_Center"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAmenity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRank"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPrice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1_Star"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2_Stars"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#3_Stars"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#4_Stars"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#5_Stars"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_002"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_003"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_005"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_007"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_008"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_011"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_012"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_020"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_022"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_023"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_024"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_026"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_032"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_034"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_036"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_038"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_039"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_040"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_041"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_043"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_044"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_045"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_046"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_047"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_049"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_050"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_052"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_053"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_054"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_055"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_056"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_058"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hotel_059"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#airport_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#attraction_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bridge_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bus_station_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bus_station_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bus_station_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#center_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#civic_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hospital_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#square_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#square_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#square_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#square_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stadium_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#station_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#station_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#station_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tower_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#town_hall_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#university_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#university_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#university_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#university_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#university_5"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Hotel_1_Star"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Hotel"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasRank"/>
+                <NamedIndividual IRI="#1_Star"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hotel_2_Stars"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Hotel"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasRank"/>
+                <NamedIndividual IRI="#2_Stars"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hotel_3_Stars"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Hotel"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasRank"/>
+                <NamedIndividual IRI="#3_Stars"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hotel_4_Stars"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Hotel"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasRank"/>
+                <NamedIndividual IRI="#4_Stars"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hotel_5_Stars"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Hotel"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasRank"/>
+                <NamedIndividual IRI="#5_Stars"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#24h_Reception"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accomodation"/>
+        <Class IRI="#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Airport"/>
+        <Class IRI="#Station"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Amenity"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attraction"/>
+        <Class IRI="#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Babysitting"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bar"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beach-Volley"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beach_Umbrella"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <Class IRI="#Accomodation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bike"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Boat"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Booking_Service"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowling"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bridge"/>
+        <Class IRI="#Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bus_Station"/>
+        <Class IRI="#Station"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Camping"/>
+        <Class IRI="#Accomodation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Center"/>
+        <Class IRI="#Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Civic"/>
+        <Class IRI="#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conference_Hall"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cradle"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disabled_Facilities"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fire_Station"/>
+        <Class IRI="#Civic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Golf_Course"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Good_Hotel"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gym"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health_Clinic"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hospital"/>
+        <Class IRI="#Civic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hostel"/>
+        <Class IRI="#Accomodation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotel"/>
+        <Class IRI="#Accomodation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotel_1_Star"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotel_2_Stars"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotel_3_Stars"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotel_4_Stars"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hotel_5_Stars"/>
+        <Class IRI="#Hotel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Internet_Access_Point"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Laundry"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Minigolf"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Park"/>
+        <Class IRI="#Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parking"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pet_Allowed"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Police_Station"/>
+        <Class IRI="#Civic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pool"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Port"/>
+        <Class IRI="#Station"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Public_facility"/>
+        <Class IRI="#Amenity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rank"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Residence"/>
+        <Class IRI="#Accomodation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restaurant"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Safety_box"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sail"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shopping_Center"/>
+        <Class IRI="#Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Airport"/>
+        <Class IRI="#Site_Near_Station"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Attraction"/>
+        <Class IRI="#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Bridge"/>
+        <Class IRI="#Site_Near_Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <Class IRI="#Site_Near_Station"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Civic"/>
+        <Class IRI="#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Fire_Station"/>
+        <Class IRI="#Site_Near_Civic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Park"/>
+        <Class IRI="#Site_Near_Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Police_Station"/>
+        <Class IRI="#Site_Near_Civic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Shopping_Center"/>
+        <Class IRI="#Site_Near_Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Square"/>
+        <Class IRI="#Site_Near_Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Stadium"/>
+        <Class IRI="#Site_Near_Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Station"/>
+        <Class IRI="#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Theater"/>
+        <Class IRI="#Site_Near_Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Tower"/>
+        <Class IRI="#Site_Near_Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Town_Hall"/>
+        <Class IRI="#Site_Near_Civic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <Class IRI="#Site_Near_Station"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Site_Near_University"/>
+        <Class IRI="#Site_Near_Civic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sport_facility"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Square"/>
+        <Class IRI="#Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stadium"/>
+        <Class IRI="#Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Station"/>
+        <Class IRI="#Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sub"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Subway_Station"/>
+        <Class IRI="#Station"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sunbed"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surf"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Swimming_Pool"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Table_Tennis"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tennis_Court"/>
+        <Class IRI="#Sport_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Theater"/>
+        <Class IRI="#Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tower"/>
+        <Class IRI="#Attraction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Town_Hall"/>
+        <Class IRI="#Civic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train_Station"/>
+        <Class IRI="#Station"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#University"/>
+        <Class IRI="#Civic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WI-FI"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wellness_Center"/>
+        <Class IRI="#Public_facility"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Hotel_1_Star"/>
+        <Class IRI="#Hotel_2_Stars"/>
+        <Class IRI="#Hotel_3_Stars"/>
+        <Class IRI="#Hotel_4_Stars"/>
+        <Class IRI="#Hotel_5_Stars"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Rank"/>
+        <NamedIndividual IRI="#1_Star"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rank"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rank"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rank"/>
+        <NamedIndividual IRI="#4_Stars"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rank"/>
+        <NamedIndividual IRI="#5_Stars"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Babysitting"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Sunbed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Swimming_Pool"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_002"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_003"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_004"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Sunbed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_005"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bridge"/>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Town_Hall"/>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bike"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_006"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_007"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_009"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_010"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_011"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_012"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Babysitting"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Gym"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_013"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_014"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Babysitting"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Gym"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_015"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Babysitting"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Swimming_Pool"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Wellness_Center"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_016"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_018"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_019"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_020"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bridge"/>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Town_Hall"/>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Babysitting"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_021"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_022"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_022"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_022"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_022"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_022"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_022"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_022"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_023"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hostel"/>
+        <NamedIndividual IRI="#Hotel_023"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_023"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_023"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_023"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_024"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bridge"/>
+        <NamedIndividual IRI="#Hotel_024"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_024"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_024"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_024"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_024"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_024"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_025"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_026"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_026"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_026"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_026"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_026"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Swimming_Pool"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_026"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_026"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_027"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Sunbed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_028"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_029"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_030"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bridge"/>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Town_Hall"/>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Babysitting"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_031"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_032"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_032"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Stadium"/>
+        <NamedIndividual IRI="#Hotel_032"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_032"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_032"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_032"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_032"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_032"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Sunbed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_033"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_034"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_034"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bridge"/>
+        <NamedIndividual IRI="#Hotel_034"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_034"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_034"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Town_Hall"/>
+        <NamedIndividual IRI="#Hotel_034"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_034"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_034"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Stadium"/>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_035"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_036"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_036"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_036"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_036"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Babysitting"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_037"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_038"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_038"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_038"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_038"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_038"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_038"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_039"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bridge"/>
+        <NamedIndividual IRI="#Hotel_039"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_039"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_039"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_040"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_040"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_040"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_040"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_040"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_040"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_040"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_040"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_041"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_041"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_041"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Conference_Hall"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_041"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_041"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_041"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_041"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_042"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_043"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_043"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bridge"/>
+        <NamedIndividual IRI="#Hotel_043"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Town_Hall"/>
+        <NamedIndividual IRI="#Hotel_043"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_043"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_043"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_044"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_044"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_044"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_045"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_045"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_045"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_045"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_045"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_045"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_045"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_046"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_046"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_046"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#24h_Reception"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_046"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_047"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_047"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_047"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Babysitting"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Booking_Service"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Safety_box"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_048"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_049"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hostel"/>
+        <NamedIndividual IRI="#Hotel_049"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_049"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_049"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_049"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_049"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_050"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_050"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Tower"/>
+        <NamedIndividual IRI="#Hotel_050"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_050"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_050"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_050"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Camping"/>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Bar"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Disabled_Facilities"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Sunbed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_051"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_052"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_052"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_052"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_052"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_052"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_052"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_052"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_052"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_053"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_053"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_053"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Babysitting"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_053"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_053"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_053"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_053"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Laundry"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_054"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_055"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Good_Hotel"/>
+        <NamedIndividual IRI="#Hotel_055"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_055"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_055"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_056"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_056"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_University"/>
+        <NamedIndividual IRI="#Hotel_056"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Bus_Station"/>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Square"/>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Site_Near_Train_Station"/>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Internet_Access_Point"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_057"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_058"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_058"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_058"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_058"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_058"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_058"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bed_and_Breakfast"/>
+        <NamedIndividual IRI="#Hotel_059"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hotel"/>
+        <NamedIndividual IRI="#Hotel_059"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectComplementOf>
+            <Class IRI="#Good_Hotel"/>
+        </ObjectComplementOf>
+        <NamedIndividual IRI="#Hotel_059"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Cradle"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_059"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Parking"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_059"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#Pet_Allowed"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_059"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAmenity"/>
+            <Class IRI="#WI-FI"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Hotel_059"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Airport"/>
+        <NamedIndividual IRI="#airport_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attraction"/>
+        <NamedIndividual IRI="#attraction_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bridge"/>
+        <NamedIndividual IRI="#bridge_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bus_Station"/>
+        <NamedIndividual IRI="#bus_station_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bus_Station"/>
+        <NamedIndividual IRI="#bus_station_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bus_Station"/>
+        <NamedIndividual IRI="#bus_station_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Center"/>
+        <NamedIndividual IRI="#center_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Civic"/>
+        <NamedIndividual IRI="#civic_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospital"/>
+        <NamedIndividual IRI="#hospital_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Square"/>
+        <NamedIndividual IRI="#square_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Square"/>
+        <NamedIndividual IRI="#square_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Square"/>
+        <NamedIndividual IRI="#square_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Square"/>
+        <NamedIndividual IRI="#square_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Stadium"/>
+        <NamedIndividual IRI="#stadium_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Train_Station"/>
+        <NamedIndividual IRI="#station_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Train_Station"/>
+        <NamedIndividual IRI="#station_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Train_Station"/>
+        <NamedIndividual IRI="#station_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tower"/>
+        <NamedIndividual IRI="#tower_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Town_Hall"/>
+        <NamedIndividual IRI="#town_hall_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#University"/>
+        <NamedIndividual IRI="#university_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#University"/>
+        <NamedIndividual IRI="#university_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#University"/>
+        <NamedIndividual IRI="#university_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#University"/>
+        <NamedIndividual IRI="#university_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#University"/>
+        <NamedIndividual IRI="#university_5"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_001"/>
+        <NamedIndividual IRI="#4_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_002"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_003"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_004"/>
+        <NamedIndividual IRI="#5_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_005"/>
+        <NamedIndividual IRI="#1_Star"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_006"/>
+        <NamedIndividual IRI="#4_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_007"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_008"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_009"/>
+        <NamedIndividual IRI="#4_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_010"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_011"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_012"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_013"/>
+        <NamedIndividual IRI="#4_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_014"/>
+        <NamedIndividual IRI="#4_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_015"/>
+        <NamedIndividual IRI="#4_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_016"/>
+        <NamedIndividual IRI="#5_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_017"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_018"/>
+        <NamedIndividual IRI="#4_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_019"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_020"/>
+        <NamedIndividual IRI="#1_Star"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_021"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_022"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_024"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_025"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_026"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_027"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_028"/>
+        <NamedIndividual IRI="#4_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_029"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_030"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_031"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_032"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_033"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_035"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_037"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_038"/>
+        <NamedIndividual IRI="#1_Star"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_039"/>
+        <NamedIndividual IRI="#1_Star"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_040"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_041"/>
+        <NamedIndividual IRI="#3_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_042"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_044"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_046"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_047"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_050"/>
+        <NamedIndividual IRI="#2_Stars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRank"/>
+        <NamedIndividual IRI="#Hotel_055"/>
+        <NamedIndividual IRI="#1_Star"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_001"/>
+        <Literal datatypeIRI="&xsd;integer">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_002"/>
+        <Literal datatypeIRI="&xsd;integer">85</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_003"/>
+        <Literal datatypeIRI="&xsd;integer">88</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_004"/>
+        <Literal datatypeIRI="&xsd;integer">136</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_005"/>
+        <Literal datatypeIRI="&xsd;integer">49</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_006"/>
+        <Literal datatypeIRI="&xsd;integer">99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_007"/>
+        <Literal datatypeIRI="&xsd;integer">62</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_008"/>
+        <Literal datatypeIRI="&xsd;integer">75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_009"/>
+        <Literal datatypeIRI="&xsd;integer">74</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_010"/>
+        <Literal datatypeIRI="&xsd;integer">79</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_011"/>
+        <Literal datatypeIRI="&xsd;integer">63</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_012"/>
+        <Literal datatypeIRI="&xsd;integer">69</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_013"/>
+        <Literal datatypeIRI="&xsd;integer">115</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_014"/>
+        <Literal datatypeIRI="&xsd;integer">81</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_015"/>
+        <Literal datatypeIRI="&xsd;integer">84</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_016"/>
+        <Literal datatypeIRI="&xsd;integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_017"/>
+        <Literal datatypeIRI="&xsd;integer">63</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_018"/>
+        <Literal datatypeIRI="&xsd;integer">88</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_019"/>
+        <Literal datatypeIRI="&xsd;integer">79</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_020"/>
+        <Literal datatypeIRI="&xsd;integer">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_021"/>
+        <Literal datatypeIRI="&xsd;integer">49</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_022"/>
+        <Literal datatypeIRI="&xsd;integer">59</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_023"/>
+        <Literal datatypeIRI="&xsd;integer">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_024"/>
+        <Literal datatypeIRI="&xsd;integer">66</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_025"/>
+        <Literal datatypeIRI="&xsd;integer">108</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_026"/>
+        <Literal datatypeIRI="&xsd;integer">61</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_027"/>
+        <Literal datatypeIRI="&xsd;integer">67</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_028"/>
+        <Literal datatypeIRI="&xsd;integer">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_029"/>
+        <Literal datatypeIRI="&xsd;integer">76</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_030"/>
+        <Literal datatypeIRI="&xsd;integer">79</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_031"/>
+        <Literal datatypeIRI="&xsd;integer">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_032"/>
+        <Literal datatypeIRI="&xsd;integer">67</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_033"/>
+        <Literal datatypeIRI="&xsd;integer">77</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_034"/>
+        <Literal datatypeIRI="&xsd;integer">69</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_035"/>
+        <Literal datatypeIRI="&xsd;integer">82</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_036"/>
+        <Literal datatypeIRI="&xsd;integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_037"/>
+        <Literal datatypeIRI="&xsd;integer">69</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_038"/>
+        <Literal datatypeIRI="&xsd;integer">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_039"/>
+        <Literal datatypeIRI="&xsd;integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_040"/>
+        <Literal datatypeIRI="&xsd;integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_041"/>
+        <Literal datatypeIRI="&xsd;integer">105</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_042"/>
+        <Literal datatypeIRI="&xsd;integer">62</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_043"/>
+        <Literal datatypeIRI="&xsd;integer">78</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_044"/>
+        <Literal datatypeIRI="&xsd;integer">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_045"/>
+        <Literal datatypeIRI="&xsd;integer">59</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_046"/>
+        <Literal datatypeIRI="&xsd;integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_047"/>
+        <Literal datatypeIRI="&xsd;integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_048"/>
+        <Literal datatypeIRI="&xsd;integer">68</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_049"/>
+        <Literal datatypeIRI="&xsd;integer">65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_050"/>
+        <Literal datatypeIRI="&xsd;integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_051"/>
+        <Literal datatypeIRI="&xsd;integer">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_052"/>
+        <Literal datatypeIRI="&xsd;integer">99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_053"/>
+        <Literal datatypeIRI="&xsd;integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_054"/>
+        <Literal datatypeIRI="&xsd;integer">98</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_055"/>
+        <Literal datatypeIRI="&xsd;integer">55</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_056"/>
+        <Literal datatypeIRI="&xsd;integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_057"/>
+        <Literal datatypeIRI="&xsd;integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_058"/>
+        <Literal datatypeIRI="&xsd;integer">73</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPrice"/>
+        <NamedIndividual IRI="#Hotel_059"/>
+        <Literal datatypeIRI="&xsd;integer">60</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAmenity"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasRank"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAmenity"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRank"/>
+        <Class IRI="#Hotel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAmenity"/>
+        <Class IRI="#Amenity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRank"/>
+        <Class IRI="#Rank"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasPrice"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPrice"/>
+        <Class IRI="#Accomodation"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPrice"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_001</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Ranieri</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_001</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Via Filippo Mazzei 2 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_002</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Roseto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_003</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Roma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_004</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Relais dell&apos;Orologio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_005</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Casa Doina</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_006</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Bologna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_007</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Milano</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_008</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Capitol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_009</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Repubblica Marinara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_010</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Alessandro Della Spina</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_011</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Athena</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_012</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Amalfitana</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_013</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">AC Hotel Pisa by Marriott</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_014</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Grand Bonanno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_015</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Golden Tulip Galilei</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_016</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Abitalia Tower Plaza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_017</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Santa Croce Fossabanda</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_018</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel NH Cavalieri</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_019</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel La Pace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_020</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Relais dei Fiori</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_021</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Royal Victoria</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_022</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">B&amp;B Hotel Pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_023</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Pisa Delfo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_024</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Verdi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_025</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Giardino Tower Inn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_026</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Airone Pisa Park</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_027</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Touring</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_028</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Grand Hotel Duomo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_029</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Terminus &amp; Plaza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_030</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Minerva</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_031</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Leonardo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_032</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Ariston</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_033</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Di Stefano</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_034</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Centro Storico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_035</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Villa Kinzica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_036</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Residence Isola Verde</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_037</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Francesco</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_038</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Helvetia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_039</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Rinascente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_040</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Astor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_041</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Novecento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_042</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel La Torre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_043</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Le Donzelle di Vettovaglie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_044</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Villa Primavera</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_045</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Casa San Tommaso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_046</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Moderno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_047</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Garden</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_048</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Villa Leaning Tower</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_049</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel La Locanda di Giada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_050</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Cecile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_051</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Torre Pendente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_052</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel il Giardino di Alice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_053</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Five Roses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_054</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Live 09</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_055</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel The Sun Flower</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_056</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Caterina</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_057</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hotel Gli Arlecchini</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_058</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Casa Doina Airport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hotel_059</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Casa Doina Airport 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#airport_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">piazzale corradino d&apos;ascanio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#attraction_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">duomo: piazza del duomo pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#bridge_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ponte di mezzo pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#bus_station_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">piazza s antonio pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#bus_station_2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">piazza della stazione pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#bus_station_3</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">piazzale corradino d&apos;ascanio pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#center_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">corso italia 5 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#civic_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">via giacomo matteotti 1 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hospital_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">via piero trivella pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#square_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">piazza del Duomo 6 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#square_2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">piazza dei miracoli pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#square_3</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">piazza santa caterina pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#square_4</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">piazza vittorio emanuele II pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stadium_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">via antonio rosmini 12 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#station_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">pisa centrale: piazza della stazione pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#station_2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">pisa san rossore: viale delle cascine 1 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#station_3</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">pisa aeroporto: piazzale corradino d&apos;ascanio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tower_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">piazza dei miracoli pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#town_hall_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">via del moro 2 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#university_1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">via diotisalvi 2 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#university_2</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">via curtatone e montanara 15 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#university_3</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">largo bruno pontecorvo 3 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#university_4</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">via cosimo ridolfi 10 pisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#university_5</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">via del boschetto 80 pisa</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+

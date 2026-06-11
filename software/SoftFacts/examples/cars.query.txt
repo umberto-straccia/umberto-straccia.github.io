@@ -1,0 +1,7 @@
+(RETRIEVE (?x ) WHERE ( (Car ?x) ) )
+
+(RETRIEVE (?x ?y ) WHERE ( (HasPRICE ?x ?y ) (>= ?y 12000 ) ) )
+
+(RETRIEVE (?x ?y ) WHERE ( (HasPRICE ?x ?y ) ) ORDERBY ( &ls(10000 14000 ?y)  ) LIMIT (10))
+
+(RETRIEVE (?x ?m ?y ?z ) WHERE ( (HasPRICE ?x ?y) (HasKM ?x ?z) (HasMODEL?x ?m))  ORDERBY (&ls(10000 14000 ?y) * 0.7 + &ls(13000 17000 km) * 0.3 ) LIMIT (3))

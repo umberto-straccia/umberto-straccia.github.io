@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--last modified on Tue, Oct 7, 1997 17:28-->
+<HTML>
+
+<HEAD>
+	<META NAME="GENERATOR" Content="Symantec Visual Page 1.0.2">
+	<META NAME="Author" Content="Umberto Straccia">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>Meghini, Sebastiani, Straccia.</TITLE>
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#770000" VLINK="#003399" ALINK="#770000">
+
+<P>
+<HR>
+
+<H4></H4>
+<P><FONT COLOR="#AA0000"><B>Reasoning about the Form and Content for Multimedia Objects
+(Extended Abstract)</B></FONT></P>
+<P><FONT COLOR="#003399">In <CITE>Proceedings of AAAI 1997 Spring Symposium on Intelligent
+integration and Use of Text, Image, Video and Audio</CITE>, pages 89--94, Stanford
+University, California, 1997.</FONT><BR>
+
+<HR>
+<STRONG> Introduction: </STRONG><BR>
+Due to the pervasive role of multimedia documents (MDs) in nowadays information systems,
+a vast amount of research has been carried out in the last few years on methods for
+effectively retrieving such documents from large repositories. This research is still
+in its infancy, due to the inherent difficulty of indexing documents pertaining to
+media other than text in a way that reflects their information content and, as a
+consequence, that significantly impacts on retrieval. Nonetheless, a number of theoretical
+results concerning sub-problems (e.g.\ the image retrieval problem) have been obtained
+and experimented with, and on top of these a first generation of retrieval systems
+have been built~\cite{ieee} and, in some cases, even turned into commercial products~\cite{virage,qbic}.
+The distinguishing feature of these multimedia retrieval systems (MRSs), and of the
+related research models, is the lack of a proper representation and use of the {\em
+content} of non-textual documents: only features pertaining to their {\em form},
+being most amenable to automatic extraction through digital signal processing (DSP)
+techniques, are used upon retrieval. But this is disturbing, as documents, irrespective
+of the representation medium they employ, are to be regarded as {\em information
+carriers}, and as such are to be studied along two parallel dimensions, that of {\em
+form} (or {\em syntax}, or {\em symbol}) and that of {\em content} (or {\em semantics},
+or {\em meaning}). Here, ``form'' is just a collective name for all those (medium-dependent)
+features of an information carrier that pertain to the representation and to the
+representation medium, while ``content'' is likewise a collective name for those
+(medium-independent) features that pertain to the slice of the real world being represented,
+which exists independently of the existence of a representation referring to it.
+The main thrust of this paper is that a data model for the retrieval of MDs (which
+we here take as consisting of multiple sub-documents each pertaining to possibly
+different media, rather than as just non-textual ``atomic'' documents) not only needs
+both dimensions to be taken into account, but also requires that {\em each of them
+be tackled by means of the tools most appropriate to it}, and that these sets of
+tools be integrated in a principled way in order to ensure transparent user access.
+Concerning the issue of tool appropriateness, we think that, inasmuch as the techniques
+from DSP (used e.g.\ in image and audio retrieval) are inadequate to reason about
+content, those from the field of knowledge representation are inadequate to deal
+with document form. This study addresses the problem of injecting semantics into
+MD retrieval by presenting a data model for MDs where sub-documents may be either
+texts or images. The way this model enforces the interaction between these two media
+is illustrative of how other media might also be accounted for. Texts and images
+are represented at the content level as sets of properties of the real-world objects
+{\em being represented}; at this level, the representation is {\em medium-independent},
+and a unique language for content representation is thus adopted. This data model
+is logic-based, in the sense that this latter language is based on a {\em description
+logic} (DL -- see e.g.~\cite{Borgida95}). Texts and images are also represented at
+the form level, as sets of physical features of the objects {\em representing} a
+slice of the world; at this level, the representation is {\em medium-dependent},
+so different document processing techniques are used to deal with sub-documents expressed
+in the different media. Although features pertaining to form are not represented
+explicitly in the DL, they impact on the DL-based reasoning through a mechanism of
+``procedural attachments''. This implements the connection between (logical) reasoning
+about content and (non-logical) reasoning about form. From the point of view of the
+{\em semantics} of the query language, this latter connection is established by restricting
+the set of interpretations of the logical language to those that verify the constraints
+imposed at form level by the results of the text processing and DSP analysis. This
+mechanism for giving semantics to procedural attachments, thereby allowing to effectively
+merge logical and non-logical reasoning, has also been called the {\em method of
+concrete domains}~\cite{concretedomains}. Although the main task of our DL is reasoning
+about content, our DL-based query language is also endowed with the referential machinery
+to address the form dimension of text and images; linking the form and content of
+the same document is made possible by the sharing of the same DL symbols. The DL-based
+query language thus allows the expression of retrieval requests addressing both structural
+(form) and conceptual (content) similarity, and its underlying logic permits, among
+other things, to bring to bear domain knowledge (whose representation DLs are notoriously
+good at) in the retrieval process. The query language also includes facilities for
+fuzzy reasoning, in order to address the inherently quantitative nature of notions
+like ``similarity'' between text/images or between their features (word morphology,
+image colour, image shape, and the like). The model is extensible, in that the set
+of symbols representing similarity can be enriched at will, to account for different
+notions of similarity and methods for computing it. The resulting retrieval capability
+thus extends that of current MRSs with the use of semantic information processing
+and reasoning about text/image content. So far, the only attempts in this direction
+had been based on textual annotations to non-textual documents (``captions'': see
+e.g.~\cite{smeaton96}), in some cases supported by the use of thesauri to semantically
+connect the terms occurring in the text~\cite{guglielmo}; this means that text is
+seen as mere comment on the non-textual document, and not as an object of independent
+interest and therefore subject to retrieval {\it per se}. In our model text and images
+are both first-class citizens, and this clearly indicates how the extension to other
+media could be accomplished. The paper is organised as follows. Section~\ref{sec:l}
+deals with the ``form'' dimension of texts and images, defining the notions of {\em
+text layout} and {\em image layout}; these consists of the symbolic representation
+of form-related aspects of a text or image. Both notions are endowed with a {\em
+mereology}, i.e.\ a theory of parts, based on the notion of {\em text region} and
+{\em image region} as from digital geometry. In Section~\ref{sec:ric} we briefly
+introduce a fuzzy DL, discussing its use to represent document content and to ``anchor''
+content representations to form representations. Document bases are defined in Section~\ref{sec:db},
+while Section~\ref{sec:qil} introduce queries, categorising them with respect to
+the representation medium and to the dimension involved, and describing how the ``procedural
+attachment'' and the ``concrete domains'' methods provide a smooth integration of
+form- and content-based retrieval. The full paper also discusses its computational
+complexity and the realization of a MRS supporting the model. Concerning this latter
+point, we only remark that this are well within reach of the current technology.
+In particular, we have developed a theorem prover for a significant extension of
+the DL we use here~\cite{carlo31}, based on a sound and complete Gentzen-style sequent
+calculus; this theorem prover is currently being prototyped for subsequent experimental
+evaluation. 
+<HR>
+
+
+</BODY>
+
+</HTML>

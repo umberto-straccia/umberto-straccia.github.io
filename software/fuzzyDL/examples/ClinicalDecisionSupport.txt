@@ -1,0 +1,20 @@
+% Ontology of patients
+
+(implies CVC Disease)
+(implies Diabetes Disease)
+
+(define-concrete-feature gender *string*)
+(define-concrete-feature output *string*)
+(define-concrete-feature lastLDL *real* 0 1000)
+
+(define-fuzzy-concept TriglyceridesMoreThan150 crisp (0, 1000, 150, 1000))
+(define-fuzzy-concept HDLLessThan40 crisp (0, 1000, 0, 40))
+(define-fuzzy-concept HDLLessThan50 crisp (0, 1000, 0, 50))
+
+(define-concept DiabeticPatient (and Patient (some hasDisease Diabetes)) )
+(define-concept LDLNearNormal (and (>= lastLDL value1) (<= lastLDL value2)))
+(define-concept DiabeticPatientWithHigherRiskofCVD (and DiabeticPatient (some hasDisease CVD ) (all lastTriglycerides TriglyceridesMoreThan150)  LDLNearNormal (or (and (= gender "male") (all lastHDL HDLLessThan40)) (and (= gender "female") (all lastHDL HDLLessThan50)) ) ) )
+
+% Rule
+
+(l-implies DiabeticPatientWithHigherRiskofCVD (= output "Order_Fibrate_Therapy") )

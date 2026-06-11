@@ -1,0 +1,139 @@
+% Flood Forecasting (Illustrative Example)
+
+(define-fuzzy-number-range 0 1000)
+
+% rain fall is measured in liter per square meter
+%(define-concrete-feature rainfall *real* 0 100)
+
+(functional rainfall)
+(range rainfall *real* 0 100)
+
+% fuzzy sets for rain fall
+(define-fuzzy-concept LowRainfall left-shoulder(0,100,15,18)) 
+(define-fuzzy-concept MidRainfall trapezoidal(0,100,12,18,27,33)) 
+(define-fuzzy-concept HighRainfall right-shoulder(0,100,27,33)) 
+
+% air temperature is measured in degree celsius
+%(define-concrete-feature airtemperature *real* 0 60)
+
+(functional airtemperature)
+(range airtemperature *real* 0 60)
+
+% fuzzy sets for air temperature
+(define-fuzzy-concept LowAirTemperature left-shoulder(0,100,20,23)) 
+(define-fuzzy-concept MidAirTemperature trapezoidal(0,100,17,23,27,33)) 
+(define-fuzzy-concept HighAirTemperature right-shoulder(0,100,27,33)) 
+
+% meteo alert codes: green=1, orange=4.5, red=9
+%(define-concrete-feature meteoalertcode *real* 0 9)
+
+(functional meteoalertcode)
+(range meteoalertcode *real* 0 9)
+
+(define-fuzzy-concept MeteoGreen left-shoulder(0,9,1,3)) 
+(define-fuzzy-concept MeteoOrange triangular(0,9,3,4.5,6)) 
+(define-fuzzy-concept MeteoRed right-shoulder(0,9,8,9)) 
+
+
+% Rule Set 1
+% Knowledge regarding the meteorological warning
+
+
+(define-concept Rule11 (g-and (some rainfall LowRainfall) (some airtemperature LowAirTemperature) (some meteoalertcode MeteoGreen)))
+
+(define-concept Rule12 (g-and (some rainfall MidRainfall)  (some airtemperature MidAirTemperature) (some meteoalertcode MeteoOrange)))
+
+(define-concept Rule13 (g-and (some rainfall HighRainfall) (some meteoalertcode MeteoRed)))
+
+(define-concept RuleS1 (g-or Rule11 Rule12 Rule13) )
+
+%%%%%%%%%%
+
+% Water flow is measured in m^3/s
+%(define-concrete-feature flow *real* 0 100)
+
+(functional flow)
+(range flow *real* 0 100)
+
+% fuzzy sets for water flow
+(define-fuzzy-concept LowFlow left-shoulder(0,100,12.5,15)) 
+(define-fuzzy-concept MidFlow trapezoidal(0,100,10,15,32,35)) 
+(define-fuzzy-concept HighFlow trapezoidal(0,100,32,36,48,53)) 
+(define-fuzzy-concept VeryHighFlow right-shoulder(0,100,48,53))
+
+% Water level is measured in mdM
+%(define-concrete-feature waterlevel *real* 0 1000)
+
+(functional waterlevel)
+(range waterlevel *real* 0 1000)
+
+% fuzzy sets for water flow
+(define-fuzzy-concept LowWaterlevel left-shoulder(0,1000,596,598)) 
+(define-fuzzy-concept MidWaterlevel trapezoidal(0,1000,595,598,601,604)) 
+(define-fuzzy-concept HighWaterlevel trapezoidal(0,1000,602,604,608,610)) 
+(define-fuzzy-concept VeryWaterlevel right-shoulder(0,1000,608,609))
+
+
+% hydro alert codes: green=1, yellow=3, orange=6, red=9
+%(define-concrete-feature hydroalertcode *real* 0 9)
+
+(functional hydroalertcode)
+(range hydroalertcode *real* 0 9)
+
+(define-fuzzy-concept HydroGreen left-shoulder(0,9,1,2)) 
+(define-fuzzy-concept HydroYellow triangular(0,9,1,3,5)) 
+(define-fuzzy-concept HydroOrange triangular(0,9,4,6,8)) 
+(define-fuzzy-concept HydroRed right-shoulder(0,9,8,9)) 
+
+%% Rule Set 2
+% Knowledge regarding the hydrogeological warning (flood production analysis, flood forecasting)
+
+(define-concept Rule21 (g-and (some flow LowFlow) (some waterlevel LowWaterlevel) (some hydroalertcode HydroGreen)))
+
+(define-concept Rule22 (g-and  (some flow MidFlow)  (some waterlevel MidWaterlevel) (some hydroalertcode HydroYellow)))
+
+(define-concept Rule23 (g-and  (some flow HighFlow)  (some waterlevel HighWaterlevel) (some hydroalertcode HydroOrange)))
+
+(define-concept Rule24 (g-and (some flow VeryHighFlow) (some waterlevel VeryWaterlevel) (some hydroalertcode HydroRed)))
+
+(define-concept RuleS2 (g-or Rule21 Rule22 Rule23 Rule24) )
+
+
+
+%%%%%%%%%%%
+% Facts
+% We consider 3 scenarios
+(instance run1 (= rainfall 15))
+(instance run1 (= airtemperature 17))
+(instance run1 (= flow 20.3))
+(instance run1 (= waterlevel 600))
+
+
+(instance run2 (= rainfall 30))
+(instance run2 (= airtemperature 25))
+(instance run2 (= flow 42.1))
+(instance run2 (= waterlevel 605))
+
+(instance run3 (= rainfall 70))
+(instance run3 (= airtemperature 25))
+(instance run3 (= flow 51.3))
+(instance run3 (= waterlevel 609))
+
+
+
+%(min-instance? run3 (>= waterlevel 10))
+
+%% meteo allert code?
+(defuzzify-mom?  RuleS1 run1 meteoalertcode)
+%(defuzzify-mom?  RuleS1 run2 meteoalertcode)
+%(defuzzify-mom?  RuleS1 run3 meteoalertcode)
+
+
+
+%% hydro allert code?
+(defuzzify-mom?  RuleS2 run1 hydroalertcode)
+%(defuzzify-mom?  RuleS2 run2 hydroalertcode)
+%(defuzzify-mom?  RuleS2 run3 hydroalertcode)
+
+
+

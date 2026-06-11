@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style2.css" />
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <title>SUM 2014</title>
+		<meta name="description" content="International Conference on Scalable Uncertainty Management">
+		<meta name="keywords" content="International Conference on Scalable Uncertainty Management, SUM">
+    </head>
+    
+    <!--[if IE 6 ]><body class="ie6 old_ie"><![endif]-->
+    <!--[if IE 7 ]><body class="ie7 old_ie"><![endif]-->
+    <!--[if IE 8 ]><body class="ie8"><![endif]-->
+    <!--[if IE 9 ]><body class="ie9"><![endif]-->
+    <!--[if !IE]><!--><body><!--<![endif]-->
+        <div id="page">
+			<a href="index.html">
+<div id="banniere">
+    
+    <div id="banniere_txt1">
+		8th International Conference on Scalable Uncertainty Management (SUM 2014)
+    </div>
+    <div id="banniere_txt2">
+        <b>St. Anne's College, Oxford, UK, September 15-17, 2014 </b> <br/>
+    </div>
+	
+</div>
+</a>            <partie_centrale>
+				<menu_left>
+	<div class="links">
+
+    <h4>Contributions</h4>
+        <div class="mdiv">
+        <div id="liens">
+	        <ul>
+		        <li><a href="call.html" title="Call for papers">Call for papers</a></li>
+		        <li><a href="dates.html" title="Dates">Dates</a></li>
+		        <li><a href="cameraready.html" title="Camera-ready instructions">Camera-ready instructions</a></li>
+	        </ul>
+        </div>
+     </div>
+     
+     <h4>Organization</h4>
+        <div class="mdiv">
+        <div id="liens">
+	        <ul>
+		        <li><a href="committee.html" title="Organization Committee">Organization Committee</a></li>
+		        <li><a href="program_committee.html" title="Program Committee">Program Committee</a></li>
+	        </ul>
+        </div>
+     </div>
+
+    <h4>Program</h4>
+        <div class="mdiv">
+        <div id="liens">
+	        <ul>
+		        <li><a href="invited_speakers.html" title="Invited speakers">Invited speakers</a></li>
+		        <li><a href="accepted_papers.html" title="Accepted papers">Accepted papers</a></li>
+	        </ul>
+        </div>
+     </div>
+
+    <h4>Participants</h4>
+        <div class="mdiv">
+        <div id="liens">
+	        <ul>
+	        	<li><a href="conference_venue.html" title="Conference venue">Conference venue</a></li>
+	          <li><a href="schedule.html" title="Schedule">Schedule</a></li>
+		        <li><a href="registration.html" title="Registration">Registration</a></li>
+		        <li><a href="accommodation.html" title="Accommodation">Accommodation</a></li>
+		        <li><a href="travel.html" title="Travel">Travel</a></li>
+<!--		    <li><a href="student_grants.php" title="Student Grants">Student Grants</a></li> -->
+<!--		    <li><a href="social_programme.php" title="Social programme">Social programme</a></li> -->
+	        </ul>
+        </div>
+     </div>
+
+    <h4>Misc</h4>
+        <div class="mdiv">
+        <div id="liens">
+	        <ul>
+		        <li><a href="past_sums.html" title="Past SUMs">Past SUMs</a></li>
+<!--		     <li><a href="contact.php" title="Contact">Contact</a></li> -->
+<!--		    <li><a href="download.php" title="Downloads">Downloads</a></li> -->
+	        </ul>
+        </div>
+     </div>
+	</div>
+	
+	<div class="copyright">
+		(c) 2013, Jonathan Hourez, UMons,<br>
+      (c) 2014, Umberto Straccia, ISTI-CNR
+	</div>
+</menu_left>                <texte>
+                    <h1>
+						<table id="page-table">
+							<tr>
+								<td width="17">&nbsp;</td>
+								<td width="566">
+									About SUM 2014
+								</td>
+							</tr>
+						</table>
+                    </h1>
+      <p>The International Conference on Scalable Uncertainty Management (SUM) is an annual conference that was launched in 2007 with the goal to exploit and strengthen the connection between the Artificial Intelligence and Database communities. It aims at bringing together all those researchers interested in the management of uncertain, incomplete or inconsistent information. Such information originates commonly in applications where significant computational effort is needed to process data in a meaningful and semantically justifiable manner. Typical applications of that kind include databases, the Web, and the life sciences. </p>
+
+	  <p>In 2014, SUM will take place in St. Anne's College, Oxford, UK, September 15-17, 2014. </p>
+						
+					<p>Papers are solicited in all areas of managing and reasoning with substantial and complex kinds of uncertain, incomplete or inconsistent information. These include (but are not restricted to) applications in decision support systems, machine learning, negotiation technologies, semantic web applications, search engines, ontology systems, information retrieval, natural language processing, information extraction, image recognition, vision systems, data and text mining, and the consideration of issues such as provenance, trust, heterogeneity, and complexity of data and knowledge.</p>
+					
+					<p><b>Post conference note:</b> The LNAI proceedings are now available online. You can find information about it <A HREF="http://www.springeronline.com/978-3-642-40380-4">here</A> 
+					                        or access the online version <A HREF="http://www.springerlink.com/content/978-3-642-40380-4/">here</A>.</p>
+                </texte>
+            </partie_centrale>
+
+			<footer>
+	<!--<a href="http://www.umons.ac.be/"><img src="images/umons_jpg.png" alt="UMons" height="40" /></a> -->
+	<a href="http://www.springer.com/"><img src="images/logo_springer.jpeg" alt="LNCS" height="40" /></a>
+	<a href="http://www.springer.com/it/book/9783319115078"><img src="images/logo_lncs.jpeg" alt="LNCS" height="40" /></a>
+	<br />
+</footer>			
+        </div>
+    </body>
+</html>

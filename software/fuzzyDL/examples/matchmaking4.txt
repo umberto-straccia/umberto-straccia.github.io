@@ -1,0 +1,84 @@
+#Background ontology
+(implies Sedan PassengerCar)
+(implies SatelliteAlarm AlarmSystem)
+(define-concept NavigatorPack (and SatelliteAlarm GPS_system))
+(define-concept InsurancePlus (and DriverInsurance TheftInsurance))
+(disjoint ExColorBlack ExColorGray)
+
+(functional HasAlarmSystem)
+(define-concrete-feature HasPrice *real* 0 100000)
+(functional HasAirConditioning)
+(functional HasExColor)
+(define-concrete-feature HasKMWarranty *integer* 0 300000)
+(functional HasNavigator)
+(functional HasMWarranty)
+
+
+#Buyer statements
+#Strict requirements
+(define-concept Beta (and PassengerCar (<= HasPrice 26000)))
+
+
+#Buyer Preferences
+(define-fuzzy-concept ls1 left-shoulder(0,100000,22300,22750))
+(define-concept B1 (implies  (some HasAlarmSystem AlarmSystem) (some HasPrice ls1)))
+
+#(define-concept B2 (some HasInsurance (and DriverInsurance (or TheftInsurance FireInsurance))))
+(define-concept B2 (and (some HasInsurance DriverInsurance) (or (some HasInsurance TheftInsurance) (some HasInsurance FireInsurance))))
+
+(define-concept B3 (and (some HasAirConditioning AirConditioning) (some HasExColor (or ExColorBlack ExColorGray))))
+
+
+(define-fuzzy-concept ls2 left-shoulder(0,100000,22000,24000))
+(define-concept B4 (some HasPrice ls2))
+
+(define-fuzzy-concept rs1 right-shoulder(0,300000,15000,175000))
+(define-concept B5 (some HasKMWarranty rs1))
+
+#(define-concept buy (and Beta (w-sum (0.1 B1) (0.2 B2) (0.3 B3) (0.4 B4))))
+(define-concept buy (and Beta (w-sum (0.1 B1) (0.2 B2) (0.1 B3) (0.2 B4) (0.4 B5))))
+
+#Seller statements
+#Strict requirements
+(define-concept Sigma (and Sedan (>= HasPrice 22000)))
+
+#Seller Preferences
+(define-fuzzy-concept rs2 right-shoulder(0,100000,22500,22750))
+(define-concept S1 (implies (some HasNavigator NavigatorPack) (some HasPrice rs2)))
+
+
+(define-concept S2 (some HasInsurance InsurancePlus))
+
+
+(define-fuzzy-concept SellerKmWarr left-shoulder(0,300000,100000,125000))
+(define-concept S3 (some HasKMWarranty SellerKmWarr))
+
+(define-fuzzy-concept SellerMWarr left-shoulder(0,96,60,72))
+(define-concept S4 (some HasMWarranty SellerMWarr))
+
+(define-concept S5 (implies (some HasExColor ExColorBlack) (some HasAirConditioning AirConditioning)))
+
+
+(define-concept sell (and Sigma (w-sum (0.3 S1) (0.1 S2) (0.3 S3) (0.1 S4) (0.2 S5))))
+#(define-concept sell (and Sigma (w-sum (0.3 S1) (0.1 S2) (0.3 S3) (0.3 S5))))
+
+
+# Objective
+(show-concrete-fillers HasPrice HasKMWarranty HasMWarranty)
+(max-sat? (l-and buy sell))
+
+#HasPrice(ind1) = 22500.0
+#HasKMWarranty(ind1) = 10000.0
+#HasMWarranty(ind1) = 60.0
+#Is Concept (buy)_L_AND_(sell) satisfiable? [Individual ind1] <= 0.7625
+
+
+
+
+
+
+
+
+
+
+

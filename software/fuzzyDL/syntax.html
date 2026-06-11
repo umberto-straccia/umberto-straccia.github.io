@@ -1,0 +1,931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="generator" content="Adobe GoLive" />
+		<title>FuzzyDL syntax</title>
+	</head>
+
+	<body>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Concept expressions:</font></b></u></em></code></p>
+		<table width="1119" cellspacing="2" cellpadding="0">
+			<tr>
+				<td><code>C,C1, C2</code></td>
+				<td><code>--&gt;</code></td>
+				<td><code><b>*top*</b></code></td>
+				<td><code>(top concept)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><b>*bottom*</b></code></td>
+				<td><code>(bottom concept)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><b>A</b></code></td>
+				<td><code>(atomic concept)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><b>(and C1 C2)</b></code></td>
+				<td><code>(concept conjunction)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><b>(or C1 C2)</b></code></td>
+				<td><code>(concept disjunction)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><b>(not C)</b></code></td>
+				<td><code>(concept negation)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><b>(some R C)</b></code></td>
+				<td><code>(existential role restriction)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(all R C)</b></code></td>
+				<td><code>(universal role restriction)</code></td>
+			</tr>
+            <tr>
+				<td></td>
+				<td></td>
+				<td><code><b>(b-some R a)</b></code></td>
+				<td><code>(individual value restriction, R role, a individual)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(CM C)</b></code></td>
+				<td><code>(modifier name CM applied to a concept), modifiers are defined below</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>CFC</b></code></td>
+				<td><code>(concept name CFC defined with explicit fuzzy membership function), see below</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(w-sum (n1 C1) ... (nk Ck))</b></code></td>
+				<td><code>(weighted-sum concept, ni in [0,1], Ci concept, n1+ ..+nk=1, see below)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(l-and C1 C2)</b></code></td>
+				<td><code>(concept conjunction according to Lukasiewicz T-norm)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(l-or C1 C2)</b></code></td>
+				<td><code>(concept disjunction according to Lukasiewicz T-conorm)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(g-and C1 C2)</b></code></td>
+				<td><code>(concept conjunction according to Gödel T-norm)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(g-or C1 C2)</b></code></td>
+				<td><code>(concept disjunction according to Gödel T-conorm)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>DR</b></code></td>
+				<td><code>(datatype restriction), see below</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(implies C1 C2)</b></code></td>
+				<td><code>(concept implication), this is the concept &quot;if C1 then C2&quot;</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(kd-implies C1 C2)</b></code></td>
+				<td><code>(concept implication), this is the concept &quot;if C1 then C2&quot;, where implication is Kleene-Dienes implication</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(l-implies C1 C2)</b></code></td>
+				<td><code>(concept implication), this is the concept &quot;if C1 then C2&quot;, where implication is Lukasiewicz implication</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(g-implies C1 C2)</b></code></td>
+				<td><code>(concept implication), this is the concept &quot;if C1 then C2&quot;, where implication is Gödel implication</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(n C)</b></code></td>
+				<td><code>(weighted concept, n in [0,1], C concept, see below)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>([&gt;= d] C)</b></code></td>
+				<td><code>(threshold concept, d in [0,1] or variable, C concept, see below)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>([&lt;= d] C)</b></code></td>
+				<td><code>(threshold concept, d in [0,1] or variable, C concept, see below)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(self R)</b></code></td>
+				<td><code>(self concept, i.e, set of instances x such that R(x,x))</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(ua RN C)</b></code></td>
+				<td><code>(upper approximation of concept C according to indiscernibility relation RN)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(la RN C)</b></code></td>
+				<td><code>(lower approximation of concept C according to indiscernibility relation RN)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(some R fn)</b></code></td>
+				<td><code>(existential role restriction with a fuzzy number)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(all R fn)</b></code></td>
+				<td><code>(universal role restriction with a fuzzy number)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(tua RN C)</b></code></td>
+				<td><code>tight upper approximation of concept C according to indiscernibility relation RN</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(lua RN C)</b></code></td>
+				<td><code>loose upper approximation of concept C according to indiscernibility relation RN</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(tla RN C)</b></code></td>
+				<td><code>tight lower approximation of concept C according to indiscernibility relation RN</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(lla RN C)</b></code></td>
+				<td><code>loose lower approximation of concept C according to indiscernibility relation RN</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(FN)</b></code></td>
+				<td><code>Fuzzy Number, to appear only in existential, universal and datatype restrictions</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(owa (w1 ... wn) (C1 ... Cn))</b></code></td>
+				<td><code>OWA aggregation of concepts Ci</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(q-owa q C1 ... Cn)</b></code></td>
+				<td><code>Quantifier-guided OWA aggregation of concepts Ci, q is a quantifier defined as right-shoulder or linear function over [0,1]</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(choquet (w1 ... wn) (C1 ... Cn))</b></code></td>
+				<td><code>Choquet integral aggregation of concepts Ci</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(sugeno (w1 ... wn) (C1 ... Cn))</b></code></td>
+				<td><code>Sugeno integral aggregation of concepets Ci</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td valign="top"><code><b>(q-sugeno (w1 ... wn) (C1 ... Cn))</b></code></td>
+				<td><code>Quasi-Sugeno integral aggregation of concepts Ci</code></td>
+			</tr>
+			<tr>
+			  <td></td>
+			  <td></td>
+			  <td valign="top"><code><strong>(w-max (v1 C1) . . . (vk Ck))</strong></code></td>
+			  <td><code>Weighted maximum</code></td>
+		  </tr>
+			<tr>
+			  <td></td>
+			  <td></td>
+			  <td valign="top"><code><strong>(w-min (v1 C1) . . . (vk Ck))</strong></code></td>
+			  <td><code>Weighted minimum</code></td>
+		  </tr>
+			<tr>
+			  <td></td>
+			  <td></td>
+			  <td valign="top"><code><b>(w-sum-zero (n1 C1) ... (nk Ck))</b></code></td>
+			  <td><code>(Weighted-sum concept that is 0 if one argument is 0, ni in [0,1], Ci concept, n1+ ..+nk=1)</code></td>
+		  </tr>
+		</table>
+<p><code><b>Note</b>: conjunction and disjunction are n-ary, n&gt;1</code></p>
+		<ul>
+			<li><code>Lukasiewicz T-norm: (and x y) = max(0, x+y -1)</code></li>
+			<li><code>Lukasiewicz T-conorm: (or x y) = min(1, x+y)</code></li>
+			<li><code>Lukasiewicz implication: x =&gt; y is 1 if x ≤ y, else is max(0, 1 - x + y)</code></li>
+			<li><code>Gödel T-norm: (and x y) = min(x, y)</code></li>
+			<li><code>Gödel T-conorm: (or x y) = max(x, y)</code></li>
+			<li><code>Gödel  implication: x =&gt; y is 1 if x ≤ y, else is y</code></li>
+			<li><code>Kleene-Dienes implication: x =&gt; y is max(1-x,y)</code></li>
+		</ul>
+		<ul>
+			<li><code>By default, the conjuction (and C1 C2) and disjunction (or C1 C2) are interpreted according the selected semantics (Classical Logic, Zadeh Semantics, Lukasiewicz Logic)</code></li>
+			<li><code>Negation is interpreted always as Lukasiewicz negation: (not x) = 1- x</code></li>
+			<li><code>Zadeh semantics uses: Lukasiewicz negation, Gödel T-norm, Gödel T-conorm, Kleene-Dienes implication in the &quot;(all R C)&quot; and &quot;(kd-implies C1 C2)&quot; concepts. For general concept inclusion axioms, (implies C1 C2) is the same as: for all individuals d, the degree C1(d) is less or equal than C2(d). This is the same as stating (l-implies C1 C2 1). Similarly for 'concept inclusion'</code></li>
+			<li><code>Lukasiewicz Logic uses: Lukasiewicz negation, conjunction and disjunction and implication.
+				</code></li>
+		</ul>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Logic selection:</font></b></u></em></code></p>
+		<p><code>Definition of the fuzzy logic is not done in the Config file, but in the KB with the statement:</code></p>
+		<p><code> <strong>(define-fuzzy-logic [lukasiewicz | zadeh | classical])</strong></code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Indiscernibility Relation Declarations:</font></b></u></em></code></p>
+		<p><code>Definitions a role R as an indescirnibility relation</code></p>
+		<p><code><b>(define-fuzzy-similarity R)</b></code></p>
+		<p><code>R is a reflexive and symmetric</code></p>
+		<ul>
+			<ul>
+				<ul>
+					
+				</ul>
+			</ul>
+		</ul>
+		<p><code><b>(define-fuzzy-equivalence R)</b></code></p>
+		<p><code>R is a reflexive, symmetric, and transitive</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Truth constants:</font></b></u></em></code></p>
+		<p><code><b>(define-truth-constant constant n)</b></code></p>
+		<p><code>Defines a name for a truth constant n, where n is a rational in [0,1].</code></p>
+		<p><code>Example:</code></p>
+		<p><code>(define-truth-constant totally 1.0)<br />
+		  (define-truth-constant very 0.8)<br />
+		  (define-truth-constant quite 0.7)<br />
+		  (define-truth-constant moderately 0.6)<br />
+		  (define-truth-constant enough 0.4)<br />
+		  (define-truth-constant little 0.2)</code></p>
+		<p><code>We then may use  them in the expressions as, e.g.</code></p>
+		<p><code>(instance jim Tall totally)<br />
+		  (instance maria Tall little)</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Concept modifier:</font></b></u></em></code></p>
+		<p><code><b>(define-modifier CM linear-modifier(b))</b></code></p>
+		<p><code>Defines a name for a modifier as a linear hedge. b&gt;0.  E.g. (define-modifier very linear-modifier(3))</code></p>
+		<p><code><b>(define-modifier CM triangular-modifier(a,b,c))</b></code></p>
+		<p><code>Defines a name for a triangular modifier, where at 0 the value is a, at b the value is 1, while at 1 the value is c. E.g. (define-modifier more-or-less triangular-modifier(0,0.8,0.7))</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Concrete Fuzzy Concepts:</font></b></u></em></code></p>
+		<p><code>Defines a name for a fuzzy set with explicit fuzzy membership function.</code></p>
+		<p><code><b>(define-fuzzy-concept CFC crisp(k1,k2,a,b))</b> </code></p>
+		<p><code><b>(define-fuzzy-concept CFC left-shoulder(k1,k2,a,b))   with a &lt; b</b> </code></p>
+		<p><code><b>(define-fuzzy-concept CFC right-shoulder(k1,k2,a,b))   with a &lt; b</b></code></p>
+		<p><code><b>(define-fuzzy-concept CFC triangular(k1,k2,a,b,c))     with a &lt; b &lt; c</b></code></p>
+		<p><code><b>(define-fuzzy-concept CFC trapezoidal(k1,k2,a,b,c,d))   with a &lt; b &lt; c &lt; d</b></code></p>
+		<p><code><b>(define-fuzzy-concept CFC linear(k1,k2,a,b)) </b></code></p>
+		<p><code><b>(define-fuzzy-concept CFC modified(mod,F)) </b></code></p>
+		<p><code>E.g. (define-fuzzy-concept Young left-shoulder(0,100,10,30))</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Fuzzy Numbers:</font></b></u></em></code></p>
+		<p><code>Fuzzy numbers, such as &quot;about 3&quot;, &quot;about 4.5&quot;, can be represented as concrete fuzzy concepts having triangular membership function. A fuzzy number can be defined using the syntax</code></p>
+		<p><code><strong>(define-fuzzy-number-range k1 k2)</strong></code></p>
+		<p><code>which defines the range of all fuzzy numbers used. Then any individual fuzzy number is defined by means of</code></p>
+		<p><code><b>(define-fuzzy-number name FN) </b></code></p>
+		<p><code>where <b>FN</b>  is a fuzzy number expression and defines the fuzzy number <b>name</b> as defined by the expression <b>FN.</b> A fuzzy number correponds to a triangular fuzzy membership function, with range k1, k2, i.e, <b>triangular(k1, k2, a, b, c).  </b></code></p>
+		<p><code>No recursive definition is allowed.</code></p>
+		<p><code>Any rational number n is a fuzzy number with triangular membership function, where a=b=c.</code></p>
+		<p><code>On fuzzy numbers, we may perform arithmetic operations, such as addition, substraction, multiplication and division. Let n be  rational number , n+ be a non zero rational and</code></p>
+		<p><code><b>(define-fuzzy-number fn1 a1, b1, c1) </b></code></p>
+		<p><code><b>(define-fuzzy-number fn2 a2, b2, c2) </b></code></p>
+		<p><code>The following are fuzzy number expressions with parameters as shown in the last column</code></p>
+		<table width="617" border="0" cellspacing="2" cellpadding="2">
+			<tr>
+				<td><code><b>FN</b></code></td>
+				<td><code><b>--&gt;</b></code></td>
+				<td><code><strong>name</strong></code></td>
+				<td><code>fuzzy number name</code></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>n</strong></code></td>
+				<td><code>real number</code></td>
+				<td><code>(n, n, n)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>(a, b, c)</strong></code></td>
+				<td><code>triangular fuzzy number</code></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong><b>(f+ fn1 fn2)</b></strong></code></td>
+				<td><code>(addition)</code></td>
+				<td><code>(a1 + a2, b1 + b2, c1 + c2)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong><b>(f- fn1 fn2)</b></strong></code></td>
+				<td><code>(substraction)</code></td>
+				<td><code>(a1 - c2, b1 - b2, c1 - a2)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong><b>(f* fn1 fn2)</b></strong></code></td>
+				<td><code>(multiplication)</code></td>
+				<td><code>(a1 * a2, b1 * b2, c1 * c2)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong><b>(f/ fn1 f2)</b></strong></code></td>
+				<td><code>(division)</code></td>
+				<td><code>(a1/c2, b1/b2, c1/a2)</code></td>
+			</tr>
+		</table>
+		<p><code><font color="#dd1e28">Note:</font> </code></p>
+		<ul>
+			<li><code>f+ and f* may also have L arguments, e.g, <strong><b>(f+ fn1 fn2 ... fnL)</b></strong></code></li>
+		</ul>
+		<p><code>Example: Three exams of a student have been evaluated qualitatively using the degree scale VeryPoor, Poor, Fair, Good, VeryGood, defined as fuzzy numbers below</code></p>
+		<p><code><strong>(define-fuzzy-number-range -100 100)</strong></code></p>
+		<p><code>(<b>define-fuzzy-number </b>VeryPoor 0, 0, 2)</code></p>
+		<p><code>	(<b>define-fuzzy-number </b>Poor  1, 2.5, 4)</code></p>
+		<p><code>(<b>define-fuzzy-number </b>Fair  3, 5, 7)</code></p>
+		<p><code>(<b>define-fuzzy-number </b>Good  6, 7.5, 9)</code></p>
+		<p><code>(<b>define-fuzzy-number </b>VeryGood  8, 10, 10)</code></p>
+		<p><code>The overall evaluation can be defined as:</code></p>
+		<p><code>(define-concept Exam1 (some hasScore  VeryPoor))</code></p>
+		<p><code>(define-concept Exam2 (some hasScore Fair))</code></p>
+		<p><code>(define-concept Exam3 (some hasScore Good))</code></p>
+		<p><code>(define-concept StudentScore (w-sum (0.3 Exam1) (0.2 Exam2)  (0.5 Exam3)) )</code></p>
+		<p><code>where the weights reflects the importance of the exams.</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Datatype Restrictions:</font></b></u></em></code></p>
+		<p><code>Defines a name for a functional datatype attribute (also called concrete feature) that then can be used to form concepts according to the syntax below. Concrete features are defined using two instructions, functionality and range:</code></p>
+		<p><code><strong> (functional </strong><b>featureName</b><strong>)</strong></code></p>
+		<p><code><strong> (range </strong><b>featureName</b><strong> *integer* k1 k2)  |  (range F *real* k1 k2)  |  (range F *string*)</strong> | <strong>  (range F *boolean*)</strong></code></p>
+	<p><code>Boolean values	are: <strong>true</strong>, <strong>false</strong></code></p>
+<p><code>E.g., </code></p>
+		<p><code>(functional hasAge)</code></p>
+		<p><code>(range hasAge *integer* 0 150),</code></p>
+		<p><code>defines the attribute hasAge as integer valued. The values should be between 0 and 150.</code></p>
+		<p><code>Datatype restrictions are concepts having the following syntax:</code></p>
+		<table width="462" border="0" cellspacing="2" cellpadding="2">
+			<tr>
+				<td><code><b>DR</b></code></td>
+				<td><code><b>--&gt;</b></code></td>
+				<td><code><strong><b>(&gt;= featureName value)</b></strong></code></td>
+				<td><code>(at least restriction)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>(&lt;= <b>featureName</b> value)</strong></code></td>
+				<td><code>(at most restriction)</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>(= <b>featureName</b> value)</strong></code></td>
+				<td><code>(equal restriction)</code></td>
+			</tr>
+		</table>
+		<table width="625" border="0" cellspacing="2" cellpadding="2">
+			<tr>
+				<td width="48"><code><b>value</b></code></td>
+				<td width="26"><code><b>--&gt;</b></code></td>
+				<td width="82"><code><strong><b>string</b></strong></code></td>
+				<td width="443"><code>if feature type is <b>*string*</b></code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>integer</strong></code></td>
+				<td><code>if feature type is <b>*integer*</b></code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>rational</strong></code></td>
+				<td><code>if feature type is <b>*real*</b></code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>FN</strong></code></td>
+				<td><code>fuzzy number expression, if feature type is <b>*real*</b></code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>AE</strong></code></td>
+				<td><code>arithmetic expression</code></td>
+			</tr>
+			<tr>
+			  <td></td>
+			  <td></td>
+			  <td><code><strong>true</strong> | <strong>false</strong></code></td>
+			  <td><code>if feature type is boolean. &gt;= and &lt;= operations are not allowed</code></td>
+		  </tr>
+		</table>
+		<table width="778" border="0" cellspacing="2" cellpadding="2">
+		  <tr>
+				<td><code><strong>AE</strong></code></td>
+				<td><code><b>--&gt;</b></code></td>
+				<td><code><strong><b>n</b></strong></code></td>
+				<td><code>a number, e.g., 10.81. Negative numbers are prefixed with &quot;-&quot;, e.g, -10.82</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>t</strong></code></td>
+				<td><code>a concrete feature</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>n *t </strong></code></td>
+				<td><code>product among a number and a feature</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>AE1 + AE2 + ...  + AEk</strong></code></td>
+				<td><code>sum of k arithmetic expressions</code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>t1 - t2</strong></code></td>
+				<td><code>difference</code></td>
+			</tr>
+		</table>
+		<p><code>For instance, given the definition</code></p>
+		<p><code>(functional hasAge)</code></p>
+		<p><code>(range hasAge *integer* 0 150)</code></p>
+	<p><code>the concept</code></p>
+		<p align="left"><code>(and Person (&gt;= hasAge 18))</code></p>
+		<p align="left"><code>denotes the set of people whose age is at least 18.</code></p>
+		<p align="left"><code>Another example si the following:</code></p>
+		<p align="left"><code>%----</code></p>
+		<p align="left"><code>(functional totalPrice)</code></p>
+		<p align="left"><code>(range totalPrice *real* 0 1000)</code></p>
+	<p align="left"><code>(functional netPrice)</code></p>
+	<p align="left"><code>(range netPrice *real* 0 1000)</code></p>
+<p align="left"><code>(instance a (= netPrice 50.21))</code></p>
+		<p align="left"><code>(instance a (= totalPrice (netPrice + (0.2*netPrice) + -20) )  )</code></p>
+		<p align="left"><code>(show-concrete-fillers-for a netPrice totalPrice)</code></p>
+		<p align="left"><code>(min-instance? a (&gt;= totalPrice 30))</code></p>
+		<p align="left"><code>%-----</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">General Concept Inclusions Axioms:</font></b></u></em></code></p>
+		<table width="1461" cellspacing="2" cellpadding="0">
+			<tr>
+				<td><code><b>(equivalent-concepts C D)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>concept  C is defined as equivalent to concept D</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(define-concept CN C)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>concept name CN is defined as concept C</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(define-primitive-concept CN C)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>concept name CN is a sub-concept of concept C</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(implies C1 C2 [d])</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>concept C1 is a sub-class of concept C2 with degree d</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(l-implies C1 C2 [d])</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>concept C1 is a sub-class of concept C2 with degree d using Lukasiewicz implication</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(g-implies C1 C2 [d])</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>concept C1 is a sub-class of concept C2 with degree d using Gödel implication</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(kd-implies C1 C2 [d])</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>concept C1 is a sub-class of concept C2 with degree d using Kleene-Dienes implication</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(disjoint CN1 .... CNm)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>This declares concepts names CN1 ... CNm to be disjoint: for all i &lt; j, (implies (and CNi CNj) *bottom* )</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(range RN C) </b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>Role name RN has range concept C. Same as (implies *top* (all RN C))</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(domain RN C)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>Role name RN has  domain concept C. Same as (implies (some RN *top*) C)</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(z-implies C1 C2 [d])</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>concept C1 is a sub-class of concept C2 with degree d using Zadeh implication</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(disjoint-union CN1 .... CNm)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>(disjoint CN2 ... CNm) and C1= (or CN2 ... CNm) </code></td>
+			</tr>
+		</table>
+		<p><code>The degree d may be either a rational number in [0,1] or a variable (string). Variables may be used when some special constraints on the values are requested, by using Inequetions (see below)</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Role Axioms:</font></b></u></em></code></p>
+		<table width="1094" cellspacing="2" cellpadding="0">
+			<tr>
+				<td><code><b>(functional RN)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>role RN is considered functional</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(transitive RN)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>role RN is transitive. RN cannot be functional</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(implies-role RN1 RN2 [d])</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>role RN2 subsumes role RN1 to degree d</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(inverse RN1 RN2)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>role RN1 is defined as the inverse of role RN2</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(reflexive RN)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>role RN is defined as reflexive</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(symmetric RN)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>role RN is defined as symmetric</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(define-fuzzy-similarity RN)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>role RN is defined as an indiscernibility relation, i.e., reflexive, symmetric and transitive role</code></td>
+			</tr>
+			<tr>
+			  <td><code><b>(inverse-functional RN)</b></code></td>
+			  <td><code>--&gt;</code></td>
+			  <td><code>role RN is considered inverse functional</code></td>
+		  </tr>
+		</table>
+	<p></p>
+		<p><code><b>NOTE: (define-fuzzy-similarity RN) </b>is used together &quot;upper&quot; and &quot;lower approximations concepts in Fuzzy Rough Set reasoning. For instance, </code></p>
+		<p><code>(define-fuzzy-similarity S) </code></p>
+		<p><code>(instance a (ua S C) 0.8) </code></p>
+		<p><code>(instance a (la S D) 0.7)</code></p>
+		<p><code>(related a b S 0.9)</code></p>
+		<p><code>(min-instance? b D) </code></p>
+		<p><code>#(min-instance? a (some S (and C D)))</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Weighted Concept:</font></b></u></em></code></p>
+		<p><code><b>(w-sum (n1 C1) ... (nk Ck))</b></code></p>
+		<p><code>Represents a concept, which is the weighted sum of the concepts Ci, i.e. n1*C1 + ... + nk*Ck. We assume, ni in [0,1] and n1+ ..+nk=1.</code></p>
+		<p><code>Example of usage:</code></p>
+		<p><code>(define-concept Dinner (and Person (w-sum (0.2 Bottle) (0.3 Plate) (0.2 Fork) (0.2 Spoon) (0.1 Knife))))</code></p>
+		<p><code>&quot;A dinner is something in which there is a Person and possibly, a bottle, a plate, a fork, a spoon, a knife&quot;.</code></p>
+		<p><code><b>(w-sum-zero (n1 C1) ... (nk Ck))</b></code></p>
+		<p><code>Represents a concept that is as the weighted sum, except that if an argument is 0, the expression is 0.</code></p>
+		<p><code>Example of usage:</code></p>
+        <p><code>(define-concept Dinner (and Person (w-sum-zero (0.2 Bottle) (0.3 Plate) (0.2 Fork) (0.2 Spoon) (0.1 Knife))))</code></p>
+        <p><code>&quot;A dinner is something in which there is a Person and possibly, a bottle, a plate, a fork, a spoon, a knife. If one of the arguments is 0, i.e missing, then we have no dinner&quot;.</code></p>
+<p><code><b>(n C)</b></code></p>
+		<p><code>For n in [0,1],  this represents a concept such that for any individual d, the degree of being individual d an instance of (n C), i.e., (n C)(d), is given by n times the degree of being d an instance of C, i.e., n * C(d). As a note, (w-sum (n1 C1) ... (nk Ck)) is the same as (l-or (n1 C1) ... (nk Ck)).</code></p>
+		<p><code>Other aggregation methods are via OWA, quantifier-based OWA or Fuzzy Integrals.</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Threshold Concept:</font></b></u></em></code></p>
+		<p><code><b>([&gt;= d] C)</b></code></p>
+		<p><code><b>([&lt;= d] C)</b></code></p>
+		<p><code>Represents a concept, where d in [0,1] or d is a variable and C is a concept. E.g., the degree of being individual a an instance of ([&gt;= d] C), i.e., ([&gt;= n] C)(a), is 0 if a is an instance of C to degree less than d, otherwise the degree is C(a). Similarly, the degree of being individual a an instance of ( [&lt;= d] C), i.e., ([&lt;= d] C)(a), is 0 if a is an instance of C to degree greather than d, otherwise the degree is C(a).</code></p>
+		<p><code>Example of usage:</code></p>
+		<p><code>(implies ([&gt;= 0.8] Dinner) GoodDinner))</code></p>
+		<p><code>&quot;A a dinner with degree greater or equal than 0.8 is a good dinner&quot;</code></p>
+		<p><code>As such ([&gt;= 0.8] Dinner) acts as thresholded concept with threshold 0.8.</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Assertions:</font></b></u></em></code></p>
+		<table width="1320" cellspacing="2" cellpadding="0">
+			<tr>
+				<td><code><b>(instance a C [d])</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>individual a is instance of concept C at least with degree d. If degree omitted, 1 is assumed</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(related a b RN [d])</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>individual a is related to b by means of role RN, at least with degree d. If degree omitted, 1 is assumed</code></td>
+			</tr>
+		</table>
+		<p><code>The degree d may be either a rational number in [0,1] or a variable (string). Variables may be used when some special constraints on the values are requested, by using Inequetions (see below)</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Linear Inequation Axioms:</font></b></u></em></code></p>
+		<p><code>Allow to specify constraints on the truth values.</code></p>
+		<table width="434" cellspacing="2" cellpadding="0">
+			<tr>
+				<td><code>constraints</code></td>
+				<td><code>--&gt;</code></td>
+				<td><code><strong>(constraints &lt;constraint&gt;+)</strong></code></td>
+			</tr>
+			<tr>
+				<td><code>constraint</code></td>
+				<td><code>--&gt;</code></td>
+				<td><code><strong>(binary var)</strong></code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>(free var)</strong></code></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><code><strong>(a1*var1 + ... + aN*varN OP number)</strong></code></td>
+			</tr>
+		</table>
+		<p><code>where</code></p>
+		<table width="1094" cellspacing="2" cellpadding="0">
+			<tr>
+				<td><code><strong>(binary var)</strong></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>The variable &quot;var&quot; is declared to be binary, i.e. takes value 0 or 1</code></td>
+			</tr>
+			<tr>
+				<td><code><strong>(free var)</strong></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>The variable &quot;var&quot; is declared to be free, i.e. takes any value</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(a1*var1 + ... + aN*varN OP number)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>An in-equation is a linear combination of constants*variable, bounded by a rational number</code></td>
+			</tr>
+			<tr>
+				<td><code><b>OP</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>&quot;&lt;=&quot; | &quot;&gt;=&quot; | &quot;=&quot;</code></td>
+			</tr>
+		</table>
+		<p></p>
+		<p><code><b>Example 1.</b></code></p>
+		<p><code>(instance a C x1)</code></p>
+		<p><code>(instance a D x2)</code></p>
+		<p><code>(constraints (x1 + x2 = 0.5))</code></p>
+		<p><code><b>Example 2.</b></code></p>
+		<p><code>Tom is taller than Tim.</code></p>
+		<p><code>(instance tim (not Tall) x1)</code></p>
+		<p><code>(instance tom Tall x)</code></p>
+		<p><code>(constraints (x1 + x = 1))</code></p>
+		<p></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Crisp Declarations:</font></b></u></em></code></p>
+		<p><code>Declares concepts Ai and roles Rj as crisp.</code></p>
+		<p><code><strong>(crisp-concept A1 ... An)</strong></code></p>
+		<p><code><strong>(crisp-role R1 ... Rn)</strong></code></p>
+		<p></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Query Expressions:</font></b></u></em></code></p>
+		<p><code>Multiple queries can be added to the file.</code></p>
+		<table width="1494" cellspacing="2" cellpadding="0">
+			<tr>
+				<td><code><b>(min-instance? a C)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>determines the minimal degree to which individual a is an instance of concept C</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(max-instance? a C)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>determines the maximal degree to which individual a is an instance of concept C</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(min-subs? C1 C2)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>determines the minimal degree to which concept C1 subsumes concept C2</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(max-subs? C1 C2)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>determines the maximal degree to which concept C1 subsumes concept C2</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(min-l-subs? C1 C2)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>determines the minimal degree to which concept C1 subsumes concept C2, using Lukasiewicz implication</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(max-l-subs? C1 C2)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>determines the maximal degree to which concept C1 subsumes concept C2, using Lukasiewicz implication</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(min-g-subs? C1 C2)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>determines the minimal degree to which concept C1 subsumes concept C2, using Gödel implication</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(max-g-subs? C1 C2)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>determines the maximal degree to which concept C1 subsumes concept C2, using Gödel implication</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(min-kd-subs? C1 C2)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>determines the minimal degree to which concept C1 subsumes concept C2, using Kleene-Dienes implication</code></td>
+			</tr>
+			<tr>
+				<td height="29"><code><b>(max-kd-subs? C1 C2)</b></code></td>
+			  <td><code>-&gt;</code></td>
+				<td><code>determines the maximal degree to which concept C1 subsumes concept C2, using Kleene-Dienes implication</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(min-sat? C [a])</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>determines the minimal degree to which concept C is satisfiable. Optionally we may specify an individual a. In that case the minimal degree to which the individual a is an instance of C is computed</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(max-sat? C [a])</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>determines the maximal degree to which concept C is satisfiable. Optionally we may specify an individual a. In that case the maximal degree to which the individual a is an instance of C is computed</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(min-var? var)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>determines the minimal value for variable var in [0,1], taking into account the constraints in the KB</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(max-var? var)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>determines the maximal value for variable var in [0,1], taking into account the constraints in the KB</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(min-related? a b RN)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>determines the minimal degree to which individual pair (a,b) is an instance of role name RN</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(max-related? a b RN)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>determines the maximal degree to which individual pair (a,b) is an instance of role name RN</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(defuzzify-lom? C a </b><strong><b>F</b></strong><b>)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>Defuzzify the value of feature F using largest of the maxima method. a is an individual (see <a href="examples/examples.html">example</a>)</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(defuzzify-som? C a </b><strong><b>F</b></strong><b>)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>Defuzzify the value of feature F using smallest of the maxima method. a is an individual (see <a href="examples/examples.html">example</a>)</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(defuzzify-mom? C a </b><strong><b>F</b></strong><b>)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>Defuzzify the value of feature F using middle of the maxima method. a is an individual (see <a href="examples/examples.html">example</a>)</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(bnp? </b><strong><b>fn</b></strong><b>)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>Defuzzify fuzzy number fn. It computes the Best Non-Fuzzy Performance (BNP) of fuzzy number fn as (a + b + c)/3</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(all-instances? C)</b></code></td>
+				<td><code>-&gt;</code></td>
+				<td><code>Same as (min-instance? a C) for every individual in the KB</code></td>
+			</tr>
+			<tr>
+			  <td><code><strong>(sat?)</strong></code></td>
+			  <td><code>-&gt;</code></td>
+			  <td><code> Test if a KB is satisfiable </code></td>
+		  </tr>
+		</table>
+	<p><code>A simple example of maximization problem is the following:</code></p>
+		<p><code>(instance a Beta xBeta)</code></p>
+		<p><code>(instance a Alpha xAlpha)</code></p>
+		<p><code>(constraints (xBeta&lt;=0.5) (xAlpha + -0.3*y&lt;=0) (BND y BV) (0.5*xBeta + 0.5*xAlpha + -1*x=0))</code></p>
+		<p><code>(min-var? x)</code></p>
+		<p><code><em><u><b><font size="+1" color="#dd1e28">Show Expressions:</font></b></u></em></code></p>
+		<p><code>Statements have been added to show values in an optimal solution.</code></p>
+		<table width="1000" cellspacing="2" cellpadding="0">
+			<tr>
+				<td><code><b>(show-concrete-fillers f1 ... fn)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>show all fillers of concrete feature f1 ... fn in an optimal solution to a query</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-concrete-fillers-for a f1 ... fn)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>for individual a, show all fillers of concrete feature f1 ... fn in an optimal solution to a query</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-variables x1 ... xn)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>show the value of the variables x1 ... xn in an optimal solution to a query</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-instances A1 ... An)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>show all instances of atomic concepts A1 ... An and their degree in an optimal solution to a query</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-concepts a1 ... an)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>show all atoms to which ai is instance and their degree in an optimal solution to a query</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-language)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>show the description logic language of the KB, from ALC to SHIF</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-abstract-fillers R A1 ... An)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>show the membership to atomic concepts A1,  ...,  An of the fillers of R</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-abstract-fillers-for a R A1 ... An</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>show the membership to atomic concepts A1, ..., An of the fillers of R for individual a</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-concrete--instance-for a f A1 ... An)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>show degrees of being the f filler of a an instance of concept Ai</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-abstract-fillers R1 ... Rn)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>showfillers of R1 ... Rn and membership to any concept</code></td>
+			</tr>
+			<tr>
+				<td><code><b>(show-abstract-fillers-for a R1 ... Rn)</b></code></td>
+				<td><code>--&gt;</code></td>
+				<td><code>show fillers of R1 ... Rn for a and membership to any concept</code></td>
+			</tr>
+		</table>
+		<p></p>
+		<p><code><strong>Example</strong>:</code></p>
+		<p><code>(functional hasPrice)</code></p>
+		<p><code>(define-fuzzy-concept AudiTTPrice right-shoulder(0,50000,30500,31500))</code></p>
+		<p><code>(define-concept AudiTT (and SportsCar (some hasPrice AudiTTPrice)))</code></p>
+		<p><code>(define-fuzzy-concept BuyerPrice left-shoulder(0,50000,30000,32000))</code></p>
+		<p><code>(define-concept BuyerQuery (and SportsCar (some hasPrice BuyerPrice)))</code></p>
+		<p><code>(max-sat? (and BuyerQuery AudiTT))</code></p>
+		<p><code>(show-concrete-fillers hasPrice)</code></p>
+		<p></p>
+		<p><code>&quot;Ask about the maximal agreement among buyer and sold item  AUdiTT and show the price of this agreement&quot;</code></p>
+		<p></p>
+	</body>
+
+</html>

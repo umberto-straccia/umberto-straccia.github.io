@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://gaia.isti.cnr.it/~straccia/snoopy.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+  xml:base="http://gaia.isti.cnr.it/~straccia/snoopy.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Bird">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Animal"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Dog"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Dog">
+    <owl:disjointWith rdf:resource="#Bird"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Animal"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Image">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="LivingThing"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Animal"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ImageRegion"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#LivingThing">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ImageRegion"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Image"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Query1">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Quer1: "Retrieve whatever is about Animals"</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Animal"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isAbout"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#ImageRegion">
+    <owl:disjointWith rdf:resource="#LivingThing"/>
+    <owl:disjointWith rdf:resource="#Image"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Animal"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Animal">
+    <owl:disjointWith rdf:resource="#Image"/>
+    <owl:disjointWith rdf:resource="#ImageRegion"/>
+    <rdfs:subClassOf rdf:resource="#LivingThing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#isAbout">
+    <rdfs:range rdf:resource="#LivingThing"/>
+    <rdfs:domain rdf:resource="#ImageRegion"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasImageRegion">
+    <rdfs:domain rdf:resource="#Image"/>
+    <rdfs:range rdf:resource="#ImageRegion"/>
+  </owl:ObjectProperty>
+  <Bird rdf:ID="woodstock"/>
+  <ImageRegion rdf:ID="imageregion1">
+    <isAbout>
+      <Dog rdf:ID="snoopy"/>
+    </isAbout>
+  </ImageRegion>
+  <Image rdf:ID="image1">
+    <hasImageRegion rdf:resource="#imageregion1"/>
+    <hasImageRegion>
+      <ImageRegion rdf:ID="imageregion2">
+        <isAbout rdf:resource="#woodstock"/>
+      </ImageRegion>
+    </hasImageRegion>
+  </Image>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

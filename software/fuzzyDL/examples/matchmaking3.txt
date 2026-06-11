@@ -1,0 +1,46 @@
+#
+(functional hasPrice)
+(functional hasKM)
+
+(implies Sedan Car)
+(implies StationWagon Car)
+
+# Seller's cars
+(define-fuzzy-concept P12500 right-shoulder(0,50000,11250,12500))
+(define-fuzzy-concept KM18000 crisp(0,1000000,18000,18000))
+(define-concept C455 (and Sedan (some hasPrice P12500) (some hasKM KM18000)))
+
+(define-fuzzy-concept P12000 right-shoulder(0,50000,9600,12000))
+(define-fuzzy-concept KM17000 crisp(0,1000000,17000,17000))
+(define-concept C34 (and Sedan (some hasPrice P12000) (some hasKM KM17000)))
+
+(define-fuzzy-concept P13000 right-shoulder(0,50000,10400,13000))
+(define-fuzzy-concept KM16000 crisp(0,1000000,16000,16000))
+(define-concept C1812 (and StationWagon (some hasPrice P13000) (some hasKM KM16000)))
+
+# Buyer's preferencess
+
+(define-fuzzy-concept BuyerCarPrice left-shoulder(0,50000,10000,14000))
+(define-fuzzy-concept BuyerCarKM left-shoulder(0,100000,10000,20000))
+
+(define-concept Pref1 (and Car (some hasPrice BuyerCarPrice)))
+(define-concept Pref2 (and Car (some hasKM BuyerCarKM)))
+(define-concept BuyDegree (w-sum (0.7 Pref1) (0.3 Pref2))) 
+
+# Let's show the price and KM on the optimal agreement
+(show-concrete-fillers hasPrice hasKM)
+
+#(concept-satisfiable? (and BuyDegree C455))  #degree = 0.444103, hasPrice= 11805.1 hasKM=18000
+#(concept-satisfiable? (and BuyDegree C34))   #degree = 0.605634, hasPrice= 11053.5 hasKM=17000
+#(concept-satisfiable? (and BuyDegree C1812)) #degree = 0.515464, hasPrice= 11740.2 hasKM=16000
+
+(max-sat? (and BuyDegree C455))  #degree = 0.444103, hasPrice= 11805.1 hasKM=18000
+#(max-sat? (and BuyDegree C34))   #degree = 0.605634, hasPrice= 11053.5 hasKM=17000
+#(max-sat? (and BuyDegree C1812)) #degree = 0.515464, hasPrice= 11740.2 hasKM=16000
+
+
+
+
+
+
+

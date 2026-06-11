@@ -1,0 +1,36 @@
+% Define features
+
+(define-concrete-feature hasScore *real* 0 100)
+(define-concrete-feature hasCost *real* 0 100)
+(define-concrete-feature hasDeliveryTime *real* 0 100)
+(define-concrete-feature hasQuality *real* 0 100)
+
+
+% Definition of qualitative performance values
+(define-fuzzy-concept VeryPoor left-shoulder(0, 10, 0, 2))
+(define-fuzzy-concept Poor triangular(0, 10, 1, 2.5, 4))
+(define-fuzzy-concept Fair triangular(0, 10, 3, 5, 7))
+(define-fuzzy-concept Good triangular(0, 10, 6, 7.5, 9))
+(define-fuzzy-concept VeryGood right-shoulder(0, 10, 8, 10))
+
+% Definition of the alternative score concept
+
+(define-concept Aletrnative (= hasScore ( (0.258*hasCost) + (0.105*hasDeliveryTime) + (0.637*hasQuality) )     ))
+
+
+% description of the alternatives and their performance values
+(instance a1 (and Aletrnative (some hasCost VeryPoor) (some hasDeliveryTime Fair)  (some hasQuality Good)   ))
+
+(instance a2 (and Aletrnative (some hasCost Good) (some hasDeliveryTime VeryGood)  (some hasQuality Poor)   ))
+
+(instance a3 (and Aletrnative (some hasCost Fair) (some hasDeliveryTime Fair)  (some hasQuality Poor)   ))
+
+%(show-concrete-fillers-for a hasScore hasCost hasDeliveryTime hasQuality)
+
+
+% defuzzyfy the score: so a1 is the best offer
+
+(defuzzify-mom? Aletrnative a1 hasScore)    % 5.3025
+%(defuzzify-mom? Aletrnative a2 hasScore)   % 4.5775
+%(defuzzify-mom? Aletrnative a3 hasScore)   % 3.4075
+

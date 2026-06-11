@@ -1,0 +1,135 @@
+This file contains instructions to install the FOILDL system and 
+how to use both as stand-alone application and Protege plugin.
+
+
+############################################
+  INSTRUCTIONS FOR THE STAND-ALONE VERSION.
+############################################
+
+The application is composed by:
+ the executable jar archive FOILDL.jar;
+ other jar files included into the lib directory.
+
+FOILDL.jar can be executed by shell command:
+  java -jar FOILDL.jar
+  
+The application's view is composed mainly by a window containing two panels
+called Learn and Options.
+
+
+
+Learn panel is the control panel for the FOIL algorithm.
+Initially this panel presents just a status bar on top and three buttons
+on the bottom: LEARN, STOP and BATCH.
+
+The LEARN button starts the algorithm and if options are not changed
+the algorithm's parameters, including the ontology and the concept to learn, 
+are read from the default CONFIG file.
+
+Once the algorithm is started a message is shown, signaling that algorithm is working
+and the STOP button becomes enabled.
+While algorithm is working a bar on the bottom, over those three buttons a label shows rules
+checked by algorithm, and each time a rule is learned, it is added into a list shown
+in the middle part of the panel.
+
+The algorithm can be interrupted by clicking the STOP button.
+
+Whenever it is interrupted, algorithm computes its last step with the partial rule set learned and
+the status message will remind the user about the interruption.
+
+On algorithm termination (by interruption or by ending) a dialog asks wheter useless axioms is wanted
+to be removed or not and then last ending step can start.
+
+The last step consist in:
+ computing the Confidence of each rule of the covering set;
+ Showing a diagram explaining the meaning of any fuzzy expression appeared.
+
+The BATCH button raises two dialogs asking for an input directory of config files 
+and an output folder for results and then, for each input file, an instance of FOILDL is executed.
+
+Each algorithm instance does not modify the ontology, user should add learned axioms itself if desired.
+
+
+
+Options panel is composed by three radio button, first one, the default choise, tells the algorithm
+to read parameters from the default CONFIG file; the second one shows a subpanel to manually prepare 
+the parameters needed by algorithm; third button allows the user to load a config file and to modify
+that configuration or use it.
+
+
+
+Configuration file is made of a list of parameters following this sintax: <PARAMETER NAME> = <PARAMETER VALUE>
+
+The following is the list of parameter's name that can/must be used:
+  ontology: it's value is the path to the .owl ontology;
+  concept: it is the name of the target concept, head of the rules that user wants to learn;
+  debug_mode (optional): can be true or false (default value if missing) and tells the algorithm
+      to write on standard output, some debug informations;
+  cwa_mode (optional): this parameter tells the algorithm how the negative examples should be generated,
+      if value is true then all instances that are not inferred instances of the target concept are negative examples,
+      if value is false or missing then, negative exampls are only those instances inferred to belong
+      to the complement of target concept;
+  direct_subclasses (optional): when the algorithm refines a body rule it can replace a conjunct class by replacing with
+      all its subclass, if this parameter's value is true the algorithm generates just direct subclasses, if value
+      is false (or missing) all subclasses are generate;
+  backtrack_mode (optional): if true applies the backtrack strategy to FOIL algorithm;
+  max_depth (optional): integer value, (1 by default) states the max depth of nested SOMEOF expressions
+      (0 does not allow SOMEOF expressions) ;
+  max_conjuncts (optional): integer value, (5 by default) states the max number of conjunctions in a conjunction
+      at any level of nesting;
+  theta (optional): double value (0.0) by default, states the min value that a rule should have as cf value;
+  reasoner (optional): PELLET (default) to use Pellet reasoner, HERMIT for Hermit reasoner, JFACT for JFact;
+  skip_classes: it represents a list of classes (having sintax {"class1", "class2", ... }) 
+      not involved in the learning process.
+  skip_properties: it represents a list of object properties (having sintax {"prop1", "prop2", ... }) 
+      not involved in the learning process.
+  skip_data_properties: it represents a list of data properties (having sintax {"prop1", "prop2", ... }) 
+      not involved in the learning process.
+  custom_dataproperty_ranges: list parameter with sintax {<elem1>,<elem2>, ... }, each <elem> is a tuple
+      with sintax "dataprop datatype min max" these tuples are parsed to generate fuzzy concepts using the
+      custom min and max values for each given data property "dataprop" having range "datatype"; 
+
+
+
+
+
+
+############################################
+  INSTRUCTIONS FOR THE PROTEGE PLUGIN
+############################################
+
+SET UP.
+Plugin should be placed into the Protege plugin folder.
+The FOIL-DL LEARNER tab should be enbled by clicking Window -> Tabs -> FOIL-DL LEARNER.
+Optionally a custom tab to use FOIL-DL can be composed using standard views or FOIL-DL ones:
+ - Window -> Views -> Misc views -> FOIL-DL learner for the control panel view;
+ - Window -> Views -> Misc views -> FOIL-DL Excluded Entities for managing excluded entities view;
+ - Window -> Views -> Misc views -> FOIL-DL Custom Fuzzy Concepts for custom fuzzy concepts view;
+ - Window -> Views -> Individual views -> ComplementOf members list for the list of individuals of a complement expression;
+
+
+USAGE.
+Parameters are setted by using the GUI into the "FOIL-DL learner" view, the ontology used is the currently active one.
+The target concept is set to the last class selected in the default class view.
+
+To exclude an entity (class, object property or data property) select that entity from its standard 
+entity view and then click on ADD SELECTED button in FOIL-DL Excluded Entities (to reallow that entity select it
+from the above list and click on REMOVE SELECTED button).
+
+To manage custom fuzzy data property concepts, select a dataproperty then go to FOIL-DL Custom Fuzzy Concepts view
+fill intervals and choose the range type, then click ADD SELECTED to add it (REMOVE SELECTED, to delete previous choises).
+
+In order to start the learning process, a reasoner has to be started and synchronized.
+Reasoner can be started or synchronized from default Reasoner menu.
+SYNCHRONIZE/START REASONER button in FOIL-DL panel is a shortcut button for this task.
+
+LEARN button starts the learning process, and STOP button allows user to stop it.
+While running the New Axioms dialog shows information about algorith execution.
+
+Learned axioms are not automatically added to the ontology. 
+From New Axioms dialog's axioms list the user can select axioms and add them into the ontology.
+
+
+
+
+

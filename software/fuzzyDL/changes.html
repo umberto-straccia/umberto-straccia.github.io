@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+	
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="generator" content="Adobe GoLive" /><title>Fuzzy OWL2 Tools changes</title></head><body>
+		<p><code><font color="#770000" face="Georgia, Times New Roman, Times, serif">List of changes:</font></code></p>
+		<ul>
+			<ul>
+			  
+    <li><code>09 January 2019
+                </code>
+			    <ul><li><code>Update to run with Gurobi 8.1.0 MILP solver</code></li></ul>
+			  </li>
+    <li><code>23 December 2015
+                </code>
+			    <ul>
+                  <li><code>Update to run with Gurobi 6.5 MILP solver</code></li>
+                </ul>
+			  </li>
+
+			  <li><code>16 October 2015
+                </code>
+			    <ul>
+                  <li><code>Bug fixes</code></li>
+                  <li><code>fuzzyDL API and syntax documents updated</code></li>
+                  <li><code>Addition
+of Individual Value Restriction construct: the set of individuals
+connected via role R to individual "a" is expressed as </code>
+                    <ul>
+                  <li><code><strong>(b-some R a)</strong></code></li>
+                    </ul>
+                  </li>
+                </ul>
+			  </li>
+			  <li><code>12 February 2014
+                </code>
+			    <ul>
+                  <li><code>Bug fixes</code></li>
+                  <li><code>Addition of boolean datatype property restrictions </code></li>
+                  <li><code>Improved optimisations via GCI absorptions</code></li>
+                  <li><code>FuzzyDL API allows now to save a FuzzyDL ontology into<a href="/%7Estraccia/software/FuzzyOWL/index.html"> Fuzzy OWL 2</a> format</code></li>
+                  <li><code>Fuzzy OWL 2 to FuzzyDL parser has been updated</code></li>
+			    </ul>
+		      </li>
+			  <li><code>19 June 2013
+                </code>
+			    <ul>
+                  <li><code>Bug	fixes,	 update of (fuzzy) OWL 2 to fuzzyDL parser</code></li>
+                </ul>
+			  </li>
+			  <li><code>12 June 2013
+                </code>
+			    <ul>
+                  <li><code>Performance  improvements.	</code></li>
+                  <li><code>Addition of inverse functionality axiom construct for roles:
+                    </code>
+                    <ul>
+                      <li><code><strong>(inverse-functional R)</strong></code></li>
+                    </ul>
+                  </li>
+                  <li><code>Bug	fixes,	 update of (fuzzy) OWL 2 to fuzzyDL parser</code></li>
+                </ul>
+			  </li>
+			  <li><code>16 April 2013
+                </code>
+			    <ul>
+                  <li><code>Significant  improvements in TBox partitioning algorithm.			  </code></li>
+                </ul>
+			  </li>
+			  <li><code>28 January 2013
+			    </code>
+			    <ul>
+			      <li><code>Few more improvements in TBox partitioning algorithm.</code></li>
+		        </ul>
+			  </li>
+			  <li><code>23 January 2013
+		        </code>
+			    <ul>
+		          <li><code><strong>This is a major update.</strong>
+fuzzyDL includes now several optimisations, such as concept absoptions,
+TBox parititioning and specialised blocking strategies, including <em>anywhere</em> <em>blocking</em>. </code></li>
+	            </ul>
+			  </li>
+			  <li><code>27 December 2012
+			    </code>
+			    <ul>
+			      <li><code><strong>(sat?)</strong> query construct added, which tests if a KB is satisfiable			</code></li>
+		        </ul>
+		      </li>
+			  <li><code>17 December 2012
+			    </code>
+			    <ul>
+			      <li><code>optimisations</code></li>
+		        </ul>
+		      </li>
+			  <li><code>22 November 2012
+			    </code>
+			    <ul>
+			      <li><code>bug fixes</code></li>
+			      <li><code>optimisations</code></li>
+			      <li><code>New construct:
+			        </code>
+			        <ul>
+			          <li><code><strong>(w-sum-zero (v1 C1) . . . (vk Ck)) </strong> </code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>06 November 2012
+			    </code>
+			    <ul>
+			      <li><code>Now, concept names may begin with a number </code></li>
+		        </ul>
+		      </li>
+			  <li><code>01 August 2012
+			    </code>
+			    <ul>
+			      <li><code>A minor bug fix</code></li>
+			      <li><code>New constructs: 
+			        </code>
+			        <ul>
+			          <li><code><strong>(w-max (v1 C1) . . . (vk Ck)) </strong>(weighted maximum)</code></li>
+			          <li><code><strong>(w-min (v1 C1) . . . (vk Ck)) </strong>(weighted minimum) </code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>06 February 2012
+			    </code>
+			    <ul>
+			      <li><code>Some minor performance upgrates to the reasoner</code></li>
+		        </ul>
+		      </li>
+			  <li><code>18 January 2012
+			    </code>
+			    <ul>
+			      <li><code>FuzzyDL reasoner has been improved</code></li>
+			      <li><code>Fuzzy OWL 2 Protege plugin has been updated as well</code></li>
+			      <li><code>New construct: <strong>(all-instances? C)</strong> which is the same as (min-instance? a C) for every individual in the KB</code></li>
+		        </ul>
+		      </li>
+			  <li><code>27 October 2011
+			    </code>
+			    <ul>
+			      <li><code>FuzzyDL reasoner has been completely revisited</code></li>
+			      <li><code>New constructs have been added to support Rough Concepts, concept aggregation operators such as OWA and fuzzy integrals.</code></li>
+			      <li><code>Fuzzy OWL 2 Protege plugin has been revisisted as well</code></li>
+		        </ul>
+		      </li>
+			  <li><code>23 December 2010
+			    </code>
+			    <ul>
+			      <li><code>Bug fix in pairwise blocking.</code></li>
+			      <li><code>New construct has been added
+			        </code>
+			        <ul>
+			          <li><code><b>(equivalent-concepts C D)</b>
+		              </code>
+			            <ul>
+			              <li><code>Concept C is defined as equivalent to concept D</code></li>
+		                </ul>
+		              </li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>13 December 2010
+			    </code>
+			    <ul>
+			      <li><code>Bug fix in inference rule for Weighted Sum of Concepts. For the update, just replace the old FuzzyDL.jar with the new one.</code></li>
+		        </ul>
+		      </li>
+			  <li><code>24 November 2010
+			    </code>
+			    <ul>
+			      <li><code>Bug fix in parser for statement (range RN C)</code></li>
+		        </ul>
+		      </li>
+			  <li><code>17 November 2010
+			    </code>
+			    <ul>
+			      <li><code><a href="../FuzzyOWL/index.html">Fuzzy OWL 2</a> Protege plug-in can be downloaded</code></li>
+		        </ul>
+		      </li>
+			  <li><code>10 November 2010
+			    </code>
+			    <ul>
+			      <li><code>Bug correction in parser than didn't ricognise correctly the "implies" concept constructor</code></li>
+		        </ul>
+		      </li>
+			  <li><code>21 October 2010
+			    </code>
+			    <ul>
+			      <li><code>bug fix in FuzzyDL Mac OS X version</code></li>
+		        </ul>
+		      </li>
+			  <li><code>15 October 2010
+			    </code>
+			    <ul>
+			      <li><code>bug fix in Fuzzy OWL 2 parser</code></li>
+		        </ul>
+		      </li>
+			  <li><code>17 September 2010
+			    </code>
+			    <ul>
+			      <li><code><a href="../FuzzyOWL/index.html">Fuzzy OWL 2</a> (proposal) has been released, i.e, how to represent fuzzy ontologies in OWL 2
+			        </code>
+			        <ul>
+			          <li><code>A parser that converts Fuzzy OWL 2 ontologies, written in OWL 2, into fuzzyDL format has been released as well</code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>17 September 2010
+			    </code>
+			    <ul>
+			      <li><code>New fuzzyDL version has been released
+			        </code>
+			        <ul>
+			          <li><code>Some performance improvments</code></li>
+			          <li><code>Definition of the fuzzy logic is not done in the Config file, but in the KB:
+			            </code>
+			            <ul>
+			              <li><code>&nbsp;<strong>(fuzzy-logic [lukasiewicz | zadeh | classical])</strong></code></li>
+		                </ul>
+		              </li>
+			          <li><code>Concrete features are defined using two instructions, functionality and range:
+			            </code>
+			            <ul>
+			              <li><code><strong>&nbsp;(functional F)</strong></code></li>
+			              <li><code><strong>&nbsp;(range F *integer* k1 k2) | (range F *real* k1 k2) | (range F *string*)</strong></code></li>
+		                </ul>
+		              </li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>07 April 2010
+			    </code>
+			    <ul>
+			      <li><code>FuzzyDL has been released for Windows operating system</code></li>
+		        </ul>
+		      </li>
+			  <li><code>06 April 2010
+			    </code>
+			    <ul>
+			      <li><code>some bug fixes</code></li>
+		        </ul>
+		      </li>
+			  <li><code>07 January 2010</code></li>
+			  <li>
+			    <ul>
+			      <li><code>New API to read KB and Query components. Now, it is possible to:
+			        </code>
+			        <ul>
+			          <li><code>Parser parser = new Parser("filename.txt");<br />
+		              parser.Start();<br />
+		              KnowledgeBase kb = Parser.getKB();<br />
+		              Array &lt;Query&gt; q = Parser.getQueries();</code></li>
+		            </ul>
+		          </li>
+			      <li><code>For backwards compatibility, the three first lines can be replaced by:
+			        </code>
+			        <ul>
+			          <li><code>KnowledgeBase kb = Parser.getKB("filename.txt");</code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>02 December 2009</code></li>
+			  <li>
+			    <ul>
+			      <li><code>New API to read KB from files</code></li>
+		        </ul>
+		      </li>
+			  <li><code>21 October 2009
+			    </code>
+			    <ul>
+			      <li><code>Some fixes on the handling of role inclusion axioms, transitive and reflexive roles</code></li>
+		        </ul>
+		      </li>
+			  <li><code>29 June 2009
+			    </code>
+			    <ul>
+			      <li><code>Some fixes on the parser</code></li>
+			      <li><code>Multicriteria Decision Making Example added (see <a href="examples/examples.html">here</a>)</code></li>
+		        </ul>
+		      </li>
+			  <li><code>15 June 2009
+			    </code>
+			    <ul>
+			      <li><code>Datatype restrictions support arithmetic expressions, e.g.,
+			        </code>
+			        <ul>
+			          <li><code>(instance a (= totalPrice (netPrice + (0.2*netPrice) + -20) ) )</code></li>
+			          <li><code>the total price is given by the net price, plus 20% of the net price, minus 20</code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>03 June 2009
+			    </code>
+			    <ul>
+			      <li><code>A Javadoc is now available (see <a href="download/old/documents/documents.html">here</a>)</code></li>
+			      <li><code>Some bug fixes</code></li>
+		        </ul>
+		      </li>
+			  <li><code>14 May 2009
+			    </code>
+			    <ul>
+			      <li><code>A new statement has been added
+			        </code>
+			        <ul>
+			          <li><code><b>(show-concrete-instance-for a F C1 ... CN)</b></code></li>
+			          <li><code>show the degrees of being the F filler of a an instance of Ci</code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>08 May 2009
+			    </code>
+			    <ul>
+			      <li><code>Some bug fixes on datatype restrictions involving fuzzy numbers</code></li>
+		        </ul>
+		      </li>
+			  <li><code>07 May 2009
+			    </code>
+			    <ul>
+			      <li><code>Fuzzy numbers may occur in data type restrictions. For instance, "tom's age is at least about 30"
+		          </code>
+			        <ul>
+			          <li><code><b>(define-concrete-feature hasAge *real* 0 150)</b></code></li>
+			          <li><code><strong>(define-fuzzy-number-range -1000000 1000000)</strong></code></li>
+			          <li><code><b>(define-fuzzy-number about30 (25, 30, 35))</b></code></li>
+			          <li><code><b>(instance tom (&gt;= hasAge about30))</b></code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>27 April 2009
+			    </code>
+			    <ul>
+			      <li><code>Fuzzy numbers expressions allowed in fuzzy number definition.</code></li>
+		        </ul>
+		      </li>
+			  <li><code>03 April 2009
+			    </code>
+			    <ul>
+			      <li><code>Fuzzy numbers and arithemic are supported, i.e., fuzzy numbers may occurs as fuzzy concrete concepts</code></li>
+			      <li><code>Some bug fixes</code></li>
+		        </ul>
+		      </li>
+			  <li><code>18 March 2009
+			    </code>
+			    <ul>
+			      <li><code>Our OWL ontology for Fuzzy OWL has been updated</code></li>
+			      <li><code>A
+parser is provided that translates crisp OWL 2 statements (without
+datatypes) into FuzzyOntology, and translates fuzzy statements based on
+FuzzyOntology into fuzzyDL statements</code></li>
+		        </ul>
+		      </li>
+			  <li><code>07 January 2009
+			    </code>
+			    <ul>
+			      <li><code>Reflexive role statement has been added: <b>(reflexive</b><strong><b> RN</b></strong><b>)</b></code></li>
+			      <li><code>Symmetric role statement has been added: <b>(symmetric</b><strong><b> RN</b></strong><b>)</b></code></li>
+			      <li><code>Concept construct "SELF" of Description Logic SROIQ has been added: <b>(self</b><strong><b> RN</b></strong><b>)</b></code></li>
+			      <li><code>Fuzzy
+Rough Set reasoning is supported: concepts may have a lower and upper
+approximation, according to indiscernibility relations (reflexive,
+symmetric, and transitive roles) </code>
+			        <ul>
+			          <li><code><b>(ua </b><strong><b>RN C) </b></strong>(upper approximation of concept C according to indiscernibility relation RN)</code></li>
+			          <li><code><b>(la </b><strong><b>RN C) </b></strong>(lower approximation of concept C according to indiscernibility relation RN)</code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>06 January 2009
+			    </code>
+			    <ul>
+			      <li><code>The on-line version of fuzzyDL has been discontinued</code></li>
+		        </ul>
+		      </li>
+			  <li><code>24 December 2008
+			    </code>
+			    <ul>
+			      <li><code>Our OWL ontology for Fuzzy OWL has been updated with annotated comments.</code></li>
+			      <li><code>The parser, which converts fuzzy OWL statements into fuzzyDL statements has been updated.</code></li>
+		        </ul>
+		      </li>
+			  <li><code>17 December 2008
+			    </code>
+			    <ul>
+			      <li><code>An OWL ontology for Fuzzy OWL has been uploaded. It may be used to share fuzzy OWL ontologies among fuzzy OWL reasoners.</code></li>
+			      <li><code>A parser has been uploaded, which converts fuzzy OWL statements into fuzzyDL statements.</code></li>
+		        </ul>
+		      </li>
+			  <li><code>21 October 2008
+			    </code>
+			    <ul>
+			      <li><code>Performance improvements and some bug fixes.</code></li>
+		        </ul>
+		      </li>
+			  <li><code>20 October 2008
+			    </code>
+			    <ul>
+			      <li><code>Some bug fixes.</code></li>
+		        </ul>
+		      </li>
+			  <li><code>07 October 2008
+			    </code>
+			    <ul>
+			      <li><code>API (small change): A KB can be loaded from file, as specified in new API documentation.</code></li>
+		        </ul>
+		      </li>
+			  <li><code>5 May 2008
+			    </code>
+			    <ul>
+			      <li><code>Minimal API published. Documentation on how to use fuzzyDL within Java programs available from the download section.</code></li>
+		        </ul>
+		      </li>
+			  <li><code>28 January 2008
+			    </code>
+			    <ul>
+			      <li><code>New construct have been added
+			        </code>
+			        <ul>
+			          <li><code><b>(define-truth-constant constant n) - &gt; </b>Defines a name for a truth constant n, where n is a rational in [0,1].</code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+			  <li><code>21 January 2008
+			    </code>
+			    <ul>
+			      <li><code>fuzzyDL downloadable for Linux</code></li>
+		        </ul>
+		      </li>
+			  <li><code>16 January 2008
+			    </code>
+			    <ul>
+			      <li><code>fuzzyDL downloadable for MacOS X</code></li>
+		        </ul>
+		      </li>
+			  <li><code>15 January 2008
+			    </code>
+			    <ul>
+			      <li><code>New constructs have been added
+			        </code>
+			        <ul>
+			          <li><code><b>(implies-role RN1 RN2 [d]) </b>--&gt; role RN2 subsumes role RN1 to degree d</code></li>
+			          <li><code>Syntax change of "show statements"</code></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+		  </ul>
+</ul>
+		<ul>
+			<ul>
+				
+		  </ul>
+			<li><code>26 November 2007
+				</code>
+			  <ul>
+				  <li><code>New constructs have been added for defuzzyfying concepts. This allows to encode a Fuzzy Controler System into fuzzyDL
+						</code>
+					  <ul>
+						  <li><code><b>(defuzzify-lom? C a </b><strong><b>F</b></strong><b>) -&gt; </b>Defuzzify the value of feature F using largest of the maxima method. a is an individual (see <a href="examples/examples.html">example</a>)</code></li>
+						  <li><code><b>(defuzzify-som? C a </b><strong><b>F</b></strong><b>) -&gt; </b>Defuzzify the value of feature F using smallest of the maxima method. a is an individual (see <a href="examples/examples.html">example</a>)</code></li>
+						  <li><code><b>(defuzzify-mom? C a </b><strong><b>F</b></strong><b>) -&gt; </b>Defuzzify the value of feature F using middle of the maxima method. a is an individual (see <a href="examples/examples.html">example</a>)</code></li>
+					  </ul>
+				  </li>
+				</ul>
+			</li>
+			<li><code>29 October 2007
+				</code>
+			  <ul>
+				  <li><code>There
+is now an OWL to fuzzyDL converter. You may now convert OWL ontologies
+into fuzzyDL ontologies. Non-convertable OWL statements will be
+omitted. The procedure is accessible from the "Try it" page.</code></li>
+				</ul>
+			</li>
+			<li><code>24 October 2007
+				</code>
+			  <ul>
+				  <li><code>Some bugs fixed.</code></li>
+				  <li><code>Syntax of "and" and "or" changed, e.g. (L-and C1 C2) is now (l-and C1 C2) (see syntax)</code></li>
+				  <li><code>In Linear in-equations:
+						</code>
+					  <ul>
+						  <li><code><strong>(binary var) </strong>-&gt; The variable "var" is declared to be binary, i.e. takes value 0 or 1. The former statement was (BND var BV)</code></li>
+						  <li><code><strong>(free var)</strong> -&gt; The variable "var" is declared to be free, i.e. takes any value</code></li>
+					  </ul>
+				  </li>
+				  <li><code>As the (concept-subsumes C2 C1) construct is the same as the (implies C1 C2) construct, we decided to keep the latter only</code></li>
+				  <li><code>Concerning concept forming operators, the following constructs has been added
+						</code>
+					  <ul>
+						  <li><code><strong>(implies C1 C2) </strong>-&gt; this is the concept "if C1 then C2"</code></li>
+						  <li><code><strong>(l-implies C1 C2)</strong> -&gt; this is the concept "if C1 then C2" using Lukasiewicz implication</code></li>
+						  <li><code><strong>(g-implies C1 C2)</strong> -&gt; this is the concept "if C1 then C2" using Gödel implication</code></li>
+						  <li><code><strong>(kd-implies C1 C2)</strong> -&gt; this is the concept "if C1 then C2" using Kleene-Dienes implication</code></li>
+						  <li><code>(n
+C) -&gt; this represents a concept such that for any individual d, the
+degree of being individual d an instance of (n C), i.e., (n C)(d), is
+given by n times the degree of being d an instance of C, i.e., n * C(d)</code></li>
+						  <li><code><strong>(C [&gt;= n]), (C [&lt;= n])</strong>
+-&gt; Represents a thresholded concept, where n in [0,1] and C is a
+concept. E.g., the degree of being individual d an instance of (C
+[&gt;= n]), i.e., (C [&gt;= n])(d), is 0 if d is an instance of C to
+degree less than n, otherwise the degree is C(d). Similarly, the degree
+of being individual d an instance of (C [&lt;= n]), i.e., (C [&lt;=
+n])(d), is 0 if d is an instance of C to degree greather than n,
+otherwise the degree is C(d).</code></li>
+					  </ul>
+				  </li>
+				  <li><code>Concerning General Concept Inclusions, the following constructs has been added
+						</code>
+					  <ul>
+						  <li><code><strong>(l-implies C1 C2 d)</strong> -&gt; concept C1 is a sub-class of concept C2 with degree d using Lukasiewicz implication</code></li>
+						  <li><code><strong>(g-implies C1 C2 d)</strong> -&gt; concept C1 is a sub-class of concept C2 with degree d using Gödel implication</code></li>
+						  <li><code><strong>(kd-implies C1 C2 d)</strong> -&gt; concept C1 is a sub-class of concept C2 with degree d using Kleene-Dienes implication</code></li>
+					  </ul>
+				  </li>
+				  <li><code>Concerning query expressions:
+						</code>
+					  <ul>
+						  <li><code><strong>(individual-instance? a C) </strong>-&gt; has been replaced with <b>(min-instance? a C)</b></code></li>
+						  <li><code><b>(concept-subsumes? C1 C2) </b>-&gt; has been replaced with <b>(min-subs? C1 C2)</b></code></li>
+						  <li><code><b>(concept-satisfiable? C) </b>-&gt; has been replaced with <b>(min-sat? C [a])</b></code></li>
+						  <li><code><b>(solve-max-expr? var) </b>-&gt; has been replaced with <b>(max-var? var)</b></code></li>
+						  <li><code><b>(solve-min-expr? var) </b>-&gt; has been replaced with <b>(min-var? var)</b></code></li>
+						  <li><code>The full list is now<strong>:</strong></code></li>
+						  <li>
+							  <table cellpadding="0" cellspacing="2" width="1494">
+								  <tbody><tr>
+									  <td><code><b>(min-instance? a C)</b></code></td>
+									  <td><code>--&gt;</code></td>
+									  <td><code>determines the minimal degree to which individual a is an instance of concept C</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(max-instance? a C)</b></code></td>
+									  <td><code>--&gt;</code></td>
+									  <td><code>determines the maximal degree to which individual a is an instance of concept C</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(min-subs? C1 C2)</b></code></td>
+									  <td><code>--&gt;</code></td>
+									  <td><code>determines the minimal degree to which concept C1 subsumes concept C2</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(max-subs? C1 C2)</b></code></td>
+									  <td><code>--&gt;</code></td>
+									  <td><code>determines the maximal degree to which concept C1 subsumes concept C2</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(min-l-subs? C1 C2)</b></code></td>
+									  <td><code>--&gt;</code></td>
+									  <td><code>determines the minimal degree to which concept C1 subsumes concept C2, using Lukasiewicz implication</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(max-l-subs? C1 C2)</b></code></td>
+									  <td><code>--&gt;</code></td>
+									  <td><code>determines the maximal degree to which concept C1 subsumes concept C2, using Lukasiewicz implication</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(min-g-subs? C1 C2)</b></code></td>
+									  <td><code>--&gt;</code></td>
+									  <td><code>determines the minimal degree to which concept C1 subsumes concept C2, using Gödel implication</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(max-g-subs? C1 C2)</b></code></td>
+									  <td><code>--&gt;</code></td>
+									  <td><code>determines the maximal degree to which concept C1 subsumes concept C2, using Gödel implication</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(min-kd-subs? C1 C2)</b></code></td>
+									  <td><code>-&gt;</code></td>
+									  <td><code>determines the minimal degree to which concept C1 subsumes concept C2, using Kleene-Dienes implication</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(max-kd-subs? C1 C2)</b></code></td>
+									  <td><code>-&gt;</code></td>
+									  <td><code>determines the maximal degree to which concept C1 subsumes concept C2, using Kleene-Dienes implication</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(min-sat? C [a])</b></code></td>
+									  <td><code>-&gt;</code></td>
+									  <td><code>determines
+the minimal degree to which concept C is satisfiable. Optionally we may
+specify an individual a. In that case the minimal degree to which the
+individual a is an instance of C is computed</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(max-sat? C [a])</b></code></td>
+									  <td><code>-&gt;</code></td>
+									  <td><code>determines
+the maximal degree to which concept C is satisfiable. Optionally we may
+specify an individual a. In that case the maximal degree to which the
+individual a is an instance of C is computed</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(min-var? var)</b></code></td>
+									  <td><code>-&gt;</code></td>
+									  <td><code>determines the minimal value for variable var in [0,1], taking into account the constraints in the KB</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(max-var? var)</b></code></td>
+									  <td><code>-&gt;</code></td>
+									  <td><code>determines the maximal value for variable var in [0,1], taking into account the constraints in the KB</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(min-related? a b RN)</b></code></td>
+									  <td><code>-&gt;</code></td>
+									  <td><code>determines the minimal degree to which individual pair (a,b) is an instance of role name RN</code></td>
+								  </tr>
+								  <tr>
+									  <td><code><b>(max-related? a b RN)</b></code></td>
+									  <td><code>-&gt;</code></td>
+									  <td><code>determines the maximal degree to which individual pair (a,b) is an instance of role name RN</code></td>
+								  </tr>
+							  </tbody></table>
+						  </li>
+						  <li><br />
+</li>
+					  </ul>
+				  </li>
+				</ul>
+			</li>
+	</ul>
+<p />
+		<ul>
+			<ul>
+				<li><code>Show statements: statements have been added to show values in an optimal solution
+					
+					</code>
+				  <ul>
+					  <li>
+						  <table cellpadding="0" cellspacing="2" width="1494">
+							  <tbody><tr>
+								  <td><code><b>(show-fillers f1 ... fn)</b></code></td>
+								  <td><code>--&gt;</code></td>
+								  <td><code>show all fillers of concrete feature f1 ... fn in an optimal solution to a query</code></td>
+							  </tr>
+							  <tr>
+								  <td><code><b>(show-fillers a f1 ... fn)</b></code></td>
+								  <td><code>--&gt;</code></td>
+								  <td><code>for individual a, show all fillers of concrete feature f1 ... fn in an optimal solution to a query</code></td>
+							  </tr>
+							  <tr>
+								  <td><code><b>(show-variables x1 ... xn)</b></code></td>
+								  <td><code>--&gt;</code></td>
+								  <td><code>show the value of the variables x1 ... xn in an optimal solution to a query</code></td>
+							  </tr>
+							  <tr>
+								  <td><code><b>(show-instances A1 ... An)</b></code></td>
+								  <td><code>--&gt;</code></td>
+								  <td><code>show all instances of atomic concepts A1 ... An and their degree in an optimal solution to a query</code></td>
+							  </tr>
+							  <tr>
+								  <td><code><b>(show-concepts a1 ... an)</b></code></td>
+								  <td><code>--&gt;</code></td>
+								  <td><code>show all Atoms to which ai is instance and their degree in an optimal solution to a query</code></td>
+							  </tr>
+							  <tr>
+								  <td><code><b>(show-lnaguage)</b></code></td>
+								  <td><code>--&gt;</code></td>
+								  <td><code>show the description logic language of the KB, from ALC to SHIF(D)</code></td>
+							  </tr>
+						  </tbody></table>
+					  </li>
+					</ul>
+				</li>
+			</ul>
+		</ul>
+		<p />
+		<p />
+		<ul>
+			<li><code>05 September 2007
+				</code>
+			  <ul>
+				  <li><code>Some bugs fixed.</code></li>
+				  <li><code>Syntax of Datatype restrictions changed (see grammar of DR)</code></li>
+				  <li><code>Syntax of equations slightly changed ( "=&gt;" changed to "&gt;=")</code></li>
+				</ul>
+			</li>
+			<li><code>17 July 2007
+				</code>
+			  <ul>
+				  <li><code>Datatype restrictions added (string-, integer-, real-valued attributes)</code></li>
+				  <li><code>Weighted Sum Concept Operator added</code></li>
+				  <li><code>Lukasiewicz conjunction/disjunction added</code></li>
+				  <li><code>Gödel conjunction/disjunction added</code></li>
+				</ul>
+			</li>
+			<li><code>23 Oct. 2006
+				</code>
+			  <ul>
+				  <li><code>Binary code of fuzzyDL can be downloaded.</code></li>
+				</ul>
+			</li>
+			<li><code>25 Sept. 2006
+				</code>
+			  <ul>
+				  <li><code>Multiple queries can be added at the end of the file</code></li>
+				  <li><code>Weighted subsumption relations <b>(concept-subsumes C1 C2 [d]) </b>and <b>(implies C1 C2 [d])</b>, where d is an optional degree in [0,1]. d can also be avariable.</code></li>
+				</ul>
+			</li>
+			<li><code>05 Sept. 2006
+				</code>
+			  <ul>
+				  <li><code>Triangular modifier has been added: <b>(define-modifier CM triangular-modifier(a,b,c))</b></code></li>
+				  <li><code>Maximal degree of satisfiability of a concept C can be asked: <b>(concept-satisfiable? C)</b></code></li>
+				  <li><code>Maximization or Minimization problem for variable x can be asked: <b>(solve-max-x?) </b>or<b> (solve-min-x?)</b></code></li>
+				</ul>
+			</li>
+		</ul>
+	</body></html>

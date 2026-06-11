@@ -1,0 +1,3764 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY a "http://localhost/foo#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://localhost/foo#"
+     xml:base="http://localhost/foo"
+     xmlns:a="http://localhost/foo#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="http://localhost/foo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/foo#hasCard -->
+
+    <owl:ObjectProperty rdf:about="&a;hasCard"/>
+    
+
+
+    <!-- http://localhost/foo#hasRank -->
+
+    <owl:ObjectProperty rdf:about="&a;hasRank"/>
+    
+
+
+    <!-- http://localhost/foo#hasSuit -->
+
+    <owl:ObjectProperty rdf:about="&a;hasSuit"/>
+    
+
+
+    <!-- http://localhost/foo#nextRank -->
+
+    <owl:ObjectProperty rdf:about="&a;nextRank"/>
+    
+
+
+    <!-- http://localhost/foo#sameRank -->
+
+    <owl:ObjectProperty rdf:about="&a;sameRank"/>
+    
+
+
+    <!-- http://localhost/foo#sameSuit -->
+
+    <owl:ObjectProperty rdf:about="&a;sameSuit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/foo#ToLearn -->
+
+    <owl:Class rdf:about="&a;ToLearn"/>
+    
+
+
+    <!-- http://localhost/foo#card -->
+
+    <owl:Class rdf:about="&a;card"/>
+    
+
+
+    <!-- http://localhost/foo#deck -->
+
+    <owl:Class rdf:about="&a;deck"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/foo#ace -->
+
+    <owl:NamedIndividual rdf:about="&a;ace"/>
+    
+
+
+    <!-- http://localhost/foo#card0 -->
+
+    <owl:NamedIndividual rdf:about="&a;card0">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card1"/>
+        <sameSuit rdf:resource="&a;card1"/>
+        <sameSuit rdf:resource="&a;card2"/>
+        <sameSuit rdf:resource="&a;card3"/>
+        <sameSuit rdf:resource="&a;card4"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card1 -->
+
+    <owl:NamedIndividual rdf:about="&a;card1">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card2"/>
+        <nextRank rdf:resource="&a;card3"/>
+        <sameSuit rdf:resource="&a;card3"/>
+        <sameSuit rdf:resource="&a;card4"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card10 -->
+
+    <owl:NamedIndividual rdf:about="&a;card10">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card11"/>
+        <sameSuit rdf:resource="&a;card12"/>
+        <nextRank rdf:resource="&a;card12"/>
+        <sameSuit rdf:resource="&a;card13"/>
+        <sameSuit rdf:resource="&a;card14"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card100 -->
+
+    <owl:NamedIndividual rdf:about="&a;card100">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card101"/>
+        <nextRank rdf:resource="&a;card104"/>
+        <hasRank rdf:resource="&a;six"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card101 -->
+
+    <owl:NamedIndividual rdf:about="&a;card101">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;eight"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card102 -->
+
+    <owl:NamedIndividual rdf:about="&a;card102">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card103"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card103 -->
+
+    <owl:NamedIndividual rdf:about="&a;card103">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;four"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card104 -->
+
+    <owl:NamedIndividual rdf:about="&a;card104">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card101"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card105 -->
+
+    <owl:NamedIndividual rdf:about="&a;card105">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card106"/>
+        <sameSuit rdf:resource="&a;card109"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card106 -->
+
+    <owl:NamedIndividual rdf:about="&a;card106">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card107 -->
+
+    <owl:NamedIndividual rdf:about="&a;card107">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;five"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card108 -->
+
+    <owl:NamedIndividual rdf:about="&a;card108">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card109 -->
+
+    <owl:NamedIndividual rdf:about="&a;card109">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card11 -->
+
+    <owl:NamedIndividual rdf:about="&a;card11">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card10"/>
+        <sameSuit rdf:resource="&a;card12"/>
+        <sameSuit rdf:resource="&a;card13"/>
+        <sameSuit rdf:resource="&a;card14"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card110 -->
+
+    <owl:NamedIndividual rdf:about="&a;card110">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameRank rdf:resource="&a;card114"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card111 -->
+
+    <owl:NamedIndividual rdf:about="&a;card111">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card110"/>
+        <nextRank rdf:resource="&a;card114"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card112 -->
+
+    <owl:NamedIndividual rdf:about="&a;card112">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card114"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card113 -->
+
+    <owl:NamedIndividual rdf:about="&a;card113">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card114 -->
+
+    <owl:NamedIndividual rdf:about="&a;card114">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card115 -->
+
+    <owl:NamedIndividual rdf:about="&a;card115">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card116"/>
+        <sameSuit rdf:resource="&a;card119"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card116 -->
+
+    <owl:NamedIndividual rdf:about="&a;card116">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card117"/>
+        <sameSuit rdf:resource="&a;card119"/>
+        <hasRank rdf:resource="&a;eight"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card117 -->
+
+    <owl:NamedIndividual rdf:about="&a;card117">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;eight"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card118 -->
+
+    <owl:NamedIndividual rdf:about="&a;card118">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card119 -->
+
+    <owl:NamedIndividual rdf:about="&a;card119">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;king"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card12 -->
+
+    <owl:NamedIndividual rdf:about="&a;card12">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card13"/>
+        <sameSuit rdf:resource="&a;card14"/>
+        <nextRank rdf:resource="&a;card14"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card120 -->
+
+    <owl:NamedIndividual rdf:about="&a;card120">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;king"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card121 -->
+
+    <owl:NamedIndividual rdf:about="&a;card121">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card122"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card122 -->
+
+    <owl:NamedIndividual rdf:about="&a;card122">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card123"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;five"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card123 -->
+
+    <owl:NamedIndividual rdf:about="&a;card123">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card124 -->
+
+    <owl:NamedIndividual rdf:about="&a;card124">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card125 -->
+
+    <owl:NamedIndividual rdf:about="&a;card125">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card128"/>
+        <sameRank rdf:resource="&a;card129"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card126 -->
+
+    <owl:NamedIndividual rdf:about="&a;card126">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card129"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card127 -->
+
+    <owl:NamedIndividual rdf:about="&a;card127">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;seven"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card128 -->
+
+    <owl:NamedIndividual rdf:about="&a;card128">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card125"/>
+        <nextRank rdf:resource="&a;card129"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card129 -->
+
+    <owl:NamedIndividual rdf:about="&a;card129">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card13 -->
+
+    <owl:NamedIndividual rdf:about="&a;card13">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card11"/>
+        <sameSuit rdf:resource="&a;card14"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card130 -->
+
+    <owl:NamedIndividual rdf:about="&a;card130">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card131"/>
+        <nextRank rdf:resource="&a;card132"/>
+        <sameSuit rdf:resource="&a;card133"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card131 -->
+
+    <owl:NamedIndividual rdf:about="&a;card131">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card133"/>
+        <sameSuit rdf:resource="&a;card133"/>
+        <nextRank rdf:resource="&a;card134"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card132 -->
+
+    <owl:NamedIndividual rdf:about="&a;card132">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card133 -->
+
+    <owl:NamedIndividual rdf:about="&a;card133">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card130"/>
+        <sameRank rdf:resource="&a;card134"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card134 -->
+
+    <owl:NamedIndividual rdf:about="&a;card134">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card130"/>
+        <hasRank rdf:resource="&a;six"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card135 -->
+
+    <owl:NamedIndividual rdf:about="&a;card135">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card136"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card136 -->
+
+    <owl:NamedIndividual rdf:about="&a;card136">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card137 -->
+
+    <owl:NamedIndividual rdf:about="&a;card137">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card138"/>
+        <hasRank rdf:resource="&a;queen"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card138 -->
+
+    <owl:NamedIndividual rdf:about="&a;card138">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card139 -->
+
+    <owl:NamedIndividual rdf:about="&a;card139">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card138"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;four"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card14 -->
+
+    <owl:NamedIndividual rdf:about="&a;card14">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card140 -->
+
+    <owl:NamedIndividual rdf:about="&a;card140">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card144"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card141 -->
+
+    <owl:NamedIndividual rdf:about="&a;card141">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card142"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card142 -->
+
+    <owl:NamedIndividual rdf:about="&a;card142">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card143 -->
+
+    <owl:NamedIndividual rdf:about="&a;card143">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card144 -->
+
+    <owl:NamedIndividual rdf:about="&a;card144">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;eight"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card145 -->
+
+    <owl:NamedIndividual rdf:about="&a;card145">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card148"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card146 -->
+
+    <owl:NamedIndividual rdf:about="&a;card146">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card149"/>
+        <hasRank rdf:resource="&a;seven"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card147 -->
+
+    <owl:NamedIndividual rdf:about="&a;card147">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card148"/>
+        <sameRank rdf:resource="&a;card149"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card148 -->
+
+    <owl:NamedIndividual rdf:about="&a;card148">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card149"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card149 -->
+
+    <owl:NamedIndividual rdf:about="&a;card149">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;jack"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card15 -->
+
+    <owl:NamedIndividual rdf:about="&a;card15">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card16"/>
+        <sameSuit rdf:resource="&a;card16"/>
+        <sameSuit rdf:resource="&a;card17"/>
+        <sameSuit rdf:resource="&a;card18"/>
+        <sameSuit rdf:resource="&a;card19"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card150 -->
+
+    <owl:NamedIndividual rdf:about="&a;card150">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card151 -->
+
+    <owl:NamedIndividual rdf:about="&a;card151">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card153"/>
+        <hasRank rdf:resource="&a;seven"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card152 -->
+
+    <owl:NamedIndividual rdf:about="&a;card152">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card154"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card153 -->
+
+    <owl:NamedIndividual rdf:about="&a;card153">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;jack"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card154 -->
+
+    <owl:NamedIndividual rdf:about="&a;card154">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card153"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card155 -->
+
+    <owl:NamedIndividual rdf:about="&a;card155">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card157"/>
+        <sameSuit rdf:resource="&a;card159"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card156 -->
+
+    <owl:NamedIndividual rdf:about="&a;card156">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;seven"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card157 -->
+
+    <owl:NamedIndividual rdf:about="&a;card157">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card156"/>
+        <sameSuit rdf:resource="&a;card159"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card158 -->
+
+    <owl:NamedIndividual rdf:about="&a;card158">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card159 -->
+
+    <owl:NamedIndividual rdf:about="&a;card159">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <nextRank rdf:resource="&a;card158"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card16 -->
+
+    <owl:NamedIndividual rdf:about="&a;card16">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card17"/>
+        <sameSuit rdf:resource="&a;card18"/>
+        <nextRank rdf:resource="&a;card19"/>
+        <sameSuit rdf:resource="&a;card19"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card160 -->
+
+    <owl:NamedIndividual rdf:about="&a;card160">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card162"/>
+        <sameSuit rdf:resource="&a;card162"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;four"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card161 -->
+
+    <owl:NamedIndividual rdf:about="&a;card161">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card160"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card162 -->
+
+    <owl:NamedIndividual rdf:about="&a;card162">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;five"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card163 -->
+
+    <owl:NamedIndividual rdf:about="&a;card163">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;queen"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card164 -->
+
+    <owl:NamedIndividual rdf:about="&a;card164">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card165 -->
+
+    <owl:NamedIndividual rdf:about="&a;card165">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card168"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card166 -->
+
+    <owl:NamedIndividual rdf:about="&a;card166">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card167 -->
+
+    <owl:NamedIndividual rdf:about="&a;card167">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card169"/>
+        <hasRank rdf:resource="&a;jack"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card168 -->
+
+    <owl:NamedIndividual rdf:about="&a;card168">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card169 -->
+
+    <owl:NamedIndividual rdf:about="&a;card169">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card167"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card17 -->
+
+    <owl:NamedIndividual rdf:about="&a;card17">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card18"/>
+        <sameSuit rdf:resource="&a;card19"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card170 -->
+
+    <owl:NamedIndividual rdf:about="&a;card170">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card171"/>
+        <sameSuit rdf:resource="&a;card172"/>
+        <sameSuit rdf:resource="&a;card173"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card171 -->
+
+    <owl:NamedIndividual rdf:about="&a;card171">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card172"/>
+        <sameSuit rdf:resource="&a;card173"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card172 -->
+
+    <owl:NamedIndividual rdf:about="&a;card172">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card173"/>
+        <nextRank rdf:resource="&a;card174"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card173 -->
+
+    <owl:NamedIndividual rdf:about="&a;card173">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card172"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card174 -->
+
+    <owl:NamedIndividual rdf:about="&a;card174">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card175 -->
+
+    <owl:NamedIndividual rdf:about="&a;card175">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card178"/>
+        <hasRank rdf:resource="&a;six"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card176 -->
+
+    <owl:NamedIndividual rdf:about="&a;card176">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card177"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card177 -->
+
+    <owl:NamedIndividual rdf:about="&a;card177">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card178 -->
+
+    <owl:NamedIndividual rdf:about="&a;card178">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card177"/>
+        <sameRank rdf:resource="&a;card179"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card179 -->
+
+    <owl:NamedIndividual rdf:about="&a;card179">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card177"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card18 -->
+
+    <owl:NamedIndividual rdf:about="&a;card18">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card17"/>
+        <sameSuit rdf:resource="&a;card19"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card180 -->
+
+    <owl:NamedIndividual rdf:about="&a;card180">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card181 -->
+
+    <owl:NamedIndividual rdf:about="&a;card181">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card183"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card182 -->
+
+    <owl:NamedIndividual rdf:about="&a;card182">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card183 -->
+
+    <owl:NamedIndividual rdf:about="&a;card183">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card184"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card184 -->
+
+    <owl:NamedIndividual rdf:about="&a;card184">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card185 -->
+
+    <owl:NamedIndividual rdf:about="&a;card185">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card186"/>
+        <nextRank rdf:resource="&a;card186"/>
+        <hasRank rdf:resource="&a;nine"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card186 -->
+
+    <owl:NamedIndividual rdf:about="&a;card186">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card187"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card187 -->
+
+    <owl:NamedIndividual rdf:about="&a;card187">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card188"/>
+        <sameSuit rdf:resource="&a;card189"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card188 -->
+
+    <owl:NamedIndividual rdf:about="&a;card188">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card189"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card189 -->
+
+    <owl:NamedIndividual rdf:about="&a;card189">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card19 -->
+
+    <owl:NamedIndividual rdf:about="&a;card19">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card18"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card190 -->
+
+    <owl:NamedIndividual rdf:about="&a;card190">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card193"/>
+        <sameSuit rdf:resource="&a;card194"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card191 -->
+
+    <owl:NamedIndividual rdf:about="&a;card191">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card194"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card192 -->
+
+    <owl:NamedIndividual rdf:about="&a;card192">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card193"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card193 -->
+
+    <owl:NamedIndividual rdf:about="&a;card193">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card194"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card194 -->
+
+    <owl:NamedIndividual rdf:about="&a;card194">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;king"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card195 -->
+
+    <owl:NamedIndividual rdf:about="&a;card195">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card196"/>
+        <sameSuit rdf:resource="&a;card197"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card196 -->
+
+    <owl:NamedIndividual rdf:about="&a;card196">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card197"/>
+        <hasRank rdf:resource="&a;queen"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card197 -->
+
+    <owl:NamedIndividual rdf:about="&a;card197">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card199"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card198 -->
+
+    <owl:NamedIndividual rdf:about="&a;card198">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card197"/>
+        <nextRank rdf:resource="&a;card199"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card199 -->
+
+    <owl:NamedIndividual rdf:about="&a;card199">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card2 -->
+
+    <owl:NamedIndividual rdf:about="&a;card2">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card3"/>
+        <nextRank rdf:resource="&a;card4"/>
+        <sameSuit rdf:resource="&a;card4"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card20 -->
+
+    <owl:NamedIndividual rdf:about="&a;card20">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card21"/>
+        <sameSuit rdf:resource="&a;card22"/>
+        <sameSuit rdf:resource="&a;card23"/>
+        <nextRank rdf:resource="&a;card23"/>
+        <sameSuit rdf:resource="&a;card24"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card200 -->
+
+    <owl:NamedIndividual rdf:about="&a;card200">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card202"/>
+        <sameRank rdf:resource="&a;card204"/>
+        <hasRank rdf:resource="&a;eight"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card201 -->
+
+    <owl:NamedIndividual rdf:about="&a;card201">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card202 -->
+
+    <owl:NamedIndividual rdf:about="&a;card202">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card203 -->
+
+    <owl:NamedIndividual rdf:about="&a;card203">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card204 -->
+
+    <owl:NamedIndividual rdf:about="&a;card204">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card205 -->
+
+    <owl:NamedIndividual rdf:about="&a;card205">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card206 -->
+
+    <owl:NamedIndividual rdf:about="&a;card206">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card207"/>
+        <sameSuit rdf:resource="&a;card208"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card207 -->
+
+    <owl:NamedIndividual rdf:about="&a;card207">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card206"/>
+        <sameSuit rdf:resource="&a;card208"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card208 -->
+
+    <owl:NamedIndividual rdf:about="&a;card208">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card207"/>
+        <sameRank rdf:resource="&a;card209"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;five"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card209 -->
+
+    <owl:NamedIndividual rdf:about="&a;card209">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card207"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card21 -->
+
+    <owl:NamedIndividual rdf:about="&a;card21">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card22"/>
+        <sameSuit rdf:resource="&a;card22"/>
+        <sameSuit rdf:resource="&a;card23"/>
+        <sameSuit rdf:resource="&a;card24"/>
+        <hasRank rdf:resource="&a;four"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card210 -->
+
+    <owl:NamedIndividual rdf:about="&a;card210">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card211"/>
+        <sameSuit rdf:resource="&a;card212"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card211 -->
+
+    <owl:NamedIndividual rdf:about="&a;card211">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card214"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card212 -->
+
+    <owl:NamedIndividual rdf:about="&a;card212">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card213 -->
+
+    <owl:NamedIndividual rdf:about="&a;card213">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card214 -->
+
+    <owl:NamedIndividual rdf:about="&a;card214">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card212"/>
+        <hasRank rdf:resource="&a;six"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card215 -->
+
+    <owl:NamedIndividual rdf:about="&a;card215">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card216"/>
+        <sameRank rdf:resource="&a;card219"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card216 -->
+
+    <owl:NamedIndividual rdf:about="&a;card216">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card217 -->
+
+    <owl:NamedIndividual rdf:about="&a;card217">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;five"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card218 -->
+
+    <owl:NamedIndividual rdf:about="&a;card218">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;eight"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card219 -->
+
+    <owl:NamedIndividual rdf:about="&a;card219">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card22 -->
+
+    <owl:NamedIndividual rdf:about="&a;card22">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card23"/>
+        <sameSuit rdf:resource="&a;card24"/>
+        <nextRank rdf:resource="&a;card24"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card220 -->
+
+    <owl:NamedIndividual rdf:about="&a;card220">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card221"/>
+        <sameSuit rdf:resource="&a;card223"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card221 -->
+
+    <owl:NamedIndividual rdf:about="&a;card221">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card223"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card222 -->
+
+    <owl:NamedIndividual rdf:about="&a;card222">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card224"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card223 -->
+
+    <owl:NamedIndividual rdf:about="&a;card223">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card224 -->
+
+    <owl:NamedIndividual rdf:about="&a;card224">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;five"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card225 -->
+
+    <owl:NamedIndividual rdf:about="&a;card225">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card227"/>
+        <sameSuit rdf:resource="&a;card228"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card226 -->
+
+    <owl:NamedIndividual rdf:about="&a;card226">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <nextRank rdf:resource="&a;card225"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card227 -->
+
+    <owl:NamedIndividual rdf:about="&a;card227">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card228"/>
+        <hasRank rdf:resource="&a;jack"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card228 -->
+
+    <owl:NamedIndividual rdf:about="&a;card228">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;six"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card229 -->
+
+    <owl:NamedIndividual rdf:about="&a;card229">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;four"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card23 -->
+
+    <owl:NamedIndividual rdf:about="&a;card23">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card21"/>
+        <sameSuit rdf:resource="&a;card24"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card230 -->
+
+    <owl:NamedIndividual rdf:about="&a;card230">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card234"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card231 -->
+
+    <owl:NamedIndividual rdf:about="&a;card231">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card232"/>
+        <sameSuit rdf:resource="&a;card233"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card232 -->
+
+    <owl:NamedIndividual rdf:about="&a;card232">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card233"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;four"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card233 -->
+
+    <owl:NamedIndividual rdf:about="&a;card233">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card234 -->
+
+    <owl:NamedIndividual rdf:about="&a;card234">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card230"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card235 -->
+
+    <owl:NamedIndividual rdf:about="&a;card235">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card238"/>
+        <sameSuit rdf:resource="&a;card239"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card236 -->
+
+    <owl:NamedIndividual rdf:about="&a;card236">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card237"/>
+        <sameSuit rdf:resource="&a;card238"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card237 -->
+
+    <owl:NamedIndividual rdf:about="&a;card237">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card238 -->
+
+    <owl:NamedIndividual rdf:about="&a;card238">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card239 -->
+
+    <owl:NamedIndividual rdf:about="&a;card239">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card236"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card24 -->
+
+    <owl:NamedIndividual rdf:about="&a;card24">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card240 -->
+
+    <owl:NamedIndividual rdf:about="&a;card240">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameRank rdf:resource="&a;card241"/>
+        <sameSuit rdf:resource="&a;card243"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card241 -->
+
+    <owl:NamedIndividual rdf:about="&a;card241">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card242 -->
+
+    <owl:NamedIndividual rdf:about="&a;card242">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card243"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card243 -->
+
+    <owl:NamedIndividual rdf:about="&a;card243">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;four"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card244 -->
+
+    <owl:NamedIndividual rdf:about="&a;card244">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;jack"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card25 -->
+
+    <owl:NamedIndividual rdf:about="&a;card25">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card26"/>
+        <sameSuit rdf:resource="&a;card27"/>
+        <nextRank rdf:resource="&a;card27"/>
+        <sameSuit rdf:resource="&a;card28"/>
+        <sameSuit rdf:resource="&a;card29"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card26 -->
+
+    <owl:NamedIndividual rdf:about="&a;card26">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card27"/>
+        <sameSuit rdf:resource="&a;card28"/>
+        <nextRank rdf:resource="&a;card29"/>
+        <sameSuit rdf:resource="&a;card29"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card27 -->
+
+    <owl:NamedIndividual rdf:about="&a;card27">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card28"/>
+        <nextRank rdf:resource="&a;card28"/>
+        <sameSuit rdf:resource="&a;card29"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card28 -->
+
+    <owl:NamedIndividual rdf:about="&a;card28">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card26"/>
+        <sameSuit rdf:resource="&a;card29"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card29 -->
+
+    <owl:NamedIndividual rdf:about="&a;card29">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card3 -->
+
+    <owl:NamedIndividual rdf:about="&a;card3">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card2"/>
+        <sameSuit rdf:resource="&a;card4"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card30 -->
+
+    <owl:NamedIndividual rdf:about="&a;card30">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <nextRank rdf:resource="&a;card31"/>
+        <sameSuit rdf:resource="&a;card31"/>
+        <sameSuit rdf:resource="&a;card32"/>
+        <sameSuit rdf:resource="&a;card33"/>
+        <sameSuit rdf:resource="&a;card34"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card31 -->
+
+    <owl:NamedIndividual rdf:about="&a;card31">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card32"/>
+        <sameSuit rdf:resource="&a;card32"/>
+        <sameSuit rdf:resource="&a;card33"/>
+        <sameSuit rdf:resource="&a;card34"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card32 -->
+
+    <owl:NamedIndividual rdf:about="&a;card32">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card33"/>
+        <sameSuit rdf:resource="&a;card33"/>
+        <sameSuit rdf:resource="&a;card34"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card33 -->
+
+    <owl:NamedIndividual rdf:about="&a;card33">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card34"/>
+        <sameSuit rdf:resource="&a;card34"/>
+        <hasRank rdf:resource="&a;four"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card34 -->
+
+    <owl:NamedIndividual rdf:about="&a;card34">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card35 -->
+
+    <owl:NamedIndividual rdf:about="&a;card35">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card36"/>
+        <sameSuit rdf:resource="&a;card36"/>
+        <sameSuit rdf:resource="&a;card37"/>
+        <sameSuit rdf:resource="&a;card38"/>
+        <sameSuit rdf:resource="&a;card39"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;five"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card36 -->
+
+    <owl:NamedIndividual rdf:about="&a;card36">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card37"/>
+        <nextRank rdf:resource="&a;card38"/>
+        <sameSuit rdf:resource="&a;card38"/>
+        <sameSuit rdf:resource="&a;card39"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card37 -->
+
+    <owl:NamedIndividual rdf:about="&a;card37">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card38"/>
+        <sameSuit rdf:resource="&a;card39"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card38 -->
+
+    <owl:NamedIndividual rdf:about="&a;card38">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card39"/>
+        <sameSuit rdf:resource="&a;card39"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card39 -->
+
+    <owl:NamedIndividual rdf:about="&a;card39">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card37"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card4 -->
+
+    <owl:NamedIndividual rdf:about="&a;card4">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card40 -->
+
+    <owl:NamedIndividual rdf:about="&a;card40">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card41"/>
+        <sameSuit rdf:resource="&a;card42"/>
+        <nextRank rdf:resource="&a;card42"/>
+        <sameSuit rdf:resource="&a;card43"/>
+        <sameSuit rdf:resource="&a;card44"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card41 -->
+
+    <owl:NamedIndividual rdf:about="&a;card41">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card42"/>
+        <sameSuit rdf:resource="&a;card43"/>
+        <sameSuit rdf:resource="&a;card44"/>
+        <nextRank rdf:resource="&a;card44"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;four"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card42 -->
+
+    <owl:NamedIndividual rdf:about="&a;card42">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card43"/>
+        <nextRank rdf:resource="&a;card43"/>
+        <sameSuit rdf:resource="&a;card44"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card43 -->
+
+    <owl:NamedIndividual rdf:about="&a;card43">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card41"/>
+        <sameSuit rdf:resource="&a;card44"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card44 -->
+
+    <owl:NamedIndividual rdf:about="&a;card44">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;five"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card45 -->
+
+    <owl:NamedIndividual rdf:about="&a;card45">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameRank rdf:resource="&a;card46"/>
+        <sameSuit rdf:resource="&a;card48"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card46 -->
+
+    <owl:NamedIndividual rdf:about="&a;card46">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card49"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card47 -->
+
+    <owl:NamedIndividual rdf:about="&a;card47">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card48 -->
+
+    <owl:NamedIndividual rdf:about="&a;card48">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card49 -->
+
+    <owl:NamedIndividual rdf:about="&a;card49">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card5 -->
+
+    <owl:NamedIndividual rdf:about="&a;card5">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card6"/>
+        <sameSuit rdf:resource="&a;card7"/>
+        <nextRank rdf:resource="&a;card8"/>
+        <sameSuit rdf:resource="&a;card8"/>
+        <sameSuit rdf:resource="&a;card9"/>
+        <hasRank rdf:resource="&a;jack"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card50 -->
+
+    <owl:NamedIndividual rdf:about="&a;card50">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card51"/>
+        <sameSuit rdf:resource="&a;card53"/>
+        <hasRank rdf:resource="&a;six"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card51 -->
+
+    <owl:NamedIndividual rdf:about="&a;card51">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card53"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card52 -->
+
+    <owl:NamedIndividual rdf:about="&a;card52">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card51"/>
+        <sameSuit rdf:resource="&a;card54"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card53 -->
+
+    <owl:NamedIndividual rdf:about="&a;card53">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;four"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card54 -->
+
+    <owl:NamedIndividual rdf:about="&a;card54">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card55 -->
+
+    <owl:NamedIndividual rdf:about="&a;card55">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card57"/>
+        <sameSuit rdf:resource="&a;card58"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card56 -->
+
+    <owl:NamedIndividual rdf:about="&a;card56">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card57 -->
+
+    <owl:NamedIndividual rdf:about="&a;card57">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card58"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card58 -->
+
+    <owl:NamedIndividual rdf:about="&a;card58">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <nextRank rdf:resource="&a;card57"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card59 -->
+
+    <owl:NamedIndividual rdf:about="&a;card59">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card6 -->
+
+    <owl:NamedIndividual rdf:about="&a;card6">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card7"/>
+        <sameSuit rdf:resource="&a;card8"/>
+        <sameSuit rdf:resource="&a;card9"/>
+        <nextRank rdf:resource="&a;card9"/>
+        <hasRank rdf:resource="&a;king"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card60 -->
+
+    <owl:NamedIndividual rdf:about="&a;card60">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card61"/>
+        <sameSuit rdf:resource="&a;card61"/>
+        <sameSuit rdf:resource="&a;card64"/>
+        <hasRank rdf:resource="&a;king"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card61 -->
+
+    <owl:NamedIndividual rdf:about="&a;card61">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card64"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card62 -->
+
+    <owl:NamedIndividual rdf:about="&a;card62">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card63"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;four"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card63 -->
+
+    <owl:NamedIndividual rdf:about="&a;card63">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card64 -->
+
+    <owl:NamedIndividual rdf:about="&a;card64">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;jack"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card65 -->
+
+    <owl:NamedIndividual rdf:about="&a;card65">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card67"/>
+        <nextRank rdf:resource="&a;card67"/>
+        <sameSuit rdf:resource="&a;card69"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card66 -->
+
+    <owl:NamedIndividual rdf:about="&a;card66">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card68"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card67 -->
+
+    <owl:NamedIndividual rdf:about="&a;card67">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card69"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;nine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card68 -->
+
+    <owl:NamedIndividual rdf:about="&a;card68">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card69"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card69 -->
+
+    <owl:NamedIndividual rdf:about="&a;card69">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card7 -->
+
+    <owl:NamedIndividual rdf:about="&a;card7">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card5"/>
+        <sameSuit rdf:resource="&a;card8"/>
+        <sameSuit rdf:resource="&a;card9"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card70 -->
+
+    <owl:NamedIndividual rdf:about="&a;card70">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card72"/>
+        <nextRank rdf:resource="&a;card73"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card71 -->
+
+    <owl:NamedIndividual rdf:about="&a;card71">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card74"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card72 -->
+
+    <owl:NamedIndividual rdf:about="&a;card72">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;five"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card73 -->
+
+    <owl:NamedIndividual rdf:about="&a;card73">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card72"/>
+        <hasRank rdf:resource="&a;four"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card74 -->
+
+    <owl:NamedIndividual rdf:about="&a;card74">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card75 -->
+
+    <owl:NamedIndividual rdf:about="&a;card75">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card76"/>
+        <sameSuit rdf:resource="&a;card77"/>
+        <nextRank rdf:resource="&a;card78"/>
+        <hasRank rdf:resource="&a;four"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card76 -->
+
+    <owl:NamedIndividual rdf:about="&a;card76">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <sameSuit rdf:resource="&a;card77"/>
+        <nextRank rdf:resource="&a;card79"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card77 -->
+
+    <owl:NamedIndividual rdf:about="&a;card77">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card75"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;three"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card78 -->
+
+    <owl:NamedIndividual rdf:about="&a;card78">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card79"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;five"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card79 -->
+
+    <owl:NamedIndividual rdf:about="&a;card79">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card77"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card8 -->
+
+    <owl:NamedIndividual rdf:about="&a;card8">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card6"/>
+        <sameSuit rdf:resource="&a;card9"/>
+        <hasRank rdf:resource="&a;queen"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card80 -->
+
+    <owl:NamedIndividual rdf:about="&a;card80">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card81"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card81 -->
+
+    <owl:NamedIndividual rdf:about="&a;card81">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card82 -->
+
+    <owl:NamedIndividual rdf:about="&a;card82">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card80"/>
+        <sameSuit rdf:resource="&a;card83"/>
+        <hasRank rdf:resource="&a;seven"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card83 -->
+
+    <owl:NamedIndividual rdf:about="&a;card83">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card82"/>
+        <hasRank rdf:resource="&a;six"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card84 -->
+
+    <owl:NamedIndividual rdf:about="&a;card84">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card85 -->
+
+    <owl:NamedIndividual rdf:about="&a;card85">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card87"/>
+        <sameSuit rdf:resource="&a;card89"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card86 -->
+
+    <owl:NamedIndividual rdf:about="&a;card86">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card89"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card87 -->
+
+    <owl:NamedIndividual rdf:about="&a;card87">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameSuit rdf:resource="&a;card89"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;six"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card88 -->
+
+    <owl:NamedIndividual rdf:about="&a;card88">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;two"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card89 -->
+
+    <owl:NamedIndividual rdf:about="&a;card89">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card9 -->
+
+    <owl:NamedIndividual rdf:about="&a;card9">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card90 -->
+
+    <owl:NamedIndividual rdf:about="&a;card90">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card91"/>
+        <sameSuit rdf:resource="&a;card94"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;seven"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card91 -->
+
+    <owl:NamedIndividual rdf:about="&a;card91">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;seven"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card92 -->
+
+    <owl:NamedIndividual rdf:about="&a;card92">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card93"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;jack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card93 -->
+
+    <owl:NamedIndividual rdf:about="&a;card93">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card94 -->
+
+    <owl:NamedIndividual rdf:about="&a;card94">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasRank rdf:resource="&a;ace"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card95 -->
+
+    <owl:NamedIndividual rdf:about="&a;card95">
+        <rdf:type rdf:resource="&a;card"/>
+        <sameRank rdf:resource="&a;card99"/>
+        <hasSuit rdf:resource="&a;hearts"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card96 -->
+
+    <owl:NamedIndividual rdf:about="&a;card96">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;clubs"/>
+        <hasRank rdf:resource="&a;eight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card97 -->
+
+    <owl:NamedIndividual rdf:about="&a;card97">
+        <rdf:type rdf:resource="&a;card"/>
+        <nextRank rdf:resource="&a;card96"/>
+        <sameSuit rdf:resource="&a;card98"/>
+        <hasRank rdf:resource="&a;seven"/>
+        <hasSuit rdf:resource="&a;spades"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card98 -->
+
+    <owl:NamedIndividual rdf:about="&a;card98">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;spades"/>
+        <hasRank rdf:resource="&a;ten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#card99 -->
+
+    <owl:NamedIndividual rdf:about="&a;card99">
+        <rdf:type rdf:resource="&a;card"/>
+        <hasSuit rdf:resource="&a;diamonds"/>
+        <hasRank rdf:resource="&a;king"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#clubs -->
+
+    <owl:NamedIndividual rdf:about="&a;clubs"/>
+    
+
+
+    <!-- http://localhost/foo#diamonds -->
+
+    <owl:NamedIndividual rdf:about="&a;diamonds"/>
+    
+
+
+    <!-- http://localhost/foo#eight -->
+
+    <owl:NamedIndividual rdf:about="&a;eight"/>
+    
+
+
+    <!-- http://localhost/foo#five -->
+
+    <owl:NamedIndividual rdf:about="&a;five"/>
+    
+
+
+    <!-- http://localhost/foo#four -->
+
+    <owl:NamedIndividual rdf:about="&a;four"/>
+    
+
+
+    <!-- http://localhost/foo#hand0 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand0">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card0"/>
+        <hasCard rdf:resource="&a;card1"/>
+        <hasCard rdf:resource="&a;card2"/>
+        <hasCard rdf:resource="&a;card3"/>
+        <hasCard rdf:resource="&a;card4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand1 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand1">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card5"/>
+        <hasCard rdf:resource="&a;card6"/>
+        <hasCard rdf:resource="&a;card7"/>
+        <hasCard rdf:resource="&a;card8"/>
+        <hasCard rdf:resource="&a;card9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand10 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand10">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card50"/>
+        <hasCard rdf:resource="&a;card51"/>
+        <hasCard rdf:resource="&a;card52"/>
+        <hasCard rdf:resource="&a;card53"/>
+        <hasCard rdf:resource="&a;card54"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand11 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand11">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card55"/>
+        <hasCard rdf:resource="&a;card56"/>
+        <hasCard rdf:resource="&a;card57"/>
+        <hasCard rdf:resource="&a;card58"/>
+        <hasCard rdf:resource="&a;card59"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand12 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand12">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card60"/>
+        <hasCard rdf:resource="&a;card61"/>
+        <hasCard rdf:resource="&a;card62"/>
+        <hasCard rdf:resource="&a;card63"/>
+        <hasCard rdf:resource="&a;card64"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand13 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand13">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card65"/>
+        <hasCard rdf:resource="&a;card66"/>
+        <hasCard rdf:resource="&a;card67"/>
+        <hasCard rdf:resource="&a;card68"/>
+        <hasCard rdf:resource="&a;card69"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand14 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand14">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card70"/>
+        <hasCard rdf:resource="&a;card71"/>
+        <hasCard rdf:resource="&a;card72"/>
+        <hasCard rdf:resource="&a;card73"/>
+        <hasCard rdf:resource="&a;card74"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand15 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand15">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card75"/>
+        <hasCard rdf:resource="&a;card76"/>
+        <hasCard rdf:resource="&a;card77"/>
+        <hasCard rdf:resource="&a;card78"/>
+        <hasCard rdf:resource="&a;card79"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand16 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand16">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card80"/>
+        <hasCard rdf:resource="&a;card81"/>
+        <hasCard rdf:resource="&a;card82"/>
+        <hasCard rdf:resource="&a;card83"/>
+        <hasCard rdf:resource="&a;card84"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand17 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand17">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card85"/>
+        <hasCard rdf:resource="&a;card86"/>
+        <hasCard rdf:resource="&a;card87"/>
+        <hasCard rdf:resource="&a;card88"/>
+        <hasCard rdf:resource="&a;card89"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand18 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand18">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card90"/>
+        <hasCard rdf:resource="&a;card91"/>
+        <hasCard rdf:resource="&a;card92"/>
+        <hasCard rdf:resource="&a;card93"/>
+        <hasCard rdf:resource="&a;card94"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand19 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand19">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card95"/>
+        <hasCard rdf:resource="&a;card96"/>
+        <hasCard rdf:resource="&a;card97"/>
+        <hasCard rdf:resource="&a;card98"/>
+        <hasCard rdf:resource="&a;card99"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand2 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand2">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card10"/>
+        <hasCard rdf:resource="&a;card11"/>
+        <hasCard rdf:resource="&a;card12"/>
+        <hasCard rdf:resource="&a;card13"/>
+        <hasCard rdf:resource="&a;card14"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand20 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand20">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card100"/>
+        <hasCard rdf:resource="&a;card101"/>
+        <hasCard rdf:resource="&a;card102"/>
+        <hasCard rdf:resource="&a;card103"/>
+        <hasCard rdf:resource="&a;card104"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand21 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand21">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card105"/>
+        <hasCard rdf:resource="&a;card106"/>
+        <hasCard rdf:resource="&a;card107"/>
+        <hasCard rdf:resource="&a;card108"/>
+        <hasCard rdf:resource="&a;card109"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand22 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand22">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card110"/>
+        <hasCard rdf:resource="&a;card111"/>
+        <hasCard rdf:resource="&a;card112"/>
+        <hasCard rdf:resource="&a;card113"/>
+        <hasCard rdf:resource="&a;card114"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand23 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand23">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card115"/>
+        <hasCard rdf:resource="&a;card116"/>
+        <hasCard rdf:resource="&a;card117"/>
+        <hasCard rdf:resource="&a;card118"/>
+        <hasCard rdf:resource="&a;card119"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand24 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand24">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card120"/>
+        <hasCard rdf:resource="&a;card121"/>
+        <hasCard rdf:resource="&a;card122"/>
+        <hasCard rdf:resource="&a;card123"/>
+        <hasCard rdf:resource="&a;card124"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand25 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand25">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card125"/>
+        <hasCard rdf:resource="&a;card126"/>
+        <hasCard rdf:resource="&a;card127"/>
+        <hasCard rdf:resource="&a;card128"/>
+        <hasCard rdf:resource="&a;card129"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand26 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand26">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card130"/>
+        <hasCard rdf:resource="&a;card131"/>
+        <hasCard rdf:resource="&a;card132"/>
+        <hasCard rdf:resource="&a;card133"/>
+        <hasCard rdf:resource="&a;card134"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand27 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand27">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card135"/>
+        <hasCard rdf:resource="&a;card136"/>
+        <hasCard rdf:resource="&a;card137"/>
+        <hasCard rdf:resource="&a;card138"/>
+        <hasCard rdf:resource="&a;card139"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand28 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand28">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card140"/>
+        <hasCard rdf:resource="&a;card141"/>
+        <hasCard rdf:resource="&a;card142"/>
+        <hasCard rdf:resource="&a;card143"/>
+        <hasCard rdf:resource="&a;card144"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand29 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand29">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card145"/>
+        <hasCard rdf:resource="&a;card146"/>
+        <hasCard rdf:resource="&a;card147"/>
+        <hasCard rdf:resource="&a;card148"/>
+        <hasCard rdf:resource="&a;card149"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand3 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand3">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card15"/>
+        <hasCard rdf:resource="&a;card16"/>
+        <hasCard rdf:resource="&a;card17"/>
+        <hasCard rdf:resource="&a;card18"/>
+        <hasCard rdf:resource="&a;card19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand30 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand30">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card150"/>
+        <hasCard rdf:resource="&a;card151"/>
+        <hasCard rdf:resource="&a;card152"/>
+        <hasCard rdf:resource="&a;card153"/>
+        <hasCard rdf:resource="&a;card154"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand31 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand31">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card155"/>
+        <hasCard rdf:resource="&a;card156"/>
+        <hasCard rdf:resource="&a;card157"/>
+        <hasCard rdf:resource="&a;card158"/>
+        <hasCard rdf:resource="&a;card159"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand32 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand32">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card160"/>
+        <hasCard rdf:resource="&a;card161"/>
+        <hasCard rdf:resource="&a;card162"/>
+        <hasCard rdf:resource="&a;card163"/>
+        <hasCard rdf:resource="&a;card164"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand33 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand33">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card165"/>
+        <hasCard rdf:resource="&a;card166"/>
+        <hasCard rdf:resource="&a;card167"/>
+        <hasCard rdf:resource="&a;card168"/>
+        <hasCard rdf:resource="&a;card169"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand34 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand34">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card170"/>
+        <hasCard rdf:resource="&a;card171"/>
+        <hasCard rdf:resource="&a;card172"/>
+        <hasCard rdf:resource="&a;card173"/>
+        <hasCard rdf:resource="&a;card174"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand35 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand35">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card175"/>
+        <hasCard rdf:resource="&a;card176"/>
+        <hasCard rdf:resource="&a;card177"/>
+        <hasCard rdf:resource="&a;card178"/>
+        <hasCard rdf:resource="&a;card179"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand36 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand36">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card180"/>
+        <hasCard rdf:resource="&a;card181"/>
+        <hasCard rdf:resource="&a;card182"/>
+        <hasCard rdf:resource="&a;card183"/>
+        <hasCard rdf:resource="&a;card184"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand37 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand37">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card185"/>
+        <hasCard rdf:resource="&a;card186"/>
+        <hasCard rdf:resource="&a;card187"/>
+        <hasCard rdf:resource="&a;card188"/>
+        <hasCard rdf:resource="&a;card189"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand38 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand38">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card190"/>
+        <hasCard rdf:resource="&a;card191"/>
+        <hasCard rdf:resource="&a;card192"/>
+        <hasCard rdf:resource="&a;card193"/>
+        <hasCard rdf:resource="&a;card194"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand39 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand39">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card195"/>
+        <hasCard rdf:resource="&a;card196"/>
+        <hasCard rdf:resource="&a;card197"/>
+        <hasCard rdf:resource="&a;card198"/>
+        <hasCard rdf:resource="&a;card199"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand4 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand4">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card20"/>
+        <hasCard rdf:resource="&a;card21"/>
+        <hasCard rdf:resource="&a;card22"/>
+        <hasCard rdf:resource="&a;card23"/>
+        <hasCard rdf:resource="&a;card24"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand40 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand40">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card200"/>
+        <hasCard rdf:resource="&a;card201"/>
+        <hasCard rdf:resource="&a;card202"/>
+        <hasCard rdf:resource="&a;card203"/>
+        <hasCard rdf:resource="&a;card204"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand41 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand41">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card205"/>
+        <hasCard rdf:resource="&a;card206"/>
+        <hasCard rdf:resource="&a;card207"/>
+        <hasCard rdf:resource="&a;card208"/>
+        <hasCard rdf:resource="&a;card209"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand42 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand42">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card210"/>
+        <hasCard rdf:resource="&a;card211"/>
+        <hasCard rdf:resource="&a;card212"/>
+        <hasCard rdf:resource="&a;card213"/>
+        <hasCard rdf:resource="&a;card214"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand43 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand43">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card215"/>
+        <hasCard rdf:resource="&a;card216"/>
+        <hasCard rdf:resource="&a;card217"/>
+        <hasCard rdf:resource="&a;card218"/>
+        <hasCard rdf:resource="&a;card219"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand44 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand44">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card220"/>
+        <hasCard rdf:resource="&a;card221"/>
+        <hasCard rdf:resource="&a;card222"/>
+        <hasCard rdf:resource="&a;card223"/>
+        <hasCard rdf:resource="&a;card224"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand45 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand45">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card225"/>
+        <hasCard rdf:resource="&a;card226"/>
+        <hasCard rdf:resource="&a;card227"/>
+        <hasCard rdf:resource="&a;card228"/>
+        <hasCard rdf:resource="&a;card229"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand46 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand46">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card230"/>
+        <hasCard rdf:resource="&a;card231"/>
+        <hasCard rdf:resource="&a;card232"/>
+        <hasCard rdf:resource="&a;card233"/>
+        <hasCard rdf:resource="&a;card234"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand47 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand47">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card235"/>
+        <hasCard rdf:resource="&a;card236"/>
+        <hasCard rdf:resource="&a;card237"/>
+        <hasCard rdf:resource="&a;card238"/>
+        <hasCard rdf:resource="&a;card239"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand48 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand48">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card240"/>
+        <hasCard rdf:resource="&a;card241"/>
+        <hasCard rdf:resource="&a;card242"/>
+        <hasCard rdf:resource="&a;card243"/>
+        <hasCard rdf:resource="&a;card244"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand5 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand5">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card25"/>
+        <hasCard rdf:resource="&a;card26"/>
+        <hasCard rdf:resource="&a;card27"/>
+        <hasCard rdf:resource="&a;card28"/>
+        <hasCard rdf:resource="&a;card29"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand6 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand6">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card30"/>
+        <hasCard rdf:resource="&a;card31"/>
+        <hasCard rdf:resource="&a;card32"/>
+        <hasCard rdf:resource="&a;card33"/>
+        <hasCard rdf:resource="&a;card34"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand7 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand7">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card35"/>
+        <hasCard rdf:resource="&a;card36"/>
+        <hasCard rdf:resource="&a;card37"/>
+        <hasCard rdf:resource="&a;card38"/>
+        <hasCard rdf:resource="&a;card39"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand8 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand8">
+        <rdf:type rdf:resource="&a;deck"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="&a;ToLearn"/>
+            </owl:Class>
+        </rdf:type>
+        <hasCard rdf:resource="&a;card40"/>
+        <hasCard rdf:resource="&a;card41"/>
+        <hasCard rdf:resource="&a;card42"/>
+        <hasCard rdf:resource="&a;card43"/>
+        <hasCard rdf:resource="&a;card44"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hand9 -->
+
+    <owl:NamedIndividual rdf:about="&a;hand9">
+        <rdf:type rdf:resource="&a;ToLearn"/>
+        <rdf:type rdf:resource="&a;deck"/>
+        <hasCard rdf:resource="&a;card45"/>
+        <hasCard rdf:resource="&a;card46"/>
+        <hasCard rdf:resource="&a;card47"/>
+        <hasCard rdf:resource="&a;card48"/>
+        <hasCard rdf:resource="&a;card49"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/foo#hearts -->
+
+    <owl:NamedIndividual rdf:about="&a;hearts"/>
+    
+
+
+    <!-- http://localhost/foo#jack -->
+
+    <owl:NamedIndividual rdf:about="&a;jack"/>
+    
+
+
+    <!-- http://localhost/foo#king -->
+
+    <owl:NamedIndividual rdf:about="&a;king"/>
+    
+
+
+    <!-- http://localhost/foo#nine -->
+
+    <owl:NamedIndividual rdf:about="&a;nine"/>
+    
+
+
+    <!-- http://localhost/foo#queen -->
+
+    <owl:NamedIndividual rdf:about="&a;queen"/>
+    
+
+
+    <!-- http://localhost/foo#seven -->
+
+    <owl:NamedIndividual rdf:about="&a;seven"/>
+    
+
+
+    <!-- http://localhost/foo#six -->
+
+    <owl:NamedIndividual rdf:about="&a;six"/>
+    
+
+
+    <!-- http://localhost/foo#spades -->
+
+    <owl:NamedIndividual rdf:about="&a;spades"/>
+    
+
+
+    <!-- http://localhost/foo#ten -->
+
+    <owl:NamedIndividual rdf:about="&a;ten"/>
+    
+
+
+    <!-- http://localhost/foo#three -->
+
+    <owl:NamedIndividual rdf:about="&a;three"/>
+    
+
+
+    <!-- http://localhost/foo#two -->
+
+    <owl:NamedIndividual rdf:about="&a;two"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

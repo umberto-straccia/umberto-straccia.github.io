@@ -1,0 +1,313 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Multivalued prolog 		            
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 									     
+%%% Umberto Straccia 							      
+%%% http://faure.iei.pi.cnr.it/~straccia				     
+%%% straccia@iei.pi.cnr.it 						      
+%%% 									      
+%%% Version 1.0     
+%%% June, 4th 1999                                                        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+This is a strightforward, yet useful, implementation of a multivalued prolog.
+An atom A is multivalued as an interpretation I maps A into [0,1]. That is,
+I(A) in [0,1]. Therefore, rather being an atom either true or false in an interpretation I,
+an atom may have a graded truth degree in I.
+
+
+We first present the abstract syntax and semantics of multivalued prolog.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+STANDARD PROLOG TERMINOLOGY:
+
+Fact   :  atom A
+Rule   :  A:- A1, ..., An, where A atom.
+Query  :  ?- A1, ..., An, where A atom
+Program:  set of facts and rules
+
+Arithmetic term expression      : e.g. 12.0 + sqrt(2) - X
+Arithmetic evaluation predicate : e.g. Y is 12.0 + sqrt(2) - X. This is a build-in predicate.
+
+We allow arithmetic evaluation predicates to appear in the body of a rule 
+and in a query, as well as, other build-in predicates.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+MULTIVALUED PROLOG TERMINOLOGY:
+
+Truth variable: a variable, e.g. X (upper case letter)
+Truth constant: a constant in [0,1], e.g. 0.3
+Truth value   : A truth value v is either a truth variable or a truth constant.
+                Truth values v are mapped into [0,1], i.e. I(V) in [0,1].
+
+Simple mv-atom: A:v   
+                where A atom and v truth value, e.g. likes(tom,apple):0.9
+                An intepretation I maps an atom A into [0,1].
+                An intepretation I satisfies A:v  iff I(A) >= I(v).
+
+Mv-atom       : a simple mv-predicate or a built-in predicate.
+
+Mv-Fact       : Mv-atom. Examples of fact are: a(d,e):0.1 and c(d,e):0.3
+Mv-Rule       : A:- A1, ..., An, where A simple mv-atom, Ai mv-atom.
+                An intepretation I satisfies the rule iff for all ground instances,
+                A':- A1', ..., An' of the rule, 
+                if I satisfies all Ai', then I satisifes A'.
+                An example of rule is:
+                query(X1,X2):V :- a(X1,X2):R1,c(X1,X2):R2, V is R1 * R2.
+Mv-Query      : ?- A1, ..., An, where A mv-atom.
+                An intepretation I satisfies the rule iff there is a ground instance,
+                ?- A1', ..., An' of the query, such that I satisfies all Ai'.
+                An example of query is: ?- query(X1,X2):V
+Mv-Program    : set of mv-facts and mv-rules
+
+Answer set    : If P is a mv-program, Q is mv-query, then 
+                aset(P,Q) is the set of answers of Q w.r.t. P
+Best Answers  : If P is a mv-program, Q is mv-query, then 
+                bset(P,Q)  =  Max(aset(P,Q))
+                is the set of best answers of Q w.r.t. P. 
+                A substitution 
+                Theta1 = {X/t1, V/v1} is better than 
+                Theta2 = {X/t2, V/v2} if
+                there is mgu m such that t2 = (t1)m, i.e. t1 is more general, and
+                v1 >= v2. Example: {X/Z, V/0.7} is better than both 
+                {X/Z, v1/0.6} and {X/f(Y), V/0.7}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Example A:
+
+%Facts
+
+a(a,b):0.1
+a(a,b):0.2
+a(a,c):0.3
+a(a,c):0.2
+
+c(a,b):0.15
+c(a,b):0.25
+c(a,c):0.35
+c(a,c):0.25
+ 
+
+%Rules
+
+q(X1,X2):V :- a(X1,X2):R1,c(X1,X2):R2, V is R1 * R2.
+
+
+%Query
+
+?- q(X1,X2):V
+
+
+%Answer set
+
+The are 8 answers. Each answer produces the following assignments for X1,X2 and V, respectively.
+
+[a,b,0.015],
+[a,b,0.025],
+[a,b,0.030],
+[a,b,0.05],
+[a,c,0.105],
+[a,c,0.075],
+[a,c,0.07],
+[a,c,0.05]
+
+The maximal values, for each term assignment for (X1,X2) are, ordered,
+
+[a,c,0.105],
+[a,b,0.05]
+
+%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+DEDUCTION IN MV-PROGRAMS
+-------------------------------------------------
+
+Let P be a mv-program and let Q be a mv-query.      
+We will present a quite practical solution in order to compute bset(P,Q).
+
+We will show that through any standard prolog engine, bset(P,Q) may be determined. 
+Essentially, we transform P and Q into a standard logic program C(P) and 
+a standard query C(Q), respectively, in such a way that bset(P,Q) can be determined 
+in terms of the answer set of C(Q) w.r.t. C(P) UNION P_B, where
+P_B is a background standard logic program defining some auxilliary predicates. 
+                     
+We proceed as follows. For each  n-ary mv-predicate p, consider a new n+1-ary crisp
+predicate p. The idea is to map, e.g., the mv-atom 
+p(a,X):0.3 into the crisp atom p(a, X, 0.3), storing in the additional argument of p the truth degree. 
+
+Moreover, among others, P_B contains the definition of the predicate subs(R1,R2), which determines 
+whether the truth value R2 subsumes the truth value R1. For instance, 
+subs(0.3,0.2) holds. Now, let C(.) be defined as follows. Let M be a mv-facts A, mv-rules R or a mv-query Q.
+
+
+1. if M is a simple mv-atom p(t):v, then C(M) is p(t,v);
+2. if M is a build-in predicate, then C(M) = M;
+3. if M is a mv-rule p(t):v:- A1, ..., An then C(M) is
+   p(t,R) :- C(A1), ... , C(An), subs(v,R), 
+   where R is a new truth variable;
+4. if M is a mv-query ?- A1, ..., An then C(M) is
+   ?- C(A1), ... , C(An);
+5. if P is a mv-program, then C(P) is the set of C(M), for M in P.
+
+This completes the translation (compilation).
+
+-------------------------------------------------
+Example B:
+Let us "translate" Example A.
+
+%Facts
+
+%a(a,b):0.1
+%a(a,b):0.2
+%a(a,c):0.3
+%a(a,c):0.2
+
+%c(a,b):0.15
+%c(a,b):0.25
+%c(a,c):0.35
+%c(a,c):0.25
+% are translated as
+
+a(a,b,R) :- subs(0.1,R).
+a(a,b,R) :- subs(0.2,R).
+a(a,c,R) :- subs(0.3,R).
+a(a,c,R) :- subs(0.2,R).
+
+c(a,b,R) :- subs(0.15,R).
+c(a,b,R) :- subs(0.25,R).
+c(a,c,R) :- subs(0.35,R).
+c(a,c,R) :- subs(0.25,R). 
+
+
+%Rules
+
+%q(X1,X2):V :- a(X1,X2):R1,c(X1,X2):R2, V is R1 * R2.
+% is translated as
+
+q(X1,X2,R) :- a(X1,X2, R1), c(X1,X2, R2), V is R1 * R2, subs(V,R).
+
+%Query
+?- q(X1,X2):V
+% is translated as
+
+?- q(X1,X2,V).
+
+The computed answers are:
+
+X1 = a,
+X2 = b,
+V = 0.0150000 ;
+
+X1 = a,
+X2 = b,
+V = 0.0250000 ;
+
+X1 = a,
+X2 = b,
+V = 0.0300000 ;
+
+X1 = a,
+X2 = b,
+V = 0.0500000 ;
+
+X1 = a,
+X2 = c,
+V = 0.105000 ;
+
+X1 = a,
+X2 = c,
+V = 0.0750000 ;
+
+X1 = a,
+X2 = c,
+V = 0.0700000 ;
+
+X1 = a,
+X2 = c,
+V = 0.0500000 ;
+
+Note: you have to load the P_B. The file is "mvprolog.pl".
+%------------------------------------------------------------------
+
+The P_B allows also to compute directly all aswers, determines the maximum answers and orders them.
+
+You have to proceed as follows:
+
+1. if Q is a mv-query ?- A1, ..., An, where X1, ..., Xn and V1, ..., Vm are the lists of individual variables 
+   and truth variables appearing in the query Q, then add the following rule to P:
+   query(Theta) :- Theta = [ThetaX,ThetaL],
+                   ThetaX = [X1, ... , Xn],
+                   ThetaL = [V1, ... , Vm],
+                   C(A1), ... , C(An).
+   
+   Essentially, we encode an answer Theta as a list of two elements [ThetaX,ThetaL],
+   where ThetaX and ThetaL is as a list, respectively: ThetaX contains the substutions for 
+   lists of individual variables X1, ..., Xn, and ThetaL contains the substutions truth variables
+   V1, ..., Vm.
+
+2. Now, the query
+
+   a.) query(Theta)
+       returns an answer for Theta
+   b.) findall_theta(Theta,query(Theta),R)
+       returns ALL answers for Theta
+   c.) maximum(Theta,query(Theta),R).
+       returns ALL BEST answers for Theta
+   d.) order_answer(Theta,query(Theta),R).
+       returns ORDERED ALL BEST answers for Theta
+
+%------------------------------------------------------------------
+
+Example C:
+Given Example B, we add the rule
+
+query(Theta) :- Theta = [ThetaX,ThetaL],
+                ThetaX = [X1,X2],
+                ThetaL = [R],
+                q(X1,X2,R).
+
+
+The queries could be then
+
+a.) q(X1,X2,V).
+b.) findall_theta(Theta,query(Theta),R)
+c.) maximum(Theta,query(Theta),R).
+d.) order_answer(Theta,query(Theta),R).
+
+For istance,
+
+?-  maximum(Theta,query(Theta),R).
+
+produces
+
+Theta = _25,
+R = [
+      [[a,b],[0.0500000]],
+      [[a,c],[0.105000]]
+    ];
+
+That is, the best answer for [a,b] is 0.05, whereas the best answer for [a,c] is 0.105.
+
+Therefore, correctly
+
+?-  order_answer(Theta,query(Theta),R).
+
+produces
+
+R = [
+      [[a,c],[0.105000]],
+      [[a,b],[0.0500000]]
+    ];
+
+%------------------------------------------------------------------
+
+NOTE: DON'T FORGET TO LOAD THE FILE "MVPROLOG.PL", WHICH IS THE P_B.
+
+
+Enjoy,
+straccia@iei.pi.cnr.it

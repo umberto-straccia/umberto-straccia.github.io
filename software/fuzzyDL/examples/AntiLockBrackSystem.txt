@@ -1,0 +1,41 @@
+% Define features
+(define-concrete-feature temperature *real* 0 100)
+(define-concrete-feature pressure *real* 0 100)
+(define-concrete-feature throttle *real* 0 100)
+
+% Define labels for the features
+(define-fuzzy-concept TempCool triangular(0,100, 20, 24, 28))
+(define-fuzzy-concept PressLow triangular(0,100, 30, 40, 50))
+(define-fuzzy-concept PressOK triangular(0,100, 40, 50, 60))
+(define-fuzzy-concept ThrottleP2 triangular(0,100, 10, 15, 20))
+(define-fuzzy-concept ThrottleZ triangular(0,100, 15, 20, 25))
+
+
+% Define Logical Rules as Mamdani rules
+(define-concept Rule1 (g-and (some temperature TempCool) (some pressure PressLow) (some throttle ThrottleP2)))
+(define-concept Rule2 (g-and (some temperature TempCool) (some pressure PressOK) (some throttle ThrottleZ)))
+
+% Define Logical Rules as implication rules
+%(define-concept Rule1 (l-implies (g-and (some temperature TempCool) (some pressure PressLow)) (some throttle ThrottleP2)))
+%(define-concept Rule2 (l-implies (g-and (some temperature TempCool) (some pressure PressOK)) (some throttle ThrottleZ)))
+
+
+% Input to the controller
+(instance fc (= temperature 23) )
+(instance fc (= pressure 47) )
+
+% Output of the controller: case of Madami rules
+(defuzzify-lom? (g-or Rule1 Rule2) fc throttle)
+%(defuzzify-som? (g-or Rule1 Rule2) fc throttle)
+(defuzzify-mom? (g-or Rule1 Rule2) fc throttle)
+%(defuzzify-lom? (g-or (g-and (some temperature TempCool) (some pressure PressLow) (some throttle ThrottleP2) ) (g-and (some temperature TempCool) (some pressure PressOK) (some throttle ThrottleZ) ) ) fc throttle)
+%(defuzzify-som? (g-or (g-and (some temperature TempCool) (some pressure PressLow) (some throttle ThrottleP2) ) (g-and (some temperature TempCool) (some pressure PressOK) (some throttle ThrottleZ) ) ) fc throttle)
+
+% Output of the controller: case of implication rules
+%(defuzzify-lom? (g-and Rule1 Rule2) fc throttle)
+%(defuzzify-som? (g-and Rule1 Rule2) fc throttle)
+%(defuzzify-mom? (g-and Rule1 Rule2) fc throttle)
+%(defuzzify-lom? (g-and (l-implies (g-and (some temperature TempCool) (some pressure PressLow)) (some throttle ThrottleP2)) (l-implies (g-and (some temperature TempCool) (some pressure PressOK)) (some throttle ThrottleZ)) ) fc throttle)
+%(defuzzify-som? (g-and (l-implies (g-and (some temperature TempCool) (some pressure PressLow)) (some throttle ThrottleP2)) (l-implies (g-and (some temperature TempCool) (some pressure PressOK)) (some throttle ThrottleZ)) ) fc throttle)
+
+

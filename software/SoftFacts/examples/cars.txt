@@ -1,0 +1,21 @@
+(MAP-ROLE CarsTable carssmall (id[INT] model[STRING] price[INT] km[INT]))
+
+(MAP-ABSTRACT Car 1) 
+(MAP-ABSTRACT HasID 2)
+(MAP-ABSTRACT HasMODEL 2)
+(MAP-ABSTRACT HasPRICE 2)
+(MAP-ABSTRACT HasKM 2)
+
+(IMPLIES (SOME [1] CarsTable) Car)
+(IMPLIES (SOME [1 2] CarsTable) (SOME [1 2] HasMODEL)) 
+(IMPLIES (SOME [1 3] CarsTable) (SOME [1 2] HasPRICE)) 
+(IMPLIES (SOME [1 4] CarsTable) (SOME [1 2] HasKM))
+
+(DEF-MACRO max "CASE WHEN $1 > $2 THEN $1 ELSE $2 END") 
+(DEF-MACRO min "CASE WHEN $1 <= $2 THEN $1 ELSE $2 END")
+(DEF-MACRO ls "CASE WHEN $3 <= $1 THEN 1 WHEN $3 >= $2 THEN 0 ELSE ($2 - $3)/($2 - $1) END")
+(DEF-MACRO rs "CASE WHEN $3 <= $1 THEN 0 WHEN $3 >= $2 THEN 1 ELSE ($3 - $1)/($2 - $1) END")
+(DEF-MACRO tri "CASE WHEN $4 <= $1 THEN 0 WHEN $4 >= $3 THEN 0 WHEN $4 <= $2 THEN ($4 - $1)/($2 - $1) ELSE ($3 - $4)/($3 - $2) END")
+(DEF-MACRO trz "CASE WHEN $5 <= $1 THEN 0 WHEN $5 >= $4 THEN 0 WHEN $5 <= $2 THEN ($5 - $1)/($2 - $1) WHEN $5 <= $3 THEN 1 ELSE ($4 - $5)/($4 - $3) END")
+
+

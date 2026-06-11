@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+		<TITLE>SoftFacts</TITLE>
+		<link href="../../css.css" rel="stylesheet" media="screen">
+	</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+		<p class="titolo"><strong><font size="+2" face="Georgia, Times New Roman, Times, serif">The </font><font size="+2" color="#770000" face="Georgia, Times New Roman, Times, serif">SoftFacts</font><font size="+2" face="Georgia, Times New Roman, Times, serif"> System  </font><font face="Georgia, Times New Roman, Times, serif"><font size="1">(</font><font size="1" color="#dd1e28"><a href="changes.html">see also latest changes</a></font><font size="1">)</font></font></strong></p>
+		<hr>
+		<p><font color="#770000" face="Georgia, Times New Roman, Times, serif">SoftFacts</font><font face="Georgia, Times New Roman, Times, serif"> is an ontology mediated database system. An ontology layer may be used to define (in terms of a DLR-Lite like description logic, an extension of DL-Lite) the relevant abstract concepts and relations of the application domain, while a database may be used to access large volumes of data. The supported databases are, so far, MySQL, Postgres and RankSQL (for top-k retrieval). It supports also a significant set of OWL QL profile language expressions via the SoftFacts tab for </font>OWL editor Prot&eacute;g&eacute;.</p>
+		<p><font color="#770000" face="Georgia, Times New Roman, Times, serif">SoftFacts</font><font color="black" face="Georgia, Times New Roman, Times, serif">'s most interesting features are:</font></p>
+		<ul>
+			<li type="disc">Extended DLR-Lite and, thus, DL-Lite: as logical language for schema/ontology specification.<li type="disc">Conjunctive Queries: as query language<li type="disc">Relational Database: data is stored into relational database<li type="disc">Top-k Query Answering: Supports top-k retrieval (find top-k scored tuples satisfying query), e.g. &quot;find cheap hotels close to the train station&quot;, where cheap and price are a function of the distance and price, respectively.
+			<li type="disc">A plugin for  OWL editor Prot&eacute;g&eacute; is provided
+		</ul>
+		<p><img src="./softfactstab.gif" alt="" height="805" width="1202" border="0" livesrc="softfactstab.tiff"></p>
+		<p><img src="./Top5.gif" alt="" height="310" width="916" border="0" livesrc="Top5.pdf"></p>
+		<p>See the <a href="poster.html">poster</a> for a brief overview on <font color="#770000" face="Georgia, Times New Roman, Times, serif">SoftFacts.</font></p>
+		<p>Example queries are:</p>
+		<ul>
+			<li><strong>(RETRIEVE (?x ?y ?z) WHERE ( </strong><strong>(JobID ?x) (jobLocation ?y) (jobDuration ?z) (?z &gt;= 2)) )</strong>
+				<ul>
+					<li>Retrieve jobs, i.e., tuples <strong>(id, location, duration), </strong>whose duration is at least two years.
+				</ul>
+			
+		</ul>
+		<ul>
+			<li><strong>(RETRIEVE (?x ?y ?z) WHERE( </strong><strong>(JobID ?x) (jobLocation ?y) (jobDuration ?z) ) ORDERBY ( &amp;rs(?z, 3,5) ) LIMIT (5))</strong>
+				<ul>
+					<li>Retrieve the top-5 ranked tuples <strong>(id, location, duration), </strong>whose score is evaluated according to the right-shoulder function <strong>rs(?z, 3,5),</strong> i.e. I'm completely satisfied if the job duration is at least 5 years, but I can go down to 3 years to a lesser degree of satisfaction.
+				</ul>
+			
+		</ul>
+		<ul>
+			<li><strong>(RETRIEVE (?x ?y ?z ?s) WHERE ( </strong><strong>(JobID ?x) (jobLocation ?x ?y) (jobDuration ?x ?z) (jobSalary ?x ?s) ) ORDERBY ( &amp;rs(?z, 3,5)*0.4 + &amp;rs(?s, 30000,35000)*0.6 ) LIMIT (10))</strong>
+				<ul>
+					<li>Retrieve the top-10 ranked tuples <strong>(id, location, duration, salary), </strong>whose score is evaluated according to <strong>rs(?z, 3,5)*0.4 + rs(?s, 30000,35000)*0.6,</strong> i.e. a linear combination of the degree of satisfaction related to the duration and the salary of the job. The salary has more importance than the duration.
+				</ul>
+			
+		</ul>
+		<p>Typical functions to be used for scoring are the so-called left-houlder and right-shoulder function, but can be any user defined arithmetic function.</p>
+		<table width="464" border="1" cellspacing="2" cellpadding="0">
+			<tr>
+				<td><img src="../fuzzyDL/rsfunction.gif" alt="" height="137" width="210" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/rsfunction.pdf"></td>
+				<td><img src="../fuzzyDL/lsfunction.gif" alt="" height="153" width="224" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/lsfunction.pdf"></td>
+				<td><img src="../fuzzyDL/triangular.gif" alt="" height="141" width="222" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/triangular.pdf"></td>
+				<td><img src="../fuzzyDL/trapezoidal.gif" alt="" height="137" width="270" border="0" livesrc="../../../../Research/Presentations/Karlsruhe05/trapezoidal.pdf"></td>
+			</tr>
+			<tr>
+				<td>
+					<div align="center">
+						Right-shoulder function</div>
+				</td>
+				<td>
+					<div align="center">
+						Left-shoulder function</div>
+				</td>
+				<td>
+					<div align="center">
+						Triangular function</div>
+				</td>
+				<td>
+					<div align="center">
+						Trapezoidal function</div>
+				</td>
+			</tr>
+		</table>
+		<!-- Begin Shinystat Free code -->
+		<script type="text/javascript" language="JavaScript" SRC="http://codice.shinystat.com/cgi-bin/getcod.cgi?USER=straccia"></script>
+			<noscript>
+			<A HREF="http://www.shinystat.com" target="_top">
+			<IMG SRC="http://www.shinystat.com/cgi-bin/shinystat.cgi?USER=straccia" ALT="PPC ROI" BORDER="0"></A>
+			</noscript>
+		<!-- Begin Shinystat Free code -->
+	</BODY>
+	
+	
+
+</HTML>
