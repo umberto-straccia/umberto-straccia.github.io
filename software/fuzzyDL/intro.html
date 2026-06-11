@@ -18,8 +18,7 @@
     <code><font face="Georgia, Times New Roman, Times, serif"
         color="#770000"><em>fuzzyDL</em></font><em> is a joint project
         with <a href="http://webdiis.unizar.es/~fbobillo/">Fernando
-          Bobillo</a></em>
-    </code>
+          Bobillo</a></em> </code>
     <hr>
     <p><code><font face="Georgia, Times New Roman, Times, serif"
           color="#770000">fuzzyDL</font><font face="Georgia, Times New
@@ -36,8 +35,8 @@
           build fuzzy ontologies.<br>
         </font></code></p>
     <p><code><font face="Georgia, Times New Roman, Times, serif"
-          color="#770000">fuzzyDL <font color="#000000">source code is
-            now available from <a
+          color="#770000">fuzzyDL <font color="#000000">Java source
+            code is now available from <a
               href="https://github.com/umberto-straccia/FuzzyDL">https://github.com/umberto-straccia/FuzzyDL&nbsp;</a></font>
         </font></code><br>
       <code></code></p>
@@ -76,6 +75,7 @@
           color="#770000">fuzzyDL</font> is a joint project with <a
           href="http://webdiis.unizar.es/~fbobillo/">Fernando Bobillo</a>.</code></p>
     <p><code><font face="Georgia, Times New Roman, Times, serif"><strong>Some
+
             applications</strong>:</font></code></p>
     <ul>
       <li><code>Matchmaking </code> </li>
@@ -83,6 +83,7 @@
       <li><code>Multi Criteria Decision Making </code> </li>
       <li><code>Clinical Decision Support </code> </li>
       <li><code><font face="Georgia, Times New Roman, Times, serif">Logic-based
+
             Fuzzy Control Systems</font> </code> </li>
     </ul>
     <p class="titolo"><code><strong>An example</strong>: </code></p>
@@ -107,7 +108,9 @@
       <li><code>Axiom 5 asserts that <strong>age </strong>is
           functional, i.e. a person has one age only. </code> </li>
       <li><code>Axiom 1 asserts that the concept <strong>LessThan18 </strong>is
+
           a fuzzy set with a crisp membership function <strong>crisp(k1,k2,a,b))
+
           </strong>of the form below, where [k1,k2] is the domain.
           Essentially, it says that the domain is [0,100] and that
           membership is 1 for x in [0,18] . </code> </li>
@@ -118,6 +121,7 @@
     <p></p>
     <ul>
       <li><code>Axiom 2 asserts that the concept <strong>LowAge </strong>is
+
           a fuzzy set with a left-shoulder membership function <strong>
             left-shoulder(k1,k2,a,b) </strong>of the form below. </code>
       </li>
@@ -134,6 +138,7 @@
         </code> </li>
     </ul>
     <p><code>As a consequence, under Zadeh semantics we get that a <strong>YoungPerson
+
         </strong>is a <strong>Minor</strong> to degree 0.4. Indeed,</code></p>
     <p><code><strong>(concept-subsumes? Minor YoungPerson)</strong></code></p>
     <p><code>returns 0.4.</code></p>
@@ -204,6 +209,7 @@
     <p><code>On the other hand</code></p>
     <p><code><strong>(concept-subsumes? Minor VeryYoungPerson)</strong></code></p>
     <p><code>returns 0.8, which is the degree of being a <strong>VeryYoungPerson
+
         </strong>a <strong>Minor.</strong></code></p>
   </body>
 </html>
